@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Tables · Kettle Cups</title>
+    <meta name="description" content="One image of a printed table becomes cells you can check, edit and save as reviewed CSV, on your own computer.">
+    <meta property="og:title" content="Tables · Kettle Cups">
+    <meta property="og:description" content="One image of a printed table becomes cells you can check, edit and save as reviewed CSV, on your own computer.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle Cups home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+              <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+              <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/">Home</a>
+          <a href="/tables/" aria-current="page">Tables</a>
+          <a href="/evidence/">Evidence</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      
+<section class="intro" aria-labelledby="tables-title">
+  <p class="eyebrow">The first Cup</p>
+  <h1 id="tables-title">Turn a table photo into a CSV.</h1>
+  <p class="lede">Choose a photo, let Tables fill in the cells, then check and save. The draft sits beside your image so you can correct the text and layout before opening the CSV in a spreadsheet.</p>
+</section>
+
+<section aria-labelledby="example-title">
+  <h2 id="example-title">From image to cells</h2>
+  <div class="govuk-notification-banner" role="region" aria-labelledby="recorded-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+      <h3 class="govuk-notification-banner__title" id="recorded-title">A recorded result</h3>
+    </div>
+    <div class="govuk-notification-banner__content">
+      <p class="govuk-notification-banner__heading">These prepared examples show the reader’s saved output for two invented tables on 10 September 2026.</p>
+      <p class="govuk-body">This is a demonstration of recorded results. You cannot upload or read your own image on this website.</p>
+    </div>
+  </div>
+
+  <div class="example-grid">
+    <figure class="example">
+      <img src="/img/ruled.png" alt="A synthetic ruled table with three columns, Item, Quantity and Price, and three rows of stationery.">
+      <figcaption>ruled.png, a synthetic image rendered with Pillow</figcaption>
+    </figure>
+    <div class="prose">
+      <h3>The draft the reader returned</h3>
+      
+<div class="table-scroll">
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-visually-hidden">Draft returned for the ruled table</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Item</th><th scope="col" class="govuk-table__header">Quantity</th><th scope="col" class="govuk-table__header">Price</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Blue folders</td><td class="govuk-table__cell">12</td><td class="govuk-table__cell">3.50</td>
+      </tr>
+      
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Green pens</td><td class="govuk-table__cell">7</td><td class="govuk-table__cell">1.25</td>
+      </tr>
+      
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Notebooks</td><td class="govuk-table__cell">20</td><td class="govuk-table__cell">4.00</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+      <p class="small muted">All 12 cells matched the authored truth, including the space in “Blue folders”. Nothing needed correcting.</p>
+    </div>
+  </div>
+
+  <div class="csv-block" x-data="{ state: 'idle', async copy() { try { await navigator.clipboard.writeText($refs.csv.textContent.replace(/\n/g, '\r\n') + '\r\n'); this.state = 'done'; } catch { this.state = 'failed'; } setTimeout(() => { this.state = 'idle'; }, 2000); } }">
+    <div class="tag-row">
+      <h3>The CSV after review</h3>
+      <button type="button" class="govuk-button govuk-button--secondary copy-button" x-cloak @click="copy()" x-text="state === 'done' ? 'Copied' : state === 'failed' ? 'Could not copy' : 'Copy this CSV'">Copy this CSV</button>
+    </div>
+    <pre class="csv" aria-label="CSV text for the ruled table" x-ref="csv">&quot;Item&quot;,&quot;Quantity&quot;,&quot;Price&quot;
+&quot;Blue folders&quot;,&quot;12&quot;,&quot;3.50&quot;
+&quot;Green pens&quot;,&quot;7&quot;,&quot;1.25&quot;
+&quot;Notebooks&quot;,&quot;20&quot;,&quot;4.00&quot;</pre>
+    <p class="small muted">Rows end with CRLF. Spreadsheet software may still reformat dates or leading zeroes on import; import those columns as text when needed.</p>
+  </div>
+
+  <div class="example-grid" x-data="{ view: 'draft' }">
+    <figure class="example">
+      <img src="/img/unruled.png" alt="A synthetic table without ruling lines, with columns Day, Room and Time, and three rows of bookings.">
+      <figcaption>unruled.png, a synthetic image rendered with Pillow</figcaption>
+    </figure>
+    <div class="prose">
+      <h3>Where the reader was wrong</h3>
+      <div class="view-switch" role="group" aria-label="Choose which grid to show" x-cloak>
+        <button type="button" :aria-pressed="view === 'draft'" @click="view = 'draft'">Draft returned</button>
+        <button type="button" :aria-pressed="view === 'truth'" @click="view = 'truth'">Authored truth</button>
+      </div>
+      <div x-show="view === 'draft'">
+        <p class="eyebrow">Draft returned</p>
+        
+<div class="table-scroll">
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-visually-hidden">Draft returned for the unruled table</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Day</th><th scope="col" class="govuk-table__header">Room</th><th scope="col" class="govuk-table__header">Time</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Monday</td><td class="govuk-table__cell">Oak</td><td class="govuk-table__cell">10:00</td>
+      </tr>
+      
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Tuesday</td><td class="govuk-table__cell">Elm</td><td class="govuk-table__cell">11:30</td>
+      </tr>
+      
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Friday</td><td class="govuk-table__cell">Ash</td><td class="govuk-table__cell">09:15</td>
+      </tr>
+      
+      <tr class="govuk-table__row govuk-table__row--extra">
+        <td class="govuk-table__cell govuk-table__cell--empty"><span class="govuk-visually-hidden">empty cell</span><span aria-hidden="true">—</span></td><td class="govuk-table__cell govuk-table__cell--empty"><span class="govuk-visually-hidden">empty cell</span><span aria-hidden="true">—</span></td><td class="govuk-table__cell govuk-table__cell--empty"><span class="govuk-visually-hidden">empty cell</span><span aria-hidden="true">—</span></td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+        <p class="small muted">Every expected cell matched, and the reader added one empty row after the last booking. A person would remove row 5 before ticking the review box. The scorer counts this table as not exact.</p>
+      </div>
+      <div x-show="view === 'truth'">
+        <p class="eyebrow">Authored truth</p>
+        
+<div class="table-scroll">
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-visually-hidden">Authored truth for the unruled table</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Day</th><th scope="col" class="govuk-table__header">Room</th><th scope="col" class="govuk-table__header">Time</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Monday</td><td class="govuk-table__cell">Oak</td><td class="govuk-table__cell">10:00</td>
+      </tr>
+      
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Tuesday</td><td class="govuk-table__cell">Elm</td><td class="govuk-table__cell">11:30</td>
+      </tr>
+      
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Friday</td><td class="govuk-table__cell">Ash</td><td class="govuk-table__cell">09:15</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+        <p class="small muted">The intended content of the image, written before the reader ran.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="how-title">
+  <h2 id="how-title">What happens</h2>
+  <ol class="govuk-list govuk-list--number">
+    <li>Choose an image. One still JPEG, PNG or WebP, up to 15 MB and 25 million pixels. Rotate in 90° steps and trim the edges so only the table remains. The preview shows exactly what will be read.</li>
+    <li>Read it. The reader finds the table structure and the text in each cell on your CPU. It refuses merged or irregular cells rather than flattening them, and shows an error you can retry.</li>
+    <li>Check every cell. The draft grid sits beside the image. Every cell is an editable field. Cells the reader moved during alignment are marked <em>Check text position</em>, which describes changed placement, not confidence. Add or remove rows and columns if the structure is wrong.</li>
+    <li>Tick and save. Any edit clears the review checkbox. Once you tick that you have checked every cell, save as CSV. Every cell is quoted, empty cells stay empty, and text that could act as a spreadsheet formula gets a leading apostrophe.</li>
+  </ol>
+</section>
+
+<section aria-labelledby="limits-title">
+  <h2 id="limits-title">Which tables to start with</h2>
+  <p>Start with a clear, upright, tightly cropped image of one printed table in English, with no merged cells. Two cropped phone photographs of printed examples were read correctly in the latest check. Handwriting, strong tilt, blur, small type, spanning headings and larger layouts remain unproven. The reader can miss spaces, misread numbers or add empty rows, and a wrong layout can still look rectangular, so every cell needs checking, marked or not.</p>
+  <details class="govuk-details">
+    <summary class="govuk-details__summary"><span class="govuk-details__summary-text">Limits of the reader and the review</span></summary>
+    <div class="govuk-details__text">
+    <p>The reader is limited to 180 seconds, and the draft to 100 rows, 20 columns and 2,000 characters per cell. Alignment orders recognised fragments within a cell, joins them with spaces and trims outer whitespace. Text whose centre is above or below the detected table is excluded, so a mistaken table boundary can omit source content.</p>
+    <p>Rotation and cropping help locate the table; they do not establish that its cells are correct. Cropped images are prepared as PNG in browser memory and the original file is unchanged.</p>
+    <p>There is no result history. Clearing removes the in-memory grid and image. A CSV you download remains wherever your browser saves it.</p>
+    </div>
+  </details>
+</section>
+
+<section id="models" aria-labelledby="models-title">
+  <h2 id="models-title">Models used</h2>
+  <p>Tables uses four specialist models from PaddleOCR, packaged by RapidAI. All four run locally on your computer’s CPU.</p>
+  <dl class="govuk-summary-list">
+    
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key"><a href="https://github.com/RapidAI/RapidTable">SLANet-plus</a></dt>
+      <dd class="govuk-summary-list__value">Finds the table’s rows, columns and cell structure.</dd>
+    </div>
+    
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key"><a href="https://github.com/PaddlePaddle/PaddleOCR">PP-OCRv4 mobile text detector</a></dt>
+      <dd class="govuk-summary-list__value">Finds regions of text in the image.</dd>
+    </div>
+    
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key"><a href="https://github.com/PaddlePaddle/PaddleOCR">PP-OCRv6 small multilingual text recogniser</a></dt>
+      <dd class="govuk-summary-list__value">Reads the characters in each text region.</dd>
+    </div>
+    
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key"><a href="https://github.com/RapidAI/RapidOCR">PP-OCR mobile v2.0 orientation classifier</a></dt>
+      <dd class="govuk-summary-list__value">Checks the orientation of text before recognition.</dd>
+    </div>
+    
+  </dl>
+  <p>The four model files total about 34 MB. RapidTable 3.0.2 and RapidOCR 3.9.2 run them. Setup downloads and verifies the files; normal use downloads nothing.</p>
+  <p>See the <a href="/evidence/#model">exact model versions, file identities and licence information</a>.</p>
+</section>
+
+<section aria-labelledby="status-title">
+  <h2 id="status-title">Availability</h2>
+  <div class="govuk-inset-text">
+    <p><strong>Not available to download yet.</strong> Tables is running in development. There is no public installer or source download at present.</p>
+  </div>
+  <p>The current checks cover five rendered examples and two cropped phone photographs of printed tables. See the <a href="/evidence/">results and known limitations</a>.</p>
+  <p>The next step is everyday use: checking how easy it is to spot mistakes, correct the draft and put the saved CSV to work.</p>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle Cups · small local tools for everyday tasks</p>
+      <p>Built from 41f6cf0 on 2026-09-14. This site loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Evidence · Kettle Cups</title>
+    <meta name="description" content="What has been checked about Tables, on which inputs, with which model files, and what remains unproven.">
+    <meta property="og:title" content="Evidence · Kettle Cups">
+    <meta property="og:description" content="What has been checked about Tables, on which inputs, with which model files, and what remains unproven.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle Cups home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+              <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+              <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/">Home</a>
+          <a href="/tables/">Tables</a>
+          <a href="/evidence/" aria-current="page">Evidence</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="evidence-title">
+  <p class="eyebrow">Evidence</p>
+  <h1 id="evidence-title">The evidence so far.</h1>
+  <p class="lede">Tables has been checked on five rendered tables and two phone photographs of printed examples. Here are the results, the mistakes found and the limits of those checks.</p>
+
+</section>
+
+<section aria-labelledby="model-result-title">
+  <div class="tag-row">
+    <h2 id="model-result-title">Model examples</h2>
+    <strong class="govuk-tag">Recorded 2026-09-10</strong>
+  </div>
+  <div class="govuk-inset-text">
+    <p><strong>4 of 5 named synthetic tables exact; unruled adds an empty row.</strong> This is five executions on five invented images. It is not an accuracy estimate and no percentage is reported.</p>
+  </div>
+  <div class="table-scroll">
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Whole-table results against authored truth</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Image</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Exact cells</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Extra rows / cells</th>
+          <th scope="col" class="govuk-table__header">Whole table exact</th>
+          <th scope="col" class="govuk-table__header">Note</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Ruled table</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">12 / 12</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">0 / 0</td>
+          <td class="govuk-table__cell">Yes</td>
+          <td class="govuk-table__cell">Including the space in “Blue folders”.</td>
+        </tr>
+        
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Unruled table</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">12 / 12</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">1 / 3</td>
+          <td class="govuk-table__cell"><strong>No</strong></td>
+          <td class="govuk-table__cell">One extra empty row after the last data row. All 12 expected cells matched, which does not make the table exact.</td>
+        </tr>
+        
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Empty cells</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">12 / 12</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">0 / 0</td>
+          <td class="govuk-table__cell">Yes</td>
+          <td class="govuk-table__cell">Both deliberately empty cells preserved as empty.</td>
+        </tr>
+        
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Sectioned table</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">44 / 44</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">0 / 0</td>
+          <td class="govuk-table__cell">Yes</td>
+          <td class="govuk-table__cell">Section headings, dotted rows and a grouped negative amount.</td>
+        </tr>
+        
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Currency and punctuation</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">21 / 21</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">0 / 0</td>
+          <td class="govuk-table__cell">Yes</td>
+          <td class="govuk-table__cell">£, €, $, a negative currency amount, commas, decimal points and leading zeroes.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  <h3>Method</h3>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Five wholly synthetic table images, rendered with Pillow and Arial. No personal document was used.</li><li>Original image bytes were submitted in filename order to the Cup&#39;s ordinary local HTTP worker, with non-loopback networking denied at the operating system.</li><li>The worker&#39;s final grid was scored against the authored expected cells by literal string at each row and column position: no trimming, number conversion, fuzzy matching or row realignment.</li><li>A whole table is exact only when every expected cell matches and there are no missing or extra rows or cells.</li><li>Repeated runs of one image are not new cases, and cells from one image are not independent samples. No percentage or interval is reported.</li>
+  </ul>
+  <h3>Not yet tested</h3>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Strong tilt, shadow and blur across a wider range of phone photographs; direct original-JPEG browser upload was not exercised in the photograph check.</li><li>Handwriting, small type, merged or spanning headings, and larger or more complex layouts.</li><li>Any document that is not a clear, upright, tightly cropped printed table in English.</li><li>How reliably people spot and correct errors in everyday use, and which mistakes make a draft difficult to use.</li>
+  </ul>
+</section>
+
+<section id="photographs" aria-labelledby="photo-title">
+  <div class="tag-row">
+    <h2 id="photo-title">Phone photographs</h2>
+    <strong class="govuk-tag">Recorded 2026-09-12</strong>
+  </div>
+  <p><strong>Both photographed tables were exact in both runs.</strong></p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Photographed ruled table: 12 of 12 cells exact; no missing or extra rows or cells in either run.</li><li>Photographed unruled table: 12 of 12 cells exact; no missing or extra rows or cells in either run.</li>
+  </ul>
+  <p>Two phone photographs of printed synthetic tables were cropped with assistance and converted to metadata-free PNGs, without resizing, enhancement or perspective correction. Each PNG was submitted twice to the real local HTTP reader using the unchanged model lock shown below. The results were compared with the original authored cells.</p>
+  <p>This checks these two prepared photograph inputs. It does not establish accuracy on arbitrary photos or independent human correction. Direct upload of the original JPEGs through the browser was not tested, and no new operating-system network audit was performed. The five rendered examples were also repeated: the unruled render still added an empty row.</p>
+</section>
+
+<section id="model" aria-labelledby="model-title">
+  <h2 id="model-title">The model files these results belong to</h2>
+  <p>Results are only evidence for the exact files they were recorded with. A changed model, preprocessing step or runtime needs fresh inference; re-scoring an old recording is not a new result.</p>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Lock</dt>
+      <dd class="govuk-summary-list__value mono">RapidAI/SLANet-plus-PP-OCRv4-det-PP-OCRv6-rec<br>SLANet-plus-d57a942a_PP-OCRv4-det-1.4.4_PP-OCRv6-rec-3.9.2</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Runtime</dt>
+      <dd class="govuk-summary-list__value">RapidTable 3.0.2 and RapidOCR 3.9.2 on CPU, in the Cup&#39;s pinned Python 3.13 environment</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Size</dt>
+      <dd class="govuk-summary-list__value">34,323,737 bytes across four files</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Licence</dt>
+      <dd class="govuk-summary-list__value">Apache-2.0 upstream (PaddleOCR and RapidAI). That identifies the release terms of the software and models, not an audit of their training sources.</dd>
+    </div>
+  </dl>
+  <details class="govuk-details">
+    <summary class="govuk-details__summary"><span class="govuk-details__summary-text">File identities (SHA-256)</span></summary>
+    <div class="govuk-details__text">
+    <dl class="govuk-summary-list">
+      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">structure.onnx</dt>
+        <dd class="govuk-summary-list__value">SLANet-plus table structure (PaddleOCR, via OpenDataLab PDF-Extract-Kit 1.0)<br><span class="mono">d57a942af6a2f57d6a4a0372573c696a2379bf5857c45e2ac69993f3b334514b</span></dd>
+      </div>
+      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">detect.onnx</dt>
+        <dd class="govuk-summary-list__value">PP-OCRv4 mobile text detector (rapidocr_onnxruntime 1.4.4 archive)<br><span class="mono">d2a7720d45a54257208b1e13e36a8479894cb74155a5efe29462512d42f49da9</span></dd>
+      </div>
+      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">recognise.onnx</dt>
+        <dd class="govuk-summary-list__value">PP-OCRv6 small multilingual recogniser (rapidocr 3.9.2 wheel)<br><span class="mono">6f327246b50388f3c176ae304bd95767ea6dc0c9ae92153ef8cbe210b3c14884</span></dd>
+      </div>
+      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">orient.onnx</dt>
+        <dd class="govuk-summary-list__value">PP-OCR mobile orientation classifier (rapidocr_onnxruntime 1.4.4 archive)<br><span class="mono">e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c</span></dd>
+      </div>
+      
+    </dl>
+    </div>
+  </details>
+</section>
+
+<section id="claims" aria-labelledby="claims-title">
+  <div class="tag-row">
+    <h2 id="claims-title">Claims the product makes, and their checks</h2>
+    <strong class="govuk-tag">Confirmed 2026-09-11</strong>
+  </div>
+  <p>Each sentence Tables shows a user is listed with the check behind it and the boundary of that check. “Unchecked” is a visible limit, not a promise. As of 2026-09-11 the deterministic suite is 50 deterministic Python checks, 3 style checks and 32 controlled browser checks. These establish what the software does with recognised text under its documented rules. They say nothing about how often the reader recognises text correctly.</p>
+  <div class="table-scroll">
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-visually-hidden">Claims and their checks</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Claim as worded</th>
+          <th scope="col" class="govuk-table__header">Evidence type</th>
+          <th scope="col" class="govuk-table__header">Check and its boundary</th>
+          <th scope="col" class="govuk-table__header">Last confirmed</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">“Nothing calculates or corrects values.”</th>
+          <td class="govuk-table__cell">Deterministic</td>
+          <td class="govuk-table__cell">Alignment preserves retained recognised literals under changed placement, including signs, zeroes and repeated fragments. Covers retained text under the documented rules, not OCR accuracy.</td>
+          <td class="govuk-table__cell">11 Sep 2026</td>
+        </tr>
+        
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">“Empty cells and literal numbers are preserved into CSV.”</th>
+          <td class="govuk-table__cell">Deterministic</td>
+          <td class="govuk-table__cell">Python and browser checks assert the complete downloaded CSV string, including quoting, embedded newlines and blank columns.</td>
+          <td class="govuk-table__cell">11 Sep 2026</td>
+        </tr>
+        
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">“Merged or irregular predicted cells are refused, not silently flattened.”</th>
+          <td class="govuk-table__cell">Deterministic</td>
+          <td class="govuk-table__cell">Refusal of predicted structure; the browser offers another image with no draft or export. Does not prove every merged source image is recognised as such.</td>
+          <td class="govuk-table__cell">11 Sep 2026</td>
+        </tr>
+        
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">“Every edit or structural correction clears the review checkbox.”</th>
+          <td class="govuk-table__cell">Deterministic</td>
+          <td class="govuk-table__cell">Browser checks show export disabled until review is renewed after cell edits and row or column changes.</td>
+          <td class="govuk-table__cell">11 Sep 2026</td>
+        </tr>
+        
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">“The preview shows exactly the area sent to the local reader.”</th>
+          <td class="govuk-table__cell">Deterministic</td>
+          <td class="govuk-table__cell">Rotation and crop send the preview pixels and retain the original. Controlled upload pixels, not model accuracy on photographs.</td>
+          <td class="govuk-table__cell">11 Sep 2026</td>
+        </tr>
+        
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">“Your image is not sent to a cloud service.”</th>
+          <td class="govuk-table__cell">Actual model under OS isolation</td>
+          <td class="govuk-table__cell">Directory-isolation validation with an explicit external-socket denial probe and real model flows under inherited network denial. Unrestricted dependency behaviour is unchecked.</td>
+          <td class="govuk-table__cell">10 Sep 2026</td>
+        </tr>
+        
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">“Normal start, build and use never install packages or download models.”</th>
+          <td class="govuk-table__cell">Actual model under OS isolation; deterministic guards</td>
+          <td class="govuk-table__cell">Recorded offline build, start and live flow; corrupt or missing assets stay a visible readiness error.</td>
+          <td class="govuk-table__cell">10 Sep 2026</td>
+        </tr>
+        
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">“There is no result history. You choose what to save.”</th>
+          <td class="govuk-table__cell">Partial</td>
+          <td class="govuk-table__cell">Visible clearing and cancelled-input cleanup are checked. Full absence of history across browser, worker and dependency storage is unchecked; downloaded CSV remains wherever the browser saved it.</td>
+          <td class="govuk-table__cell"><strong>unchecked as a complete claim</strong></td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="human" aria-labelledby="human-title">
+  <h2 id="human-title">Human use</h2>
+  <p class="small muted">14 September 2026</p>
+  <p>I’ve used Tables on 12 everyday tasks and used two exported CSVs afterwards. In a separate seven-task trial, both ordinary Tables exports were exact, but mistakes remained in two prepared correction tasks.</p><p>That’s enough for me to keep using and improving it. It doesn’t yet show how well it works for other people, or how reliably they can spot mistakes.</p>
+</section>
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary"><span class="govuk-details__summary-text">Record sources and dates</span></summary>
+  <div class="govuk-details__text">
+    <p>Original snapshot taken on 2026-09-11 from cups/tables/docs/tables-comparison.md, docs/tables.md, docs/claims.md and model-lock.json in dogwonder/kettle-cups at 9cbdfc5361afcd04f4a5779aa5ca074c648410d3. The original model and software findings below retain their September 2026 dates. The phone-photo check was added from the local report on 12 September 2026. This page is a reviewed copy; building the site runs no inference.</p>
+    <p>Photograph report: cups/tables/docs/photo-check-13.md; source base d699171 with photograph fixtures and their truth added locally.</p>
+    <p>Report SHA-256: <span class="mono">591d8802123219de1b510909657f54ca0e637e7ad85c6dff38ad8b7e9326eb54</span></p>
+    <p>Human-use record, 14 September 2026: cups/tables/docs/first-ten.md, cups/tables/docs/practical-use-decision.md and cups/tables/research/tables-use/rehearsal.md (Author pilot observations — 14 September 2026), at 2f88d98521de4eef4aca10b3ceb13165514a0b84.</p>
+    <p>These are the author&#39;s own tasks and reports, not independent participant sessions. The everyday-task use reports and the separate author pilot are distinct records; they do not establish general time savings or reliable error detection.</p>
+  </div>
+</details>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle Cups · small local tools for everyday tasks</p>
+      <p>Built from 41f6cf0 on 2026-09-14. This site loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

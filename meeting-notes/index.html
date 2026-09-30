@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Meeting Notes · Kettle Cups</title>
+    <meta name="description" content="Transcribe a recorded two-person meeting on your own computer, then listen back, correct the transcript and save it.">
+    <meta property="og:title" content="Meeting Notes · Kettle Cups">
+    <meta property="og:description" content="Transcribe a recorded two-person meeting on your own computer, then listen back, correct the transcript and save it.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle Cups home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+              <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+              <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/" aria-current="true">Tools</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="meeting-title">
+  <p class="eyebrow">Tools · Meeting Notes</p>
+  <h1 id="meeting-title">A meeting transcript you can listen back to and check.</h1>
+  <p class="lede">Choose a recording and a small speech model on your computer writes a draft transcript. Play the recording beside it, correct what it got wrong, then save the transcript as text.</p>
+</section>
+
+<section aria-labelledby="how-title">
+  <h2 id="how-title">What happens</h2>
+  <ol class="govuk-list govuk-list--number">
+    <li>Choose a recording. An English meeting between two people, up to 30 minutes and 250 MB, as WAV, MP3, M4A, OGG, FLAC or WebM. Your original file is not changed.</li>
+    <li>Transcribe it. The speech model runs on your computer’s CPU. The recording stays playable while you wait, and you can stop the job.</li>
+    <li>Listen and correct. The transcript is an editable text box beside the player, with buttons to go back or forward 5 seconds. Listen for missing or invented words, names, numbers and negatives. Speaker names are not added; you can type them in.</li>
+    <li>Tick and save. Any edit clears the review checkbox. Once you tick that you have checked the transcript against the recording, save it as a text file.</li>
+  </ol>
+  <p>While you work, the transcript is kept in the app’s storage on your computer, so a crash or restart can offer to bring it back. The recording itself is never copied. That stored copy is not encrypted, and it is removed when you save, discard or decline to restore it.</p>
+</section>
+
+<section aria-labelledby="not-title">
+  <h2 id="not-title">What it does not do</h2>
+  <p>It does not write summaries or action lists, or name who is speaking. I tried suggesting actions from the transcript and it was mostly noise: about three in four suggestions were not actions, even with a small model ranking them. A hand-written action list beside the transcript distracted from checking it. So Meeting Notes stops at the transcript.</p>
+  <p>If you want a summary or actions, use <a href="/share-copy/">Share Copy</a> to remove the details you would rather not send, then paste the copy into a chat model of your choice.</p>
+</section>
+
+<section id="models" aria-labelledby="models-title">
+  <h2 id="models-title">Models used</h2>
+  <dl class="govuk-summary-list"><div class="govuk-summary-list__row"><dt class="govuk-summary-list__key"><a href="https://huggingface.co/Systran/faster-whisper-small.en/tree/d1d751a5f8271d482d14ca55d9e2deeebbae577f">Whisper small.en — Systran CTranslate2 export</a></dt><dd class="govuk-summary-list__value">English speech transcription on CPU using int8, faster-whisper 1.2.1 and CTranslate2 4.8.2.</dd></div></dl>
+<p>Revision <code>d1d751a5f8271d482d14ca55d9e2deeebbae577f</code>. The five selected files total 486,100,128 bytes; explicit setup verifies their hashes. Normal use downloads nothing.</p>
+<ul class="govuk-list govuk-list--bullet">
+<li><a href="https://huggingface.co/Systran/faster-whisper-small.en/blob/d1d751a5f8271d482d14ca55d9e2deeebbae577f/model.bin">model.bin</a> — 483,545,366 bytes; SHA-256 <code>62b2a45b05ee59acb4a5341b33ee35e041395d378d418a18acfe4c9e768ee37a</code>.</li>
+<li><a href="https://huggingface.co/Systran/faster-whisper-small.en/blob/d1d751a5f8271d482d14ca55d9e2deeebbae577f/tokenizer.json">tokenizer.json</a> — 2,128,466 bytes; Git blob <code>15d7bdf9ba25718ca2504eec6a8f02bc55af0a6a</code>.</li>
+<li><a href="https://huggingface.co/Systran/faster-whisper-small.en/blob/d1d751a5f8271d482d14ca55d9e2deeebbae577f/vocabulary.txt">vocabulary.txt</a> — 422,309 bytes; Git blob <code>ee695b8d3e3c10d488304e04468efec4ca27554a</code>.</li>
+<li><a href="https://huggingface.co/Systran/faster-whisper-small.en/blob/d1d751a5f8271d482d14ca55d9e2deeebbae577f/config.json">config.json</a> — 2,657 bytes; Git blob <code>ced3fd5bbb3e9f7664658065d2d36164712cf1d5</code>.</li>
+<li><a href="https://huggingface.co/Systran/faster-whisper-small.en/blob/d1d751a5f8271d482d14ca55d9e2deeebbae577f/README.md">Model card</a> — 1,330 bytes; Git blob <code>22c0743ac43946fd981ad42117140a871e916bc7</code>.</li>
+</ul><p>The upstream model and the transcription software declare MIT licences. Audio is decoded by PyAV 18.1.0, downmixed to mono and resampled to 16 kHz. Speech detection is disabled. No speaker-identification, summary or action-extraction model is active.</p></section>
+
+<section aria-labelledby="checked-title">
+  <h2 id="checked-title">What has been checked</h2>
+  <p>On one computer, an Apple M1 Pro, three public meetings from the <a href="https://groups.inf.ed.ac.uk/ami/corpus/">AMI Meeting Corpus</a> took 82 seconds for 17 minutes of audio, 118 seconds for 25 minutes and 132 seconds for 30 minutes. That is one run each from the command line, not through the app, and memory was not measured. My target for a 30-minute meeting was about five minutes.</p>
+  <p>Those meetings have four speakers, more than this tool is meant for. How accurate the transcripts are, and how long correcting them takes, has not been measured. Noise, accents, names and people talking over each other can all cause missing or invented words, so a transcript needs checking against the recording before you rely on it.</p>
+</section>
+
+<section aria-labelledby="status-title">
+  <h2 id="status-title">Availability</h2>
+  <div class="govuk-inset-text">
+    <p><strong>Not available to download yet.</strong> Meeting Notes runs in the development Kettle app on my Mac. There is no public installer or source download at present.</p>
+  </div>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle Cups · small local tools for repeatable tasks</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from c399b41 on 2026-09-30. This site loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

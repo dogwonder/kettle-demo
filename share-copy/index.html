@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Share Copy · Kettle Cups</title>
+    <meta name="description" content="Make a copy of a letter or email with the details you choose taken out, on your own computer, before you paste it into a chat model.">
+    <meta property="og:title" content="Share Copy · Kettle Cups">
+    <meta property="og:description" content="Make a copy of a letter or email with the details you choose taken out, on your own computer, before you paste it into a chat model.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle Cups home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+              <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+              <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/" aria-current="true">Tools</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="share-title">
+  <p class="eyebrow">Tools · Share Copy</p>
+  <h1 id="share-title">Take the personal details out before you paste.</h1>
+  <p class="lede">Before you paste a letter or email into a chat model, Share Copy makes a copy with the details you choose left out. It suggests names, addresses, contact details, reference numbers and passwords to remove. You check every suggestion and the whole copy before you use it.</p>
+</section>
+
+<section aria-labelledby="how-title">
+  <h2 id="how-title">What happens</h2>
+  <ol class="govuk-list govuk-list--number">
+    <li>Paste or open some text, or paste a PNG or JPEG image of a printed letter. An image is read into text on your computer, and you correct that text against the image.</li>
+    <li>Review the suggestions. A small model and a set of rules mark details to remove. You can keep or change each one, and select anything else to remove, everywhere it appears.</li>
+    <li>Check the copy. Read the whole copy, tick that you have checked it, then copy it or save it as a text file. Your original is not changed.</li>
+  </ol>
+  <p>The result is a copy you have checked, not a guarantee that it is safe to share. The model and rules miss things, so read the parts they did not mark as well.</p>
+</section>
+
+<section id="models" aria-labelledby="models-title">
+  <h2 id="models-title">Models used</h2>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key"><a href="https://huggingface.co/kalyan-ks/ettin-68m-nemotron-pii/blob/500262a2aaf913825ef750ef255c3fe437cd8e64/model.safetensors">Ettin 68M PII</a></dt>
+      <dd class="govuk-summary-list__value">Suggests names, addresses, contact details and identifiers. About 137 MB, MIT licence, revision <code>500262a2aaf913825ef750ef255c3fe437cd8e64</code>. It reads at most 12,000 characters at a time; longer text is refused rather than cut short, and can use the rules alone.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key"><a href="https://github.com/tesseract-ocr/tessdata_fast/blob/65727574dfcd264acbb0c3e07860e4e9e9b22185/eng.traineddata">Tesseract English (tessdata_fast 4.1.0)</a></dt>
+      <dd class="govuk-summary-list__value">Reads printed English text from an image, run by Tesseract 5.5.2. About 4 MB.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Rules, no model</dt>
+      <dd class="govuk-summary-list__value">Email addresses, UK phone numbers and labelled references. Also secrets pasted by mistake: a value after a label such as “Password:” or “API key:”, common API key formats, private keys and card numbers. A password written in a sentence with no label is not found.</dd>
+    </div>
+  </dl>
+  <p>Both models run on your computer’s CPU and download nothing in normal use. On a Mac, the model runs in a separate process with network access denied. Dates, times and job titles are not suggested.</p>
+</section>
+
+<section aria-labelledby="checked-title">
+  <h2 id="checked-title">What has been checked</h2>
+  <p>The main check is one invented housing repairs letter, with the details to remove written down before the model ran. The model and rules made eleven selections: ten fully covered details that should go, one caught only part of a repeated flat number, and a description that would identify the home was missed entirely. With those added by hand, the copy matched the expected one exactly. Without them, it would have kept details that should have gone.</p>
+  <p>That is one example, not a measure of how often it finds everything. I tried two other small models on the same letter and chose this one; none of them found everything unaided.</p>
+  <p>I have used Share Copy in my own work since 24 September 2026. That is one person’s use.</p>
+</section>
+
+<section aria-labelledby="status-title">
+  <h2 id="status-title">Availability</h2>
+  <div class="govuk-inset-text">
+    <p><strong>Not available to download yet.</strong> Share Copy runs in the development Kettle app on my Mac. There is no public installer or source download at present.</p>
+  </div>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle Cups · small local tools for repeatable tasks</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from c399b41 on 2026-09-30. This site loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

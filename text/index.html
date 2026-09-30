@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Text · Kettle Cups</title>
+    <meta name="description" content="Five exact clean-up and sorting jobs for text, done by ordinary code on your own computer, with no model and a list of what changed.">
+    <meta property="og:title" content="Text · Kettle Cups">
+    <meta property="og:description" content="Five exact clean-up and sorting jobs for text, done by ordinary code on your own computer, with no model and a list of what changed.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle Cups home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+              <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+              <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/" aria-current="true">Tools</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="text-title">
+  <p class="eyebrow">Tools · Text</p>
+  <h1 id="text-title">Tidy and sort text without asking a chatbot.</h1>
+  <p class="lede">Paste some text, choose one change, see exactly what changed, then copy or save the result. Ordinary code does the work. No model rewrites your words, and the same text always gives the same result.</p>
+</section>
+
+<section aria-labelledby="why-title">
+  <h2 id="why-title">Why this exists</h2>
+  <p>I kept asking a chatbot to do small jobs to text: sort a list, strip bullets, fix line breaks after copying from a PDF. Each of these jobs has an exact answer, so it does not need a model. Text does them on your computer, tells you what it changed, and says when it cannot decide.</p>
+</section>
+
+<section aria-labelledby="ops-title">
+  <h2 id="ops-title">The five changes</h2>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Sort lines</dt>
+      <dd class="govuk-summary-list__value">A to Z or Z to A, in UK English dictionary order. No line’s characters change, and blank lines go to the end.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Remove bullets and numbering</dt>
+      <dd class="govuk-summary-list__value">Bullet symbols, dashes and numbering such as <code>1.</code>, <code>a)</code> or <code>(i)</code> at the start of a line. Things like <code>-5</code>, <code>3.5 m</code> or <code>A. Smith</code> are left alone.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Change case</dt>
+      <dd class="govuk-summary-list__value">lower, UPPER, Title or sentence case. Code cannot know that “london” is a name, so sentence case lists every word it lowered that is not a common English word, for you to check.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Tidy spacing and stray characters</dt>
+      <dd class="govuk-summary-list__value">Repeated spaces, spaces at line ends and runs of blank lines. Invisible characters left by PDFs and web pages, such as soft hyphens and zero-width spaces, are removed, and ligatures like “ﬁ” become letters. Letters, digits and punctuation never change.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Fix line breaks</dt>
+      <dd class="govuk-summary-list__value">Rejoin lines broken by copying from a PDF, put run-together list items on their own lines, break where a sentence ends with no space, or put one sentence per line. Words joined across a hyphen are listed, because “well-being” should keep its hyphen.</dd>
+    </div>
+  </dl>
+  <p>Every change reports a count of what it did, and applying it twice gives the same result as applying it once. Your original stays in place until you choose to replace it, and one replacement can be undone. Grammar, spelling, rewording and summaries are not part of this tool.</p>
+</section>
+
+<section id="models" aria-labelledby="models-title">
+  <h2 id="models-title">Models used</h2>
+  <p><strong>None.</strong> Text is ordinary code. It downloads nothing and sends nothing anywhere.</p>
+</section>
+
+<section aria-labelledby="checked-title">
+  <h2 id="checked-title">What has been checked</h2>
+  <p>Each change has automated tests on invented text. They check that nothing outside the stated change is altered, that applying a change twice matches applying it once, and that a text of 50,000 words finishes promptly.</p>
+  <p>I also tested my own reason for building it. I expected a chatbot to rewrite the whole text for each of these jobs, costing more model work the longer the text. On ten texts, an AI coding agent wrote a small script instead in 19 of 20 attempts, and kept every word each time. So the case for Text is not that it saves model work. It is that the text stays on your computer, the result is the same every time, and the tool tells you what it will not guess. In one of those runs, for example, the agent silently changed an identifier from “88a” to “88A” in sentence case, where Text would have listed the word for you to check.</p>
+  <p>I have used Text in my own work since 21 September 2026 and found it useful. That is one person’s use.</p>
+</section>
+
+<section aria-labelledby="status-title">
+  <h2 id="status-title">Availability</h2>
+  <div class="govuk-inset-text">
+    <p><strong>Not available to download yet.</strong> Text runs in the development Kettle app on my Mac. There is no public installer or source download at present.</p>
+  </div>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle Cups · small local tools for repeatable tasks</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from c399b41 on 2026-09-30. This site loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

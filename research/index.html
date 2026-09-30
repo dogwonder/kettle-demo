@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Research · Kettle Cups</title>
+    <meta name="description" content="Open questions about what small local tools can replace, with dated results, including the ones that went against me.">
+    <meta property="og:title" content="Research · Kettle Cups">
+    <meta property="og:description" content="Open questions about what small local tools can replace, with dated results, including the ones that went against me.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle Cups home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+              <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+              <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/">Tools</a>
+          <a href="/research/" aria-current="page">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="research-title">
+  <p class="eyebrow">Research</p>
+  <h1 id="research-title">Open questions, with dated results.</h1>
+  <p class="lede">For a repeatable task, what is the smallest local thing that does it well enough, what does it replace, and where does it fail? I test that on real tools and publish what I find, including results that go against me.</p>
+  <p>You do not need any of this to use a tool.</p>
+</section>
+
+<section aria-labelledby="results-title">
+  <h2 id="results-title">Results so far</h2>
+  <div class="cards">
+    <article class="card">
+      <div class="tag-row">
+        <h3><a href="/research/agent-guide-study/">Does a guide to a local tool reduce an agent’s model work?</a></h3>
+        <strong class="govuk-tag">Exploratory · 19 September 2026</strong>
+      </div>
+      <p><strong>Outcome: no advantage on these inputs.</strong> Claude Code with my guide and Tables used more model work than Claude Code reading the image itself, and was exact on one fewer of seven small tables. The study also produced a token budget for one table.</p>
+      <p class="small muted">Limits: seven invented development examples, one agent, one pass. Energy was not measured.</p>
+    </article>
+    <article class="card">
+      <div class="tag-row">
+        <h3><a href="/evidence/">What has been checked about Tables?</a></h3>
+        <strong class="govuk-tag">Recorded 10 to 14 September 2026</strong>
+      </div>
+      <p><strong>4 of 5 named synthetic tables exact; unruled adds an empty row.</strong> Two cropped phone photographs were read correctly. In my own use, mistakes remained in two prepared correction tasks.</p>
+      <p class="small muted">Limits: development examples and my own use. There are no independent users, and no accuracy percentage is reported.</p>
+    </article>
+  </div>
+</section>
+
+<section aria-labelledby="kinds-title">
+  <h2 id="kinds-title">Three kinds of evidence, kept apart</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Software checks show that the code does what it says, such as how a CSV is written. They say nothing about whether a model read your table correctly.</li>
+    <li>Model observations are results on named inputs with exact model files. They hold for those files and those inputs only.</li>
+    <li>Human-use findings are what happened when a person used the tool, including the mistakes they did not spot.</li>
+  </ul>
+  <p>Three claims also stay separate, and each needs its own evidence: that a tool is useful; that a whole task uses less of a named resource at the quality required; and that publishing a finding helps someone else. So far: some evidence for the first, from one person; a token budget for one task, which is not a measured reduction; nothing yet for the third.</p>
+</section>
+
+<section aria-labelledby="open-title">
+  <h2 id="open-title">Still open</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Whether the agent comparison changes on larger tables that were not used in development. Not started.</li>
+    <li>How well people other than me spot the reader’s mistakes. Not started, and it would need real participants.</li>
+    <li>What a computer already provides for common writing tasks, and whether a small local tool adds anything to it. Not started.</li>
+  </ul>
+  <p>I have not measured energy, and I do not claim a reduction in it. Tokens describe demand on a model, not energy.</p>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle Cups · small local tools for repeatable tasks</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from c399b41 on 2026-09-30. This site loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

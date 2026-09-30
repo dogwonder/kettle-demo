@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>App style guide · Kettle Cups</title>
+    <meta name="description" content="Kettle’s app style guide — the existing GOV.UK theme, colours, typography, components and writing conventions.">
+    <meta property="og:title" content="App style guide · Kettle Cups">
+    <meta property="og:description" content="Kettle’s app style guide — the existing GOV.UK theme, colours, typography, components and writing conventions.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle Cups home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+              <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+              <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/">Tools</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      
+<section class="intro" aria-labelledby="guide-title">
+  <p class="eyebrow">Design reference · reviewed 22 September 2026</p>
+  <h1 id="guide-title">Kettle style guide</h1>
+  <p class="lede">Small local tools, with work you can see, check and finish.</p>
+  <p>A guide to the app’s visual language and behaviour, using Kettle’s existing GOV.UK theme. These examples render with the website’s own theme; the app source remains authoritative for each tool’s layout and behaviour.</p>
+  <nav aria-label="Style guide sections">
+    <ul class="govuk-list guide-contents">
+      <li><a href="#principles">Principles</a></li>
+      <li><a href="#marks">Marks and motion</a></li>
+      <li><a href="#icons">Icons</a></li>
+      <li><a href="#colour">Colour</a></li>
+      <li><a href="#type">Typography</a></li>
+      <li><a href="#space">Space and shape</a></li>
+      <li><a href="#components">Components</a></li>
+      <li><a href="#voice">Voice</a></li>
+      <li><a href="#accessibility">Accessibility</a></li>
+      <li><a href="#sources">Sources and maintenance</a></li>
+    </ul>
+  </nav>
+</section>
+
+<section id="principles" aria-labelledby="principles-title">
+  <h2 id="principles-title">Principles</h2>
+  <div class="cards">
+    <div class="card"><h3>Start with the task</h3><p>Say what the person can finish. Name the models and their jobs separately, where people can inspect them.</p></div>
+    <div class="card"><h3>Make work explicit</h3><p>Choosing a file does not start reading it. Label the action that starts work, show its status and provide Stop when cancellation is supported.</p></div>
+    <div class="card"><h3>Keep the source close</h3><p>Put the original beside the draft. Let people correct values and preserve empty cells, rather than filling gaps with guesses.</p></div>
+    <div class="card"><h3>Review before saving</h3><p>Make review an explicit step. Changes to a reviewed result must clear its review state before another reviewed export.</p></div>
+  </div>
+  <p class="small muted">Local operation, setup downloads and any configured source fetching need accurate, separate explanations. State what the tool actually reads and writes.</p>
+</section>
+
+<section id="marks" aria-labelledby="marks-title">
+  <h2 id="marks-title">Marks and motion</h2>
+  <p>The kttl wordmark and geometric cup identify the app. Keep icons subordinate to visible labels. The existing header above uses the site’s lockup at a 40px height.</p>
+  <div class="guide-brand-sample">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="52 0 581.14 246" role="img" aria-label="Kettle logo" focusable="false"><rect x="52" y="0" width="581.14" height="246" fill="#16335b"/><path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/><path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/><path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/><path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/><g transform="translate(448.72 40.94) scale(6.831)"><path fill="#edf2f7" d="M6 30 V16 H22 V30 Z"/><path fill="#edf2f7" d="M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/><path fill="#00E5E5" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z" class="guide-logo-steam"/><path fill="#00E5E5" d="M14 6 V2 H16.6 V4 H21 V6 Z" class="guide-logo-steam guide-logo-steam--later"/></g></svg>
+    <p class="guide-privacy">Nothing leaves this computer.</p>
+  </div>
+  <div class="govuk-checkboxes">
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="animate-logo" name="animate-logo" type="checkbox" aria-describedby="animate-logo-hint">
+      <label class="govuk-label govuk-checkboxes__label" for="animate-logo">Animate the logo</label>
+      <div class="govuk-hint govuk-checkboxes__hint" id="animate-logo-hint">Preview the working state. If your device requests reduced motion, the steam stays still.</div>
+    </div>
+  </div>
+  <p class="small muted">App header specimen: the wordmark, cup and the local-operation sentence on navy. This sentence describes the local tool, not the website. Setup downloads are explained separately.</p>
+  <p>In the app, steam is hidden at rest and animates while work is running. Reduced motion shows static steam during work. Status must also appear in words; motion alone never explains what is happening.</p>
+</section>
+
+<section id="icons" aria-labelledby="icons-title">
+  <h2 id="icons-title">Icons</h2>
+  <p>The Kettle icon set uses angular shapes on a 32 × 32 grid, with navy and supporting grey shades. These are available for app design; an icon here does not mean a tool or feature is available.</p>
+  
+  <ul class="guide-icons">
+    
+    <li class="card">
+      <img src="/img/icons/kettle-boiled.svg" alt="" width="48" height="48" loading="lazy">
+      <a href="/img/icons/kettle-boiled.svg">Just boiled</a>
+      <code>kettle-boiled.svg</code>
+    </li>
+    
+    <li class="card">
+      <img src="/img/icons/kettle-steeping.svg" alt="" width="48" height="48" loading="lazy">
+      <a href="/img/icons/kettle-steeping.svg">Steeping</a>
+      <code>kettle-steeping.svg</code>
+    </li>
+    
+    <li class="card">
+      <img src="/img/icons/kttl-mini-cup-animated.svg" alt="" width="48" height="48" loading="lazy">
+      <a href="/img/icons/kttl-mini-cup-animated.svg">Cup</a>
+      <code>kttl-mini-cup-animated.svg</code>
+    </li>
+    
+    <li class="card">
+      <img src="/img/icons/letter.svg" alt="" width="48" height="48" loading="lazy">
+      <a href="/img/icons/letter.svg">Letter</a>
+      <code>letter.svg</code>
+    </li>
+    
+    <li class="card">
+      <img src="/img/icons/pile.svg" alt="" width="48" height="48" loading="lazy">
+      <a href="/img/icons/pile.svg">A pile</a>
+      <code>pile.svg</code>
+    </li>
+    
+    <li class="card">
+      <img src="/img/icons/drop-here.svg" alt="" width="48" height="48" loading="lazy">
+      <a href="/img/icons/drop-here.svg">Drop it here</a>
+      <code>drop-here.svg</code>
+    </li>
+    
+    <li class="card">
+      <img src="/img/icons/done.svg" alt="" width="48" height="48" loading="lazy">
+      <a href="/img/icons/done.svg">Done</a>
+      <code>done.svg</code>
+    </li>
+    
+    <li class="card">
+      <img src="/img/icons/needs-you.svg" alt="" width="48" height="48" loading="lazy">
+      <a href="/img/icons/needs-you.svg">Needs you</a>
+      <code>needs-you.svg</code>
+    </li>
+    
+    <li class="card">
+      <img src="/img/icons/stays-local.svg" alt="" width="48" height="48" loading="lazy">
+      <a href="/img/icons/stays-local.svg">Stays local</a>
+      <code>stays-local.svg</code>
+    </li>
+    
+    <li class="card">
+      <img src="/img/icons/takes-a-while.svg" alt="" width="48" height="48" loading="lazy">
+      <a href="/img/icons/takes-a-while.svg">Takes a while</a>
+      <code>takes-a-while.svg</code>
+    </li>
+    
+    <li class="card">
+      <img src="/img/icons/read.svg" alt="" width="48" height="48" loading="lazy">
+      <a href="/img/icons/read.svg">Read</a>
+      <code>read.svg</code>
+    </li>
+    
+    <li class="card">
+      <img src="/img/icons/spreadsheet.svg" alt="" width="48" height="48" loading="lazy">
+      <a href="/img/icons/spreadsheet.svg">Spreadsheet</a>
+      <code>spreadsheet.svg</code>
+    </li>
+    
+    <li class="card">
+      <img src="/img/icons/voice-memo.svg" alt="" width="48" height="48" loading="lazy">
+      <a href="/img/icons/voice-memo.svg">Voice memo</a>
+      <code>voice-memo.svg</code>
+    </li>
+    
+    <li class="card">
+      <img src="/img/icons/speak-aloud.svg" alt="" width="48" height="48" loading="lazy">
+      <a href="/img/icons/speak-aloud.svg">Speak aloud</a>
+      <code>speak-aloud.svg</code>
+    </li>
+    
+    <li class="card">
+      <img src="/img/icons/calendar.svg" alt="" width="48" height="48" loading="lazy">
+      <a href="/img/icons/calendar.svg">Calendar</a>
+      <code>calendar.svg</code>
+    </li>
+    
+    <li class="card">
+      <img src="/img/icons/stop.svg" alt="" width="48" height="48" loading="lazy">
+      <a href="/img/icons/stop.svg">Stop</a>
+      <code>stop.svg</code>
+    </li>
+    
+  </ul>
+  <p class="small muted">Select an icon’s name to open its SVG. These previews are static; the logo above demonstrates motion. Pair icons with visible action or status text, and hide decorative icons from assistive technology when the adjacent text supplies their meaning.</p>
+</section>
+
+<section id="colour" aria-labelledby="colour-title">
+  <h2 id="colour-title">Colour</h2>
+  <p>Navy text on pale blue and white, with one blue for actions. Swatches below use the live theme tokens, not a separate palette.</p>
+  
+  <ul class="guide-swatches">
+    
+    <li class="card guide-swatch">
+      <span class="guide-swatch__colour" style="background-color: var(--k-ground)" aria-hidden="true"></span>
+      <strong>Ground</strong>
+      <code>#edf2f7 · --k-ground</code>
+      <span class="small muted">App background</span>
+    </li>
+    
+    <li class="card guide-swatch">
+      <span class="guide-swatch__colour" style="background-color: var(--k-paper)" aria-hidden="true"></span>
+      <strong>Paper</strong>
+      <code>#ffffff · --k-paper</code>
+      <span class="small muted">Cards and working surfaces</span>
+    </li>
+    
+    <li class="card guide-swatch">
+      <span class="guide-swatch__colour" style="background-color: var(--k-ink)" aria-hidden="true"></span>
+      <strong>Ink</strong>
+      <code>#16335b · --k-ink</code>
+      <span class="small muted">Primary text and dark chrome</span>
+    </li>
+    
+    <li class="card guide-swatch">
+      <span class="guide-swatch__colour" style="background-color: var(--k-grey)" aria-hidden="true"></span>
+      <strong>Grey</strong>
+      <code>#54677f · --k-grey</code>
+      <span class="small muted">Secondary text</span>
+    </li>
+    
+    <li class="card guide-swatch">
+      <span class="guide-swatch__colour" style="background-color: var(--k-rule)" aria-hidden="true"></span>
+      <strong>Rule</strong>
+      <code>#c9d3e0 · --k-rule</code>
+      <span class="small muted">Dividers, never text</span>
+    </li>
+    
+    <li class="card guide-swatch">
+      <span class="guide-swatch__colour" style="background-color: var(--k-interactive)" aria-hidden="true"></span>
+      <strong>Interactive</strong>
+      <code>#2f6fd0 · --k-interactive</code>
+      <span class="small muted">Primary buttons and focus</span>
+    </li>
+    
+    <li class="card guide-swatch">
+      <span class="guide-swatch__colour" style="background-color: var(--k-interactive-text)" aria-hidden="true"></span>
+      <strong>Interactive text</strong>
+      <code>#1d55b0 · --k-interactive-text</code>
+      <span class="small muted">Links on light surfaces</span>
+    </li>
+    
+    <li class="card guide-swatch">
+      <span class="guide-swatch__colour" style="background-color: var(--k-tint)" aria-hidden="true"></span>
+      <strong>Tint</strong>
+      <code>#e0eafa · --k-tint</code>
+      <span class="small muted">Quiet notices and tags</span>
+    </li>
+    
+    <li class="card guide-swatch">
+      <span class="guide-swatch__colour" style="background-color: var(--k-highlight)" aria-hidden="true"></span>
+      <strong>Highlight</strong>
+      <code>#00e5e5 · --k-highlight</code>
+      <span class="small muted">Cyan details on navy</span>
+    </li>
+    
+    <li class="card guide-swatch">
+      <span class="guide-swatch__colour" style="background-color: var(--k-boundary)" aria-hidden="true"></span>
+      <strong>Boundary</strong>
+      <code>#00e5e5 · --k-boundary</code>
+      <span class="small muted">Privacy rule on navy</span>
+    </li>
+    
+  </ul>
+  <div class="govuk-inset-text">Colour supports meaning. Use words such as “Needs review” or “Could not read the image”. Keep cyan on navy and use the grey token for muted text, rather than reducing opacity.</div>
+  <p>Errors use the theme’s GOV.UK error treatment (<code>$k-error: #b02a2a</code>). The theme also retains success and pending colours for evidence states. Ordinary uncertainty is a review instruction; it is not automatically an error or a claim of confidence.</p>
+</section>
+
+<section id="type" aria-labelledby="type-title">
+  <h2 id="type-title">Typography</h2>
+  <p>Use system fonts: <code>system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif</code>. Use the monospace stack for filenames, elapsed time and raw values. No downloaded font is needed.</p>
+  <div class="card guide-type">
+    <div><p class="guide-type--display">Read this table</p><code>--k-t-display · about 37–49px</code></div>
+    <div><p class="guide-type--title">Check the cells</p><code>--k-t-title · about 26–31px</code></div>
+    <div><p class="guide-type--section">Keep the original in view</p><code>--k-t-section · about 22–25px</code></div>
+    <div><p class="guide-type--body">Correct the draft before saving your CSV.</p><code>--k-t-body · 18–20px</code></div>
+    <div><p class="guide-type--small">Changing a cell clears the review checkbox.</p><code>--k-t-small · 15–16px</code></div>
+    <div><p class="guide-type--tiny">ruled.png · source image</p><code>--k-t-tiny · about 12.5–12.8px</code></div>
+  </div>
+  <p class="small muted">Utopia interpolates between 360px and 1240px viewports using rem-based values. These approximate pixel sizes assume the browser’s default font size. The app caps its main heading at 2.25rem (36px at the default); this site uses the full display scale.</p>
+  <p>Keep prose to the theme’s <code>66ch</code> measure where practical. Pair size and line height through <code>k-font()</code>; use real headings in document order.</p>
+</section>
+
+<section id="space" aria-labelledby="space-title">
+  <h2 id="space-title">Space and shape</h2>
+  <p>Use the existing fluid space scale for gaps and padding. Prefer <code>k-stack()</code> for vertical groups and <code>k-cluster()</code> for controls that wrap.</p>
+  <div class="card guide-spacing">
+    
+    <div><code>--k-space-3xs</code><span style="width: var(--k-space-3xs)" aria-hidden="true"></span></div>
+    
+    <div><code>--k-space-2xs</code><span style="width: var(--k-space-2xs)" aria-hidden="true"></span></div>
+    
+    <div><code>--k-space-xs</code><span style="width: var(--k-space-xs)" aria-hidden="true"></span></div>
+    
+    <div><code>--k-space-s</code><span style="width: var(--k-space-s)" aria-hidden="true"></span></div>
+    
+    <div><code>--k-space-m</code><span style="width: var(--k-space-m)" aria-hidden="true"></span></div>
+    
+    <div><code>--k-space-l</code><span style="width: var(--k-space-l)" aria-hidden="true"></span></div>
+    
+    <div><code>--k-space-xl</code><span style="width: var(--k-space-xl)" aria-hidden="true"></span></div>
+    
+    <div><code>--k-space-2xl</code><span style="width: var(--k-space-2xl)" aria-hidden="true"></span></div>
+    
+  </div>
+  <div class="cards">
+    <div class="card"><h3>Cards</h3><p>White paper, a soft border, a light shadow and <code>--k-radius</code> (16px).</p></div>
+    <div class="card"><h3>Inner panels</h3><p><code>--k-radius-soft</code> (10px) for inset surfaces. Buttons and tags use <code>--k-radius-pill</code>.</p></div>
+  </div>
+  <p>Keep the task’s width bounded. Let controls wrap, stack source and result when space is tight, and contain wide tables in a labelled scroll region.</p>
+</section>
+
+<section id="components" aria-labelledby="components-title">
+  <h2 id="components-title">Components</h2>
+  <p>Use GOV.UK markup and Kettle’s settings bridge and skin. These are small specimens of the existing theme, not a running Cup.</p>
+  <div class="card">
+    <h3>Actions</h3>
+    <div class="actions">
+      <a class="govuk-button" href="/tables/">See Tables</a>
+      <a class="govuk-button govuk-button--secondary" href="#sources">View the source</a>
+      <button class="govuk-button" type="button" disabled>Save reviewed CSV</button>
+    </div>
+    <p class="small muted">The links navigate. The disabled save button illustrates an unavailable action. In the app, explain the requirement nearby: check the cells and confirm review before saving.</p>
+  </div>
+  <div class="card">
+    <h3>State in words</h3>
+    <div class="tag-row">
+      <strong class="govuk-tag k-tag--done">Done</strong>
+      <strong class="govuk-tag k-tag--waiting">Waiting</strong>
+      <strong class="govuk-tag">Needs review</strong>
+    </div>
+    <p class="small muted">Tags label a state; they are not controls. During work, show the actual stage and elapsed time. Do not invent a percentage or a promised completion time.</p>
+  </div>
+  <div class="govuk-notification-banner" role="region" aria-labelledby="review-notice-title">
+    <div class="govuk-notification-banner__header"><h3 class="govuk-notification-banner__title" id="review-notice-title">Check the draft</h3></div>
+    <div class="govuk-notification-banner__content"><p>Compare every cell with the original image. Empty cells and misplaced values may need correction.</p></div>
+  </div>
+  <details class="govuk-details">
+    <summary class="govuk-details__summary"><span class="govuk-details__summary-text">Where this example came from</span></summary>
+    <div class="govuk-details__text"><p>The table below is authored synthetic content for this guide. It is not a model result or an accuracy check.</p></div>
+  </details>
+  <div class="table-scroll" role="region" aria-label="Synthetic table example" tabindex="0">
+    <table class="govuk-table">
+      <caption class="govuk-table__caption">Synthetic table example</caption>
+      <thead class="govuk-table__head"><tr class="govuk-table__row"><th class="govuk-table__header" scope="col">Item</th><th class="govuk-table__header govuk-table__header--numeric" scope="col">Quantity</th><th class="govuk-table__header govuk-table__header--numeric" scope="col">Price</th></tr></thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row"><th class="govuk-table__header" scope="row">Notebook</th><td class="govuk-table__cell govuk-table__cell--numeric">2</td><td class="govuk-table__cell govuk-table__cell--numeric">£4.50</td></tr>
+        <tr class="govuk-table__row"><th class="govuk-table__header" scope="row">Pencil</th><td class="govuk-table__cell govuk-table__cell--numeric">6</td><td class="govuk-table__cell govuk-table__cell--numeric">£0.80</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small muted">Table rows have dividing rules. The last body row has no bottom border, including its row header cells.</p>
+  <h3>File selection and correction</h3>
+  <p>Use the established <a href="https://github.com/dogwonder/kettle-cups/blob/main/ui-patterns/file-picker/README.md">file-picker pattern</a>: a real, labelled file input with an optional drop target. State accepted types and limits. Keep previews, validation and unsaved-work decisions with the tool.</p>
+  <p>Correction fields need visible labels or precise accessible names, such as row and column coordinates. Show errors near the field and use a summary for failures that need attention. Keep the source available throughout review.</p>
+</section>
+
+<section id="voice" aria-labelledby="voice-title">
+  <h2 id="voice-title">Voice</h2>
+  <p>Plain British English. Lead with the person’s task, name the consequence of an action and distinguish a draft from something reviewed.</p>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Actions</dt><dd class="govuk-summary-list__value">“Read this table”, “Stop”, “Save reviewed CSV”. Use a verb and its object where that makes the result clearer.</dd></div>
+    <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Uncertainty</dt><dd class="govuk-summary-list__value">“Check this cell against the image.” Explain what needs attention; do not invent a confidence score.</dd></div>
+    <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Failures</dt><dd class="govuk-summary-list__value">Say what failed, what happened to the person’s work and what they can do next. Only promise preserved work when that behaviour is established.</dd></div>
+    <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Models</dt><dd class="govuk-summary-list__value">Name active models, their jobs and exact sources. A tool without a model says “Models used: none”.</dd></div>
+  </dl>
+</section>
+
+<section id="accessibility" aria-labelledby="accessibility-title">
+  <h2 id="accessibility-title">Accessibility</h2>
+  <p>GOV.UK provides the foundation. Kettle’s adaptations and complete task flows still need checking.</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Use the keyboard to reach every control, open details, choose files and correct results. Keep focus visible and in a useful place after actions.</li>
+    <li>The theme uses a 3px blue focus outline, a 2px offset and a white inner edge so focus remains visible on navy.</li>
+    <li>Keep labels, hints and errors associated with their controls. Do not rely on colour, an icon or motion alone.</li>
+    <li>Announce changing status politely and make failures available to assistive technology. Static examples need no live announcements.</li>
+    <li>Check zoom, narrow windows, reduced motion and forced colours. Controls should have at least a 44px hit area; long filenames and wide tables must not widen the page.</li>
+    <li>Check contrast on the actual surface, including hover, focus, disabled and error states. Do not assume a theme adaptation inherits an accessibility result.</li>
+  </ul>
+</section>
+
+<section id="sources" aria-labelledby="sources-title">
+  <h2 id="sources-title">Sources and maintenance</h2>
+  <p>The supplied desktop design guide informed the sections on this page. The current app and site theme determine the defaults: system fonts, fluid scales, existing GOV.UK components and task-specific behaviour.</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="https://github.com/dogwonder/kettle-cups/blob/main/site/styles/_settings.scss">Site theme settings</a>, <a href="https://github.com/dogwonder/kettle-cups/blob/main/site/styles/_skin.scss">GOV.UK skin</a> and <a href="https://github.com/dogwonder/kettle-cups/blob/main/site/styles/PROVENANCE.md">theme provenance</a>.</li>
+    <li><a href="https://github.com/dogwonder/kettle-cups/blob/main/cups/tables/styles/_mini.scss">App typography and chrome</a> and <a href="https://github.com/dogwonder/kettle-cups/blob/main/cups/tables/web/style.scss">Tables layout and correction styles</a>.</li>
+    <li><a href="https://github.com/dogwonder/kettle-cups/blob/main/site/src/style-guide.njk">This guide’s source</a> and <a href="https://github.com/dogwonder/kettle-cups/blob/main/docs/provenance.md">design-reference provenance</a>.</li>
+  </ul>
+  <p class="small muted">Update the app source first when changing app behaviour, then review this guide and its examples. The site owns its theme copy and builds independently; this page introduces no shared runtime or additional component library.</p>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle Cups · small local tools for repeatable tasks</p>
+      <p><a href="/style-guide/" aria-current="page">App style guide</a></p>
+      <p>Built from c399b41 on 2026-09-30. This site loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

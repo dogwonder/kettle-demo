@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Tools · Kettle Cups</title>
+    <meta name="description" content="Small tools that each do one repeatable task on your own computer, with their real availability, models and limits.">
+    <meta property="og:title" content="Tools · Kettle Cups">
+    <meta property="og:description" content="Small tools that each do one repeatable task on your own computer, with their real availability, models and limits.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle Cups home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+              <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+              <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/" aria-current="page">Tools</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="tools-title">
+  <p class="eyebrow">Tools</p>
+  <h1 id="tools-title">One task each, on your own computer.</h1>
+  <p class="lede">Each tool does one repeatable job locally and gives you a result you can check, correct and save. Some run small AI models on your computer. Some need only ordinary code.</p>
+</section>
+
+<section aria-labelledby="list-title">
+  <h2 id="list-title">Tools so far</h2>
+  <div class="cards cards--stack">
+    <article class="card">
+      <div class="tag-row">
+        <h3><a href="/tables/">Tables</a></h3>
+        <strong class="govuk-tag">In development</strong>
+      </div>
+      <p>Turn a photo of a printed table, or a bank statement saved as a PDF, into cells you can check, edit and save as a CSV. <strong>It is not available to download yet.</strong></p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Works on</dt>
+          <dd class="govuk-summary-list__value">One clear, upright, tightly cropped image of a printed table in English, with no merged cells. Or one statement downloaded from a bank as a text PDF, not a scan.</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Models</dt>
+          <dd class="govuk-summary-list__value">For images, four small specialist models, about 34 MB in total, run on your computer’s CPU. For PDF statements, none. <a href="/tables/#models">See the models used</a>.</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Network</dt>
+          <dd class="govuk-summary-list__value">Setup downloads and verifies the models once. Normal use downloads nothing, and your file is not sent to a cloud service.</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">You must</dt>
+          <dd class="govuk-summary-list__value">Check every cell before saving. The reader can misread numbers, miss spaces or add empty rows.</dd>
+        </div>
+      </dl>
+      <p><a href="/tables/">See what Tables does</a>, or read <a href="/evidence/">what has been checked</a>.</p>
+    </article>
+    <article class="card">
+      <div class="tag-row">
+        <h3><a href="/meeting-notes/">Meeting Notes</a></h3>
+        <strong class="govuk-tag">In development</strong>
+      </div>
+      <p>Transcribe a recorded meeting, listen back, correct the transcript and save it as text. <strong>It is not available to download yet.</strong></p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Works on</dt>
+          <dd class="govuk-summary-list__value">An English meeting between two people, up to 30 minutes.</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Models</dt>
+          <dd class="govuk-summary-list__value">One speech model, Whisper small.en, about 486 MB, runs on your computer’s CPU. <a href="/meeting-notes/#models">See the model used</a>.</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Network</dt>
+          <dd class="govuk-summary-list__value">Setup downloads and verifies the model once. Normal use downloads nothing, and your recording is not sent anywhere.</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">You must</dt>
+          <dd class="govuk-summary-list__value">Check the transcript against the recording. It can miss or invent words, especially names and numbers.</dd>
+        </div>
+      </dl>
+      <p><a href="/meeting-notes/">See what Meeting Notes does</a>.</p>
+    </article>
+    <article class="card">
+      <div class="tag-row">
+        <h3><a href="/text/">Text</a></h3>
+        <strong class="govuk-tag">In development</strong>
+      </div>
+      <p>Sort, tidy and fix line breaks in text with ordinary code, and see exactly what changed. <strong>It is not available to download yet.</strong></p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Works on</dt>
+          <dd class="govuk-summary-list__value">Pasted or opened plain text. Five exact changes, one at a time.</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Models</dt>
+          <dd class="govuk-summary-list__value">None. Ordinary code only.</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Network</dt>
+          <dd class="govuk-summary-list__value">None. Nothing is downloaded or sent.</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">You must</dt>
+          <dd class="govuk-summary-list__value">Check the words sentence case lists, such as names it may have lowered.</dd>
+        </div>
+      </dl>
+      <p><a href="/text/">See what Text does</a>.</p>
+    </article>
+    <article class="card">
+      <div class="tag-row">
+        <h3><a href="/share-copy/">Share Copy</a></h3>
+        <strong class="govuk-tag">In development</strong>
+      </div>
+      <p>Make a copy of a letter or email with personal details taken out, before you paste it into a chat model. <strong>It is not available to download yet.</strong></p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Works on</dt>
+          <dd class="govuk-summary-list__value">Pasted or opened English text, or an image of a printed letter.</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Models</dt>
+          <dd class="govuk-summary-list__value">Two: Ettin 68M PII suggests details to remove, and Tesseract reads images, about 141 MB in all, on your CPU. <a href="/share-copy/#models">See the models used</a>.</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Network</dt>
+          <dd class="govuk-summary-list__value">Setup downloads the models once. Normal use downloads nothing, and your text is not sent anywhere.</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">You must</dt>
+          <dd class="govuk-summary-list__value">Read the whole copy. The suggestions miss things, so a copy is only as safe as your check.</dd>
+        </div>
+      </dl>
+      <p><a href="/share-copy/">See what Share Copy does</a>.</p>
+    </article>
+    <article class="card">
+      <div class="tag-row">
+        <h3><a href="/regulars/">Regulars</a></h3>
+        <strong class="govuk-tag">In development</strong>
+      </div>
+      <p>See what you pay for again and again, from a year of bank statements, sorted by yearly total. <strong>It is not available to download yet.</strong></p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Works on</dt>
+          <dd class="govuk-summary-list__value">Statement CSVs saved and checked in <a href="/tables/">Tables</a>. One bank’s layout so far.</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Models</dt>
+          <dd class="govuk-summary-list__value">None. Ordinary code only.</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Network</dt>
+          <dd class="govuk-summary-list__value">None. Nothing is downloaded or sent, and nothing is stored.</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">You must</dt>
+          <dd class="govuk-summary-list__value">Check your statements in Tables first, and save the list as CSV before closing if you want to keep it.</dd>
+        </div>
+      </dl>
+      <p><a href="/regulars/">See what Regulars does</a>.</p>
+    </article>
+  </div>
+  <p>A tool is added here when I have used it enough to describe it honestly, with its real status.</p>
+</section>
+
+<section aria-labelledby="describe-title">
+  <h2 id="describe-title">What every tool page tells you</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>What goes in, what comes out and what you need to check.</li>
+    <li>Every model it uses, what each one does and where it came from, with exact versions.</li>
+    <li>When it uses the network. Setup is the only step that should.</li>
+    <li>Whether you can get it yet, and what it is known to get wrong.</li>
+  </ul>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle Cups · small local tools for repeatable tasks</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from c399b41 on 2026-09-30. This site loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Geo · Kettle Cups</title>
+    <meta name="description" content="Find the photos in a folder by where they were taken, from the GPS position recorded in each file, worked out by ordinary code on your own computer.">
+    <meta property="og:title" content="Geo · Kettle Cups">
+    <meta property="og:description" content="Find the photos in a folder by where they were taken, from the GPS position recorded in each file, worked out by ordinary code on your own computer.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle Cups home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+              <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+              <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/" aria-current="true">Tools</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="geo-title">
+  <p class="eyebrow">Tools · Geo</p>
+  <h1 id="geo-title">Find your photos by where they were taken.</h1>
+  <p class="lede">Choose a folder of photos. Geo reads the GPS position your phone or camera recorded in each one, then finds the photos taken near a point, inside an area or between two dates. Ordinary code does the work. It never guesses where a photo was taken, and it never changes your files.</p>
+</section>
+
+<section aria-labelledby="why-title">
+  <h2 id="why-title">Why this exists</h2>
+  <p>A phone records where each photo was taken, and that position stays inside the file. Photo apps and photo services use it to show a map, usually for one library, and often after the photos have been uploaded. Geo does it for any folder on my own computer. The photos and the places they record stay there.</p>
+</section>
+
+<section aria-labelledby="how-title">
+  <h2 id="how-title">What goes in and what comes out</h2>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Goes in</dt>
+      <dd class="govuk-summary-list__value">A folder of photos: JPEG, PNG, TIFF, WebP, iPhone HEIC files and raw files from common cameras.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">First</dt>
+      <dd class="govuk-summary-list__value">Geo makes an index. It reads the recorded position and the date taken from each photo, and keeps them in a hidden folder inside your folder. Your photos are not changed. When photos are added or changed, you update the index, and only those are read again.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">You search</dt>
+      <dd class="govuk-summary-list__value">Within a distance of a point, inside a box you give by its four edges, or every photo with a position. Each can be narrowed to a range of dates.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Comes out</dt>
+      <dd class="govuk-summary-list__value">A list of the photos found, each with its file, its recorded position, when it was taken and how far it is from your point. You can preview a photo, show it in Finder and see the results on a map.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">You can save</dt>
+      <dd class="govuk-summary-list__value">The results as a GeoJSON file, which mapping software can open.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">It also shows</dt>
+      <dd class="govuk-summary-list__value">How many photos have no recorded position, and how many could not be read, with the reason for each.</dd>
+    </div>
+  </dl>
+  <p>The map contacts no map service. On its own it shows the positions on a plain background. To see streets and places behind them, you choose a map pack, which is one file of map pictures kept on your computer. I have made one of London from Ordnance Survey open data, about 22 MB.</p>
+  <p>Nothing is kept except the index. The folders you choose, your searches and the results are not saved or logged.</p>
+</section>
+
+<section id="models" aria-labelledby="models-title">
+  <h2 id="models-title">Models used</h2>
+  <p><strong>None.</strong> Geo is ordinary code. Every position and date it shows was recorded in the photo by the device that took it. <a href="https://exiftool.org/">ExifTool</a> reads them from each file, and the distances are plain arithmetic. The map is drawn by Leaflet 1.9.4, kept inside the tool.</p>
+</section>
+
+<section aria-labelledby="network-title">
+  <h2 id="network-title">When it uses the network</h2>
+  <p>Normal use downloads nothing and sends nothing. There is one exception, and you choose it. “Use my current location” asks your browser where you are, and your browser or computer may contact a location service to work that out. Typing the position yourself avoids that.</p>
+</section>
+
+<section aria-labelledby="checked-title">
+  <h2 id="checked-title">What has been checked</h2>
+  <p>Automated tests run on invented photo details and invented map packs. A separate check ran the real ExifTool over four tiny invented files: two with a position, one without and one damaged. Each was reported correctly, and the files were byte for byte the same afterwards.</p>
+  <p>No real collection of photos had been through it when those checks were written. How well it serves a real search has not been counted.</p>
+</section>
+
+<section aria-labelledby="limits-title">
+  <h2 id="limits-title">Known limits</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>It only finds photos that carry a recorded position. Screenshots, scans and photos taken with location switched off are counted as having none.</li>
+    <li>It does not know place names. You give a position as latitude and longitude, or use your current location. You cannot type “Paris”.</li>
+    <li>A recorded position is only as good as the device that recorded it.</li>
+    <li>How long a large collection takes to index has not been measured.</li>
+    <li>It has only been run on an Apple silicon Mac, and outside the Kettle app it needs ExifTool installed separately.</li>
+    <li>The London map pack shows the area at the scale of a regional map, without every street name.</li>
+    <li>The index holds positions, dates and file names. It stays inside your folder, so treat it as you treat the photos.</li>
+  </ul>
+</section>
+
+<section aria-labelledby="status-title">
+  <h2 id="status-title">Availability</h2>
+  <div class="govuk-inset-text">
+    <p><strong>Not available to download yet.</strong> Geo runs in the development Kettle app on my Mac, as its own page and from the command line. There is no public installer or source download at present.</p>
+  </div>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle Cups · small local tools for repeatable tasks</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from 518ea66 on 2026-10-09. This site loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Local · Kettle Cups</title>
+    <meta name="description" content="Find where something is written in a folder of your own files, or a picture or video by what it shows, using a model that runs on your own computer.">
+    <meta property="og:title" content="Local · Kettle Cups">
+    <meta property="og:description" content="Find where something is written in a folder of your own files, or a picture or video by what it shows, using a model that runs on your own computer.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle Cups home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+              <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+              <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/" aria-current="true">Tools</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="local-title">
+  <p class="eyebrow">Tools · Local</p>
+  <h1 id="local-title">Find the passage, the picture or the video in your own folder.</h1>
+  <p class="lede">Choose a folder, then type a question or describe a picture or video in your own words. Local shows the passages most likely to hold the answer, each with its file and lines, and the pictures and videos closest to what you described. It writes no answer of its own, and your files stay on your computer.</p>
+</section>
+
+<section aria-labelledby="why-title">
+  <h2 id="why-title">Why this exists</h2>
+  <p>Ordinary search finds the words you type. Often I remember what a note was about but not the words in it. Search that matches by meaning usually means uploading the folder to a service. Local does that matching on my own computer, so I can point it at private notes.</p>
+</section>
+
+<section aria-labelledby="how-title">
+  <h2 id="how-title">What goes in and what comes out</h2>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Goes in</dt>
+      <dd class="govuk-summary-list__value">A folder of your own files. Text files, such as notes, Markdown, code and CSV. PDFs and Word documents, read as text. Pictures: PNG, JPEG, GIF, WebP, TIFF, BMP and iPhone HEIC files. Videos: MP4, MOV, M4V, WebM, MKV and AVI files.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">First</dt>
+      <dd class="govuk-summary-list__value">Local makes an index. It reads each file once and keeps what it finds in a hidden folder inside your folder. Your files are not changed. When files change, you update the index, which takes seconds for a few files.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">You type</dt>
+      <dd class="govuk-summary-list__value">A question, or what a picture or video shows.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Comes out</dt>
+      <dd class="govuk-summary-list__value">Three lists of up to five. “Documents” has passages: those that use the words you typed, and those a model judges close in meaning, even in other words. A passage from a PDF says which page it is on. “Pictures” and “Videos” have the closest of each, with a video shown as one still. A result the model scores no higher than it scores an unrelated question is folded away, one press from view, and a list with nothing close says so.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">You can</dt>
+      <dd class="govuk-summary-list__value">See the words you typed marked in each passage, open a picture at full size, and show any found file in Finder.</dd>
+    </div>
+  </dl>
+  <p>A picture or video comes first when every word you typed is a whole word of its file or folder name. The rest are ranked by what they show. A video is looked at as up to eight stills spread across it, so a short scene in a long video can be missed. Local does not describe a picture, read the words written in one, or listen to the sound of a video.</p>
+  <p>Nothing is kept except the index. The folder’s path, your questions and the results are not saved or logged.</p>
+</section>
+
+<section id="models" aria-labelledby="models-title">
+  <h2 id="models-title">Models used</h2>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key"><a href="https://huggingface.co/google/embeddinggemma-2/tree/914f7f89142e33e77833254d9c9b90c3cef7303b">EmbeddingGemma 2</a></dt>
+      <dd class="govuk-summary-list__value">By Google. Its one job is to turn your question, each passage, each picture and stills from each video into numbers, so that passages, pictures and videos close in meaning can be found. It writes nothing. About 1.5 GB, Apache-2.0 licence, revision <code>914f7f89142e33e77833254d9c9b90c3cef7303b</code>. Every file’s size and hash is checked before the model loads.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">No model</dt>
+      <dd class="govuk-summary-list__value">Matching the words you typed, reading the text of a PDF or Word document, finding a picture or video by its name, and marking your words in a passage are ordinary code.</dd>
+    </div>
+  </dl>
+  <p>The model runs on your computer’s CPU. Setup downloads it once; after that, normal use downloads nothing and sends nothing. An iPhone photo is read from a JPEG copy the Mac makes for the moment and does not keep.</p>
+</section>
+
+<section aria-labelledby="checked-title">
+  <h2 id="checked-title">What has been checked</h2>
+  <p>On this project’s own files, 593 of them, twelve questions were written down before any search, each with the passage that answers it. Eleven of the twelve were written by an AI agent that had read the files. Matching by words alone had the right passage in its five for 6 of the 12. Matching by words and meaning, which is what Local shows, had it for 9. Three were found by neither.</p>
+  <p>On 601 of my own notes I asked a few questions of my own, and matching by words and meaning worked much better for me than words alone. I kept no count.</p>
+  <p>For pictures, I used one folder of 99 varied pictures and 13 descriptions, written with the pictures in view. The right picture was in the five shown for all 13, and first for 12. Pictures that look alike, such as a run of screenshots of one app, have not been tried.</p>
+  <p>For videos, I made an index of one folder of my own holding 26 videos, and finding a video by what it shows worked for me. I kept no count. One more video in that folder could not be read.</p>
+  <p>For PDFs, I used one folder of my own holding 25, from 1 to 42 pages, and 23 questions an AI agent wrote from the file names. The right PDF came first for 22, and four unrelated questions showed nothing. For one of the 22 the right PDF was folded away as not close. No scanned PDF and no page set in columns was among them. Word documents have only been tried on one made up for the test.</p>
+  <p>These are counts from one person’s folders on one computer, not a measure of how often Local finds the right thing.</p>
+</section>
+
+<section aria-labelledby="limits-title">
+  <h2 id="limits-title">Known limits</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>The lists are rankings, not answers. The right passage may be missing. The line between close and not close was set from three folders, so it can fold away the right result or leave a wrong one showing.</li>
+    <li>Making the first index is slow and heavy. On an Apple M1 Pro, about 600 files took about nine minutes and up to 7 GB of memory. Each picture adds about two seconds and each video about five.</li>
+    <li>It has only been run on an Apple silicon Mac.</li>
+    <li>Scans and sound are left out. A scanned PDF gives no text, and nothing said in a video or a recording is found.</li>
+    <li>Matching by words does not forgive a spelling mistake.</li>
+    <li>The index holds a copy of your text. It stays inside your folder, so treat it as you treat the files.</li>
+  </ul>
+</section>
+
+<section aria-labelledby="status-title">
+  <h2 id="status-title">Availability</h2>
+  <div class="govuk-inset-text">
+    <p><strong>Not available to download yet.</strong> Local runs in the development Kettle app on my Mac, and as its own page. There is no public installer or source download at present.</p>
+  </div>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle Cups · small local tools for repeatable tasks</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from 518ea66 on 2026-10-09. This site loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

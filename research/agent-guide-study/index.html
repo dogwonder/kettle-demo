@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Study: an agent guide for Tables · Kettle Cups</title>
+    <meta name="description" content="I gave a frontier agent a guide to my local table reader, expecting it to need less model work. On seven small tables it needed more. What happened, what one table costs an agent, and what this does not tell you.">
+    <meta property="og:title" content="Study: an agent guide for Tables · Kettle Cups">
+    <meta property="og:description" content="I gave a frontier agent a guide to my local table reader, expecting it to need less model work. On seven small tables it needed more. What happened, what one table costs an agent, and what this does not tell you.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle Cups home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+              <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+              <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/">Tools</a>
+          <a href="/research/" aria-current="true">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="study-title">
+  <p class="eyebrow">Research · first study</p>
+  <h1 id="study-title">I gave a frontier agent a guide to my local tool. It used more model work, not less.</h1>
+  <p class="lede">I expected that an AI agent, handed Tables and a short guide to using it, would turn a picture of a table into a CSV with less model work than reading the picture itself. On seven small tables it did not.</p>
+  <p class="small muted">Run on 19 September 2026.</p>
+</section>
+
+<div class="govuk-inset-text">
+  <p><strong>One thing to keep in mind.</strong> There is no agent skill or guide to install. This was a test of my own idea, on seven small tables I had made myself. It says nothing about Tables used by a person who checks the result.</p>
+</div>
+
+<section aria-labelledby="question-title">
+  <h2 id="question-title">What I tried</h2>
+  <p>I asked Claude Code for a CSV of one table image, three ways:</p>
+  <ol class="govuk-list govuk-list--number">
+    <li>Normal. The request alone, with the agent’s usual tools.</li>
+    <li>One-line instruction. The same request plus “Complete the task with as little model work as practical.”</li>
+    <li>Guide and Tables. The same request plus my guide and a working copy of the Tables reader.</li>
+  </ol>
+  <p>Seven images, once each way.</p>
+</section>
+
+<section id="result" aria-labelledby="result-title">
+  <h2 id="result-title">What happened</h2>
+  <p>With the guide and Tables, the agent did more work. Across the seven tables it wrote 6,192 output tokens against 3,743 without the guide, took 148 seconds against 89, and got one fewer table exactly right. The cheapest of the three was the one-line instruction, at 2,791 output tokens with every table right.</p>
+  <p>Without the guide, the agent looked at the picture and wrote the file. With it, the agent ran my reader, copied out its rows and reported an unreviewed draft, as the guide told it to. Six of the seven times it never opened the image.</p>
+  <p>The one table it got wrong is the reader’s known mistake: an extra empty row on a table without ruling lines, <a href="/tables/">shown on the Tables page</a>. The agent kept the row, as the guide requires, and told the person to check it.</p>
+</section>
+
+<section id="why" aria-labelledby="why-title">
+  <h2 id="why-title">Why I think it went that way</h2>
+  <p>For a twelve-cell table, reading the picture costs the model very little. The guide adds its own text, the reader’s output and a longer report, and those cost more than the reading they replace. That may change on much larger tables. I did not test it.</p>
+  <p>Every session also carried about 70,000 tokens of Claude Code’s own fixed context before any work on the table. The differences between the three ways are small beside that.</p>
+</section>
+
+<section id="token-budget" aria-labelledby="budget-title">
+  <h2 id="budget-title">What one table costs an agent</h2>
+  <p>The run without the guide is also a record of what asking a frontier agent costs for this job: three model turns, about 535 output tokens and about 13 seconds for each table. Running my reader directly needs none of that, keeps the picture on the computer, and gave the same cells: 125 of 125, and 6 of 7 whole tables.</p>
+  <p>The wording this supports: no remote inference was required for these tested executions, at the same cell exactness. That is a token budget for this task, roughly what one small table costs if the alternative is asking Claude Code. It is not a reduction anyone made, because nobody was seen using an agent for this beforehand.</p>
+</section>
+
+<section id="decision" aria-labelledby="decision-title">
+  <h2 id="decision-title">What I do now</h2>
+  <p>I have retired the claim that Tables and this guide reduce an agent’s model work on small clean tables. The guide stays as documentation of the reader’s command-line use. Tables remains a tool for a person who checks the result.</p>
+  <p>If I take this further, the one next question is whether the comparison changes on larger tables that were not used in development. That has not been started.</p>
+</section>
+
+<section id="limits" aria-labelledby="limits-title">
+  <h2 id="limits-title">What this does not tell you</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Anything about tables that are large, dense, unfamiliar or real. All seven were examples the reader was built against.</li>
+    <li>Whether another agent or model, or a shorter guide, would do better.</li>
+    <li>How much the result varies. There was one pass.</li>
+    <li>Anything about energy. I did not measure it.</li>
+  </ul>
+</section>
+
+<section aria-labelledby="detail-title">
+  <h2 id="detail-title">The detail</h2>
+  <p>Everything behind the account above, for anyone who wants to check it.</p>
+  <details class="govuk-details">
+    <summary class="govuk-details__summary"><span class="govuk-details__summary-text">The numbers</span></summary>
+    <div class="govuk-details__text">
+      <div class="table-scroll">
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Totals across seven sessions each way, as reported by Claude Code</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">What was counted</th>
+              <th scope="col" class="govuk-table__header">Normal</th><th scope="col" class="govuk-table__header">One-line instruction</th><th scope="col" class="govuk-table__header">Guide and Tables</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Whole tables exact, of 7</th>
+              <td class="govuk-table__cell">7</td><td class="govuk-table__cell">7</td><td class="govuk-table__cell">6</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Exact cells, of 125</th>
+              <td class="govuk-table__cell">125</td><td class="govuk-table__cell">125</td><td class="govuk-table__cell">125, plus one extra empty row</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Sessions that failed or retried</th>
+              <td class="govuk-table__cell">0</td><td class="govuk-table__cell">0</td><td class="govuk-table__cell">0</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Model turns</th>
+              <td class="govuk-table__cell">21</td><td class="govuk-table__cell">21</td><td class="govuk-table__cell">22</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Output tokens</th>
+              <td class="govuk-table__cell">3,743</td><td class="govuk-table__cell">2,791</td><td class="govuk-table__cell">6,192</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Uncached input tokens</th>
+              <td class="govuk-table__cell">42</td><td class="govuk-table__cell">42</td><td class="govuk-table__cell">44</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Cache-write input tokens</th>
+              <td class="govuk-table__cell">87,542</td><td class="govuk-table__cell">87,238</td><td class="govuk-table__cell">96,085</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Cache-read input tokens</th>
+              <td class="govuk-table__cell">412,857</td><td class="govuk-table__cell">413,018</td><td class="govuk-table__cell">453,152</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Session time</th>
+              <td class="govuk-table__cell">88.8 s</td><td class="govuk-table__cell">77.8 s</td><td class="govuk-table__cell">148.2 s</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Local reader time and peak memory</th>
+              <td class="govuk-table__cell">not used</td><td class="govuk-table__cell">not used</td><td class="govuk-table__cell">about 1.0 to 1.3 s and 500 to 556 MB per image</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+      <div class="table-scroll">
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">For each table, across the seven images</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">What was counted</th>
+              <th scope="col" class="govuk-table__header">Normal agent: range (mean)</th>
+              <th scope="col" class="govuk-table__header">Tables reader run directly</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Remote model requests</th>
+              <td class="govuk-table__cell">3 turns</td>
+              <td class="govuk-table__cell">none</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Output tokens</th>
+              <td class="govuk-table__cell">328 to 1,304 (mean 535)</td>
+              <td class="govuk-table__cell">none</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Cache-write input tokens</th>
+              <td class="govuk-table__cell">11,950 to 13,974 (mean 12,506)</td>
+              <td class="govuk-table__cell">none</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Cache-read input tokens</th>
+              <td class="govuk-table__cell">58,487 to 59,903 (mean 58,980)</td>
+              <td class="govuk-table__cell">none</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Time</th>
+              <td class="govuk-table__cell">10.1 to 20.1 s (mean 12.7 s)</td>
+              <td class="govuk-table__cell">about 1.0 to 1.3 s, 3.4 s on the first call</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Local peak memory, reader process</th>
+              <td class="govuk-table__cell">not observed</td>
+              <td class="govuk-table__cell">500 to 556 MB</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Image sent off the computer</th>
+              <td class="govuk-table__cell">yes</td>
+              <td class="govuk-table__cell">no</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+      <p>Limits on the token budget:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>It is demand that could be avoided, not a reduction anyone made. Nobody was observed using an agent for this task beforehand. If the alternative is typing the table by hand, there were no tokens to begin with.</li><li>Nearly all the input tokens are Claude Code’s fixed context, not work on the table. They describe this agent and this configuration. A bare model call with one image was not measured and would be far smaller.</li><li>The one-line instruction lowered the agent’s own figure, to a mean of 399 output tokens per table.</li><li>The local route is not free. It needs a 366 MB runtime set up once, and about a second of local processing for each table.</li><li>Coverage differs on real inputs. The reader refused three of my twelve real tables, so a budget counted only on tables it can read would overstate the benefit.</li><li>Tokens are model demand, not energy.</li>
+      </ul>
+    </div>
+  </details>
+  <details class="govuk-details">
+    <summary class="govuk-details__summary"><span class="govuk-details__summary-text">How the test was set up</span></summary>
+    <div class="govuk-details__text">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Agent: Claude Code 2.1.278 in headless mode with the model claude-fable-5-1, on an Apple M1 Pro with 32 GB of memory and macOS 27.0.</li><li>Inputs: seven invented table images, five rendered and two photographed, fixed before the pass. My own tables were not used.</li><li>One fresh session for each image in each of three arms, 21 sessions in total. Every arm had the same tools: a shell and local files, with web tools and connected services off.</li><li>Each session ran in a new folder outside the repository holding only the image under a neutral name. The guide arm had a minimal copy of Tables with no test files, expected answers or other documents.</li><li>Each saved CSV was compared with answers written before any run, for whole-table equality and for exact cells. No person reviewed any output.</li>
+      </ul>
+    </div>
+  </details>
+  <details class="govuk-details">
+    <summary class="govuk-details__summary"><span class="govuk-details__summary-text">Everything that was not measured</span></summary>
+    <div class="govuk-details__text">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Energy use, or any reduction in it.</li><li>Behaviour on unfamiliar, large, dense or real tables. All seven images were development examples: the reader was built against them, and the same person wrote them and their answers.</li><li>Other agents or models, or a session with less fixed context.</li><li>Variation between repeated runs. There was one pass.</li><li>Whether a shorter guide would do better.</li>
+      </ul>
+    </div>
+  </details>
+  <details class="govuk-details">
+    <summary class="govuk-details__summary"><span class="govuk-details__summary-text">Record source and dates</span></summary>
+    <div class="govuk-details__text">
+      <p>Copied on 2026-09-21 from cups/tables/docs/evidence-agent-use-2026-09.md in dogwonder/kettle-cups at f131b3ab4d15d1028641390524ec9e780c57e5d9. This page is a reviewed copy of that evidence note. Building the site runs no model and starts no agent session.</p>
+      <p>Sessions ran on my subscription, so nothing was billed per token. Raw session output stays on my computer; only the counts above are published. The reader’s <a href="/evidence/#model">exact model versions and file identities</a> are on the Tables evidence page.</p>
+    </div>
+  </details>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle Cups · small local tools for repeatable tasks</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from 518ea66 on 2026-10-09. This site loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

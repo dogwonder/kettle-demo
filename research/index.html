@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Research · Kettle Cups</title>
+    <meta name="description" content="Things I tried while building small local tools, and what happened, including the results that went against me.">
+    <meta property="og:title" content="Research · Kettle Cups">
+    <meta property="og:description" content="Things I tried while building small local tools, and what happened, including the results that went against me.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle Cups home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+              <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+              <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/">Tools</a>
+          <a href="/research/" aria-current="page">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="research-title">
+  <p class="eyebrow">Research</p>
+  <h1 id="research-title">Things I tried, and what happened.</h1>
+  <p class="lede">I build these tools by trying things. Often I expect a small local model to beat ordinary code, and often I am wrong. This is where I show the working, including the results that went against me.</p>
+  <p>You do not need any of this to use a tool.</p>
+</section>
+
+<section aria-labelledby="results-title">
+  <h2 id="results-title">So far</h2>
+  <div class="cards">
+    <article class="card">
+      <div class="tag-row">
+        <h3><a href="/research/request-reading-study/">I tried three small models at reading a typed request. Ordinary rules did better.</a></h3>
+        <strong class="govuk-tag">6 October 2026</strong>
+      </div>
+      <p>Asked which changes a request about a picture wants, ordinary rules got 59 of 60 right and three small models got 47 or 48. The next day a different kind of model, one that fills in a form, got 56. I ended up with a few plain rules and that model behind them.</p>
+      <p class="small muted">Keep in mind: every request was written by an AI model, which flatters the rules. Nothing typed by a person was tested.</p>
+    </article>
+    <article class="card">
+      <div class="tag-row">
+        <h3><a href="/research/agent-guide-study/">I gave a frontier agent a guide to my local tool. It used more model work, not less.</a></h3>
+        <strong class="govuk-tag">19 September 2026</strong>
+      </div>
+      <p>Claude Code with my guide and Tables did more work than Claude Code reading the picture itself, and got one fewer of seven small tables right. It also gave me a figure for what one table costs an agent.</p>
+      <p class="small muted">Keep in mind: seven small tables I made myself, one agent, one pass.</p>
+    </article>
+    <article class="card">
+      <div class="tag-row">
+        <h3><a href="/evidence/">What has been checked about Tables</a></h3>
+        <strong class="govuk-tag">10 to 14 September 2026</strong>
+      </div>
+      <p>4 of 5 named synthetic tables exact; unruled adds an empty row. Two cropped phone photographs were read correctly. In my own use, mistakes remained in two prepared correction tasks.</p>
+      <p class="small muted">Keep in mind: development examples and my own use. Nobody else has tried it, and I report no accuracy percentage.</p>
+    </article>
+  </div>
+</section>
+
+<section aria-labelledby="open-title">
+  <h2 id="open-title">Not tried yet</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Whether reading a typed request holds up on wording typed by people.</li>
+    <li>Whether the agent result changes on larger tables that were not used in development.</li>
+    <li>How well people other than me spot the table reader’s mistakes. That would need real participants.</li>
+    <li>What a computer already does for common writing jobs, and whether a small local tool adds anything to it.</li>
+  </ul>
+  <p>I have not measured energy, and I do not claim a reduction in it. Tokens describe demand on a model, not energy.</p>
+</section>
+
+<section aria-labelledby="kinds-title">
+  <h2 id="kinds-title">How I keep the evidence straight</h2>
+  <details class="govuk-details">
+    <summary class="govuk-details__summary"><span class="govuk-details__summary-text">Three kinds of evidence, and three separate claims</span></summary>
+    <div class="govuk-details__text">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Software checks show that the code does what it says, such as how a CSV is written. They say nothing about whether a model read your table correctly.</li>
+        <li>Model observations are results on named inputs with exact model files. They hold for those files and those inputs only.</li>
+        <li>Human-use findings are what happened when a person used the tool, including the mistakes they did not spot.</li>
+      </ul>
+      <p>Three claims also stay separate, and each needs its own evidence: that a tool is useful; that a whole task uses less of a named resource at the quality required; and that publishing a finding helps someone else. So far: some evidence for the first, from one person; a token budget for one task, which is not a measured reduction; nothing yet for the third.</p>
+    </div>
+  </details>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle Cups · small local tools for repeatable tasks</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from 518ea66 on 2026-10-09. This site loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

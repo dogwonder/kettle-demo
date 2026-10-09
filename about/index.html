@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>About · Kettle Cups</title>
+    <meta name="description" content="What Kettle Cups is, how it works, what it does not claim and who builds it.">
+    <meta property="og:title" content="About · Kettle Cups">
+    <meta property="og:description" content="What Kettle Cups is, how it works, what it does not claim and who builds it.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle Cups home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+              <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+              <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/">Tools</a>
+          <a href="/research/">Research</a>
+          <a href="/about/" aria-current="page">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="about-title">
+  <p class="eyebrow">About</p>
+  <h1 id="about-title">Local or remote, and what each task needs.</h1>
+  <p class="lede">Kettle Cups builds small local tools for repeatable tasks, and publishes a check of what each one replaces and where it fails.</p>
+</section>
+
+<section aria-labelledby="frame-title">
+  <h2 id="frame-title">The question I ask</h2>
+  <p>The question is local or remote, not AI or no AI. For a repeatable task, what is the smallest thing that does it well enough: ordinary code, a small specialist model, a local language model or a remote model? All four are legitimate answers. “Use what your computer already does” and “use the remote model” are also results worth publishing.</p>
+  <p>Being local does not, by itself, make a tool worth having. Computers now come with models of their own for everyday writing tasks. Each tool comes with a record of what was tested and what failed.</p>
+</section>
+
+<section aria-labelledby="genai-title">
+  <h2 id="genai-title">No chatbots inside</h2>
+  <p>None of the tools is a chatbot. You do not hold a conversation with any of them, and none answers a question in its own words.</p>
+  <p>Two of the tools do run a model of the kind that writes text, and each gives you something to check it against. Meeting Notes uses a speech model to write the transcript. It can occasionally write words nobody said, so you check the transcript against the recording. <a href="/media/">Media</a> uses a language model, Qwen3 4B, to read a typed request such as “make this 720p” and pick settings from a fixed list. It never sees your file and cannot write a number of its own, but it can pick a wrong setting, so you check a written plan before anything is made.</p>
+  <p>That is my worry with models that write: a confident mistake, such as a made-up name, date or amount in your own paperwork, is easy to miss. No tool here writes your result without showing you what to check.</p>
+  <p>Mostly, this site is here to show that many everyday jobs need neither generative AI nor any model at all. Text, Regulars and Geo are ordinary code, and Tables reads PDF statements without a model.</p>
+</section>
+
+<section aria-labelledby="why-title">
+  <h2 id="why-title">Why local</h2>
+  <p>I installed Qwen 2.5 on a Raspberry Pi as a proof of concept - it worked - but got me thinking. It was slow, but it answered a question competently about fixing a tap. I think local models have a place doing everyday jobs that don’t need frontier AI. I care about privacy, energy, water and the communities hosting data centres. The huge investment planned also makes me question whether a more balanced approach could cost less. These are reasons for building the tools.</p>
+  <p>There is more than one reason to run a task on your own computer, and a tool can be worth having for one of them alone. For each reason, this is what has been checked so far.</p>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Privacy</dt>
+      <dd class="govuk-summary-list__value">Checked. Your file stays on your computer. Tables read real examples with outside network connections denied by the operating system. What its underlying libraries do when unrestricted has not been checked. <a href="/evidence/#claims">See the claims and checks</a>.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Remote requests</dt>
+      <dd class="govuk-summary-list__value">Counted. No remote inference was required for the tested executions.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Model work</dt>
+      <dd class="govuk-summary-list__value">Measured once: <a href="/research/agent-guide-study/#token-budget">a token budget for one small table</a>.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Quality and effort</dt>
+      <dd class="govuk-summary-list__value">Tested on named examples and in my own use only, including the effort of finding and correcting mistakes.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Energy, water and the places that host data centres</dt>
+      <dd class="govuk-summary-list__value">Not measured here. They are part of why I care where this work runs. I claim no result.</dd>
+    </div>
+  </dl>
+</section>
+
+<section aria-labelledby="how-title">
+  <h2 id="how-title">How the tools work</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>You finish the task and check it. You see the source beside the draft, correct it and save something exact.</li>
+    <li>Models are named, with exact versions and file identities.</li>
+    <li>Setup is the only network step. Normal use downloads nothing.</li>
+    <li>A tool with fixed model files gives the same answer next year, and has no charge for each use.</li>
+  </ul>
+</section>
+
+<section aria-labelledby="not-title">
+  <h2 id="not-title">What I do not claim</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Energy or carbon reduction. I have not measured energy. Tokens describe demand on a model, not energy.</li>
+    <li>Better models. Operating systems and the large providers will lead on model quality.</li>
+    <li>Reliability figures. Development examples cannot give them.</li>
+    <li>A stand-in for a frontier model, beyond the named cases a tool was tested on.</li>
+  </ul>
+  <p>The <a href="/research/">research pages</a> show the results so far, including a <a href="/research/agent-guide-study/">test where my agent guide used more model work, not less</a>.</p>
+</section>
+
+<section aria-labelledby="who-title">
+  <h2 id="who-title">Who builds it</h2>
+  <p>Kettle Cups grew out of Kettle, an earlier experiment in reading paperwork with local models. It keeps the focus on small tasks with results you can inspect and correct. Tables is the first tool.</p>
+  <p>I’m Rich Holman, and I build Kettle Cups as DGW.ltd. Contact <a href="mailto:dogwonder@gmail.com">dogwonder@gmail.com</a>.</p>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle Cups · small local tools for repeatable tasks</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from 518ea66 on 2026-10-09. This site loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

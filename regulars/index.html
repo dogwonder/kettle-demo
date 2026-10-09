@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Regulars · Kettle Cups</title>
+    <meta name="description" content="A year of bank statements becomes one list of what you pay for again and again, sorted by yearly total, worked out by ordinary code on your own computer.">
+    <meta property="og:title" content="Regulars · Kettle Cups">
+    <meta property="og:description" content="A year of bank statements becomes one list of what you pay for again and again, sorted by yearly total, worked out by ordinary code on your own computer.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle Cups home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+              <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+              <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/" aria-current="true">Tools</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="regulars-title">
+  <p class="eyebrow">Tools · Regulars</p>
+  <h1 id="regulars-title">See what you pay for again and again.</h1>
+  <p class="lede">Choose a year of bank statements you have checked in <a href="/tables/">Tables</a>. Regulars shows one list of every payee you pay repeatedly, sorted by what they cost you in a year. Ordinary code does the work, and the same statements always give the same list.</p>
+</section>
+
+<section aria-labelledby="why-title">
+  <h2 id="why-title">Why this exists</h2>
+  <p>Some banking apps show your spending by merchant. Many high-street banks show only categories. I ran an earlier version over a year of my own bank statements, and the yearly totals were the part my bank did not give me: direct debits, subscriptions and habits such as coffee, all in one list.</p>
+</section>
+
+<section aria-labelledby="how-title">
+  <h2 id="how-title">What goes in and what comes out</h2>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Goes in</dt>
+      <dd class="govuk-summary-list__value">The CSV files Tables saves from your PDF statements, after you have checked them. About twelve files make a year. Choose them together or add more later.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">A line</dt>
+      <dd class="govuk-summary-list__value">A payee you paid 3 or more times in 3 or more calendar months. Only money paid out is listed.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Each line shows</dt>
+      <dd class="govuk-summary-list__value">How often you pay, such as “monthly” or “about 3 times a week”, the typical payment, the yearly total, any price changes with their dates, and when you last paid if that was a while ago.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">You can</dt>
+      <dd class="govuk-summary-list__value">Open a line to see the payments behind it, rename it, merge two lines the bank names differently, or split one out again. The bank’s own names stay visible.</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Comes out</dt>
+      <dd class="govuk-summary-list__value">The list as CSV, and if you want, every payment behind it.</dd>
+    </div>
+  </dl>
+  <p>Payees are grouped by general rules, such as dropping reference numbers and the town after a card payment. There is no list of merchants. There are no categories, no “subscription” or “waste” labels and no advice on cutting back. It tells you what you pay; what to do about it is up to you.</p>
+  <p>Regulars also checks each statement’s running balance and shows any row where it does not add up, so you can fix that row in Tables. Files covering the same dates are pointed out, because a payment in both would count twice.</p>
+</section>
+
+<section id="models" aria-labelledby="models-title">
+  <h2 id="models-title">Models used</h2>
+  <p><strong>None.</strong> Regulars is ordinary code: every name, date and amount it shows comes from your statements, and every total is plain arithmetic on them. It downloads nothing and sends nothing over the network.</p>
+</section>
+
+<section aria-labelledby="checked-title">
+  <h2 id="checked-title">What has been checked</h2>
+  <p>Automated tests run on a year of invented statements, including with the network switched off.</p>
+  <p>On twelve of my own statements, every running balance added up and the list needed no manual merges. I have not yet checked every price change and “last paid” it reports against my own records. That is one person’s year from one bank.</p>
+</section>
+
+<section aria-labelledby="limits-title">
+  <h2 id="limits-title">Known limits</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>It only knows the column layout of one bank’s statements so far. Another bank needs a small addition before it will work.</li>
+    <li>It is only as right as the statements you checked in Tables.</li>
+    <li>Nothing is stored. Your statements, renames and merges are gone when you close the window, so save the CSV to keep your list.</li>
+    <li>A payee with fewer than 3 payments in 3 months cannot be merged into a line.</li>
+  </ul>
+</section>
+
+<section aria-labelledby="status-title">
+  <h2 id="status-title">Availability</h2>
+  <div class="govuk-inset-text">
+    <p><strong>Not available to download yet.</strong> Regulars runs in the development Kettle app on my Mac, beside Tables. There is no public installer or source download at present.</p>
+  </div>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle Cups · small local tools for repeatable tasks</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from 518ea66 on 2026-10-09. This site loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

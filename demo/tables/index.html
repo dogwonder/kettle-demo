@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Tables demo · Kettle Cups</title>
+    <meta name="description" content="Tables, as it is in the app, on prepared samples. The samples are made up. Tables read them on a Mac and its answers are replayed here, so it reads only these samples, and a cropped or rotated one has no answer.">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/demo/outer.js"></script>
+  </head>
+  <body class="demo">
+    <header class="demo-strip">
+      <p class="demo-strip__what">
+        <strong class="govuk-tag">Demo</strong>
+        <span><a class="govuk-link" href="/tables/">Tables</a>, as it is in the app. The samples are made up. Tables read them on a Mac and its answers are replayed here, so it reads only these samples, and a cropped or rotated one has no answer.</span>
+      </p>
+      <p class="demo-strip__try" id="demo-try" hidden>
+        <span>Examples:</span>
+        <button type="button" class="govuk-button govuk-button--secondary" data-preset="0">Read a printed table</button>
+        <button type="button" class="govuk-button govuk-button--secondary" data-preset="1">Read a photograph of a table</button>
+        <button type="button" class="govuk-button govuk-button--secondary" data-preset="2">Read a bank statement PDF</button>
+      </p>
+      <p class="demo-strip__said" id="demo-said" role="status" aria-live="polite"></p>
+    </header>
+    <noscript><p class="demo-unavailable">This demo needs JavaScript. <a class="govuk-link" href="/tables/">The Tables page</a> describes the tool without it.</p></noscript>
+    <p class="demo-unavailable" id="demo-unavailable" hidden>This demo cannot run in this browser window, because the browser has turned off the feature that replays the tool’s answers. <a class="govuk-link" href="/tables/">The Tables page</a> describes the tool.</p>
+    <iframe class="demo-frame" id="demo-frame" title="Tables: the page from the app"></iframe>
+    <script type="application/json" id="demo-data">{"cup":"tables","title":"Tables","note":"The samples are made up. Tables read them on a Mac and its answers are replayed here, so it reads only these samples, and a cropped or rotated one has no answer.","ready":"#choose","presets":[{"label":"Read a printed table","steps":[{"sample":"printed"},{"wait":"#describe:not([disabled])"},{"click":"#describe"}],"until":"#grid"},{"label":"Read a photograph of a table","steps":[{"sample":"photo"},{"wait":"#describe:not([disabled])"},{"click":"#describe"}],"until":"#grid"},{"label":"Read a bank statement PDF","steps":[{"sample":"statement"},{"wait":"#describe:not([disabled])"},{"click":"#describe"}],"until":"#grid"}],"samples":[{"name":"printed","label":"a printed table","files":[{"name":"ruled.png","type":"image/png"}]},{"name":"photo","label":"a photograph of a printed table","files":[{"name":"photo-ruled.png","type":"image/png"}]},{"name":"statement","label":"a bank statement as a PDF","files":[{"name":"statement.pdf","type":"application/pdf"}]}],"credits":[],"leftOut":[],"replayed":4,"captured":{"on":"2026-10-12","commit":"9eeced7","cupChanged":false,"slowestMs":1788}}</script>
+  </body>
+</html>

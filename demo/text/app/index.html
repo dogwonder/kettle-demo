@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Text · Kettle cups</title>
+    <link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="app-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle cups · text">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g class="cup-mark" transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+<path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+<path class="cup-steam cup-steam-later" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups · text</span>
+        </a>
+        <span class="privacy-fact">Nothing leaves this computer.</span>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+<nav><button id="return-kettle" class="govuk-link k-text-button" type="button" hidden>Back to Kettle</button></nav>
+<section class="screen">
+  <h1>Text</h1>
+  <p class="lede">Exact clean-up and sorting, done by ordinary code on this computer. No model rewrites your words, and the same text always gives the same result.</p>
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-label--m" for="input">Your text</label>
+    <div id="input-hint" class="govuk-hint">Paste it here or open a file. It stays as it is until you choose to replace it.</div>
+    <textarea id="input" class="govuk-textarea" rows="12" spellcheck="false" aria-describedby="input-hint"></textarea>
+  </div>
+  <p><button id="restore" type="button" class="govuk-link k-text-button" hidden>Put back the text from before the last replacement</button></p>
+  <div id="picker" class="screen drop-zone">
+    <input id="file" type="file" accept=".txt,.text,.md,.csv,.tsv,text/plain" aria-label="Choose a text file" hidden>
+    <button id="choose-file" type="button" class="file-picker" aria-describedby="file-hint">
+      <svg class="file-picker__icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.8 2 H19.2 V15.5 H12.8 Z"/><path fill="currentColor" d="M7 15.5 H25 L16 25.5 Z"/><path fill="#7385a0" d="M5 28 H27 V31 H5 Z"/></svg>
+      <span>Choose a text file</span>
+      <span class="small muted">Or drop a text file here.</span>
+    </button>
+    <p id="file-hint" class="small">Plain text such as .txt, .md, .csv or .tsv, saved as UTF-8, up to 5 MB. Your file is unchanged.</p>
+  </div>
+</section>
+<form id="form" class="screen" novalidate>
+  <fieldset class="govuk-fieldset" aria-describedby="operation-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m"><h2 class="govuk-fieldset__heading">Choose one change</h2></legend>
+    <div id="operation-hint" class="govuk-hint">Each change does only what it says here, and nothing else.</div>
+    <p id="operation-error" class="govuk-error-message" hidden></p>
+    <div class="govuk-radios govuk-radios--small">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="op-sort" name="operation" type="radio" value="sort" aria-describedby="op-sort-hint">
+        <label class="govuk-label govuk-radios__label" for="op-sort">Sort lines, A to Z or Z to A</label>
+        <div id="op-sort-hint" class="govuk-hint govuk-radios__hint">Puts whole lines in order, by UK English dictionary order. No line’s characters change. Spaces at the start of a line are ignored when comparing. Blank lines go to the end.</div>
+      </div>
+      <fieldset class="govuk-fieldset govuk-radios__conditional" data-options="sort" hidden>
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Order</legend>
+        <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item"><input class="govuk-radios__input" id="order-az" name="order" type="radio" value="az" checked><label class="govuk-label govuk-radios__label" for="order-az">A to Z</label></div>
+          <div class="govuk-radios__item"><input class="govuk-radios__input" id="order-za" name="order" type="radio" value="za"><label class="govuk-label govuk-radios__label" for="order-za">Z to A</label></div>
+        </div>
+      </fieldset>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="op-markers" name="operation" type="radio" value="markers" aria-describedby="op-markers-hint">
+        <label class="govuk-label govuk-radios__label" for="op-markers">Remove bullets and numbering</label>
+        <div id="op-markers-hint" class="govuk-hint govuk-radios__hint">Removes a list marker at the start of a line, and the space after it: • - * – 1. 1) (1) a) (a) (i). Indentation stays. Numbers and symbols anywhere else are untouched.</div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="op-case" name="operation" type="radio" value="case" aria-describedby="op-case-hint">
+        <label class="govuk-label govuk-radios__label" for="op-case">Change case</label>
+        <div id="op-case-hint" class="govuk-hint govuk-radios__hint">Changes capitals only. Code cannot know that “london” is a name, so sentence case lists the words it could not decide and leaves them to you.</div>
+      </div>
+      <fieldset class="govuk-fieldset govuk-radios__conditional" data-options="case" hidden>
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Change to</legend>
+        <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item"><input class="govuk-radios__input" id="to-sentence" name="to" type="radio" value="sentence" checked aria-describedby="to-sentence-hint"><label class="govuk-label govuk-radios__label" for="to-sentence">Sentence case</label><div id="to-sentence-hint" class="govuk-hint govuk-radios__hint">A capital at the start of each line and sentence, and for “I”, the days and the months (not March or May, which are also ordinary words). In text that already has lower case, acronyms like NHS are kept.</div></div>
+          <div class="govuk-radios__item"><input class="govuk-radios__input" id="to-title" name="to" type="radio" value="title" aria-describedby="to-title-hint"><label class="govuk-label govuk-radios__label" for="to-title">Title Case</label><div id="to-title-hint" class="govuk-hint govuk-radios__hint">A capital on each word except a, an, and, as, at, but, by, for, from, in, into, nor, of, on, or, the, to, with.</div></div>
+          <div class="govuk-radios__item"><input class="govuk-radios__input" id="to-lower" name="to" type="radio" value="lower"><label class="govuk-label govuk-radios__label" for="to-lower">lower case</label></div>
+          <div class="govuk-radios__item"><input class="govuk-radios__input" id="to-upper" name="to" type="radio" value="upper"><label class="govuk-label govuk-radios__label" for="to-upper">UPPER CASE</label></div>
+        </div>
+      </fieldset>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="op-tidy" name="operation" type="radio" value="tidy" aria-describedby="op-tidy-hint">
+        <label class="govuk-label govuk-radios__label" for="op-tidy">Tidy spacing and stray characters</label>
+        <div id="op-tidy-hint" class="govuk-hint govuk-radios__hint">Repeated spaces become one; spaces at line ends and extra blank lines go. Removes soft hyphens, zero-width and control characters and &#xFFFD;. Non-breaking spaces become spaces, and ligatures such as &#xFB01; become letters. Each kind is counted. Tabs, letters and punctuation never change.</div>
+      </div>
+      <div class="govuk-radios__conditional" data-options="tidy" hidden>
+        <div class="govuk-checkboxes govuk-checkboxes--small"><div class="govuk-checkboxes__item"><input class="govuk-checkboxes__input" id="line-starts" name="lineStarts" type="checkbox"><label class="govuk-label govuk-checkboxes__label" for="line-starts">Also remove spaces at the start of lines</label></div></div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="op-breaks" name="operation" type="radio" value="breaks" aria-describedby="op-breaks-hint">
+        <label class="govuk-label govuk-radios__label" for="op-breaks">Fix line breaks</label>
+        <div id="op-breaks-hint" class="govuk-hint govuk-radios__hint">Changes line breaks, and the spaces next to them, by one exact rule. It never decides where a paragraph of prose should start: that is a judgement about meaning.</div>
+      </div>
+      <fieldset class="govuk-fieldset govuk-radios__conditional" data-options="breaks" hidden>
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Rule</legend>
+        <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item"><input class="govuk-radios__input" id="mode-rejoin" name="mode" type="radio" value="rejoin" checked aria-describedby="mode-rejoin-hint"><label class="govuk-label govuk-radios__label" for="mode-rejoin">Rejoin lines broken by copying from a PDF</label><div id="mode-rejoin-hint" class="govuk-hint govuk-radios__hint">Removes line breaks inside paragraphs. Blank lines, and lines that start with a list marker, keep their breaks. A word split by a hyphen at a line end is joined and listed for you to check.</div></div>
+          <div class="govuk-radios__item"><input class="govuk-radios__input" id="mode-markers" name="mode" type="radio" value="markers" aria-describedby="mode-markers-hint"><label class="govuk-label govuk-radios__label" for="mode-markers">Put each run-together list item on its own line</label><div id="mode-markers-hint" class="govuk-hint govuk-radios__hint">A break before each • and before numbering that runs 1. 2. 3., a) b) c) or (i) (ii) (iii) within one line. A lone number, a dash or an asterisk is not split.</div></div>
+          <div class="govuk-radios__item"><input class="govuk-radios__input" id="mode-sentence-ends" name="mode" type="radio" value="sentence-ends" aria-describedby="mode-sentence-ends-hint"><label class="govuk-label govuk-radios__label" for="mode-sentence-ends">Break where a sentence ends with no space</label><div id="mode-sentence-ends-hint" class="govuk-hint govuk-radios__hint">Such as “end.Next”: a lower-case letter, then . ! or ?, then a capitalised word. Web addresses are left alone.</div></div>
+          <div class="govuk-radios__item"><input class="govuk-radios__input" id="mode-sentences" name="mode" type="radio" value="sentences" aria-describedby="mode-sentences-hint"><label class="govuk-label govuk-radios__label" for="mode-sentences">One sentence per line</label><div id="mode-sentences-hint" class="govuk-hint govuk-radios__hint">A break after . ! ? or … when a space and then a capital letter follow. Not after a short form such as Mr, Dr, Prof, St, No, Fig, approx, e.g. or i.e., or after a single initial.</div></div>
+        </div>
+      </fieldset>
+      <div class="govuk-radios__divider">or</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="op-compare" name="operation" type="radio" value="compare" aria-describedby="op-compare-hint">
+        <label class="govuk-label govuk-radios__label" for="op-compare">Compare with a second list</label>
+        <div id="op-compare-hint" class="govuk-hint govuk-radios__hint">Changes nothing. Each line is one item. Shows which items are in both lists, only in your text or only in the second list, and how many times each was written. Blank lines are left out and counted.</div>
+      </div>
+      <div class="govuk-radios__conditional screen" data-options="compare" hidden>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="second">Second list</label>
+          <div id="second-hint" class="govuk-hint">Paste it here, one item on each line.</div>
+          <textarea id="second" class="govuk-textarea" rows="8" spellcheck="false" aria-describedby="second-hint"></textarea>
+        </div>
+        <fieldset class="govuk-fieldset" aria-describedby="same-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Count as the same item</legend>
+          <div id="same-hint" class="govuk-hint">With neither ticked, two lines match only when every character is the same.</div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item"><input class="govuk-checkboxes__input" id="ignore-case" name="ignoreCase" type="checkbox"><label class="govuk-label govuk-checkboxes__label" for="ignore-case">Lines that differ only in capitals</label></div>
+            <div class="govuk-checkboxes__item"><input class="govuk-checkboxes__input" id="trim-ends" name="trimEnds" type="checkbox"><label class="govuk-label govuk-checkboxes__label" for="trim-ends">Lines that differ only in spaces at the start or end</label></div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </fieldset>
+  <div class="button-row"><button id="apply" class="govuk-button">Make this change</button></div>
+</form>
+<p id="status" role="status" aria-live="polite"></p>
+<p id="error" class="govuk-error-message" role="alert" tabindex="-1" hidden></p>
+<section id="result" class="screen" aria-labelledby="result-title" hidden>
+  <h2 id="result-title" tabindex="-1">Check what changed</h2>
+  <div class="card">
+    <h3 id="changes-title">What changed</h3>
+    <ul id="changes" class="govuk-list govuk-list--bullet" aria-labelledby="changes-title"></ul>
+    <div id="lists" class="screen"></div>
+    <p id="note" class="govuk-inset-text" hidden></p>
+    <p class="small">Everything else is exactly as it was. Your text above has not been touched.</p>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-label--m" for="output">Result</label>
+    <textarea id="output" class="govuk-textarea" rows="12" spellcheck="false" readonly></textarea>
+  </div>
+  <div class="button-row">
+    <button id="copy" type="button" class="govuk-button">Copy the result</button>
+    <button id="save" type="button" class="govuk-button govuk-button--secondary">Save as a text file</button>
+    <button id="replace" type="button" class="govuk-button govuk-button--secondary">Use the result as my text</button>
+  </div>
+</section>
+<section id="comparison" class="screen" aria-labelledby="comparison-title" hidden>
+  <h2 id="comparison-title" tabindex="-1">Check the comparison</h2>
+  <div class="card">
+    <h3 id="counted-title">What was compared</h3>
+    <ul id="counted" class="govuk-list govuk-list--bullet" aria-labelledby="counted-title"></ul>
+    <p id="nearly" class="govuk-inset-text" hidden></p>
+    <p class="small">Neither list has been changed. Each item is shown as it was first written, in the order it first appears.</p>
+  </div>
+  <div id="groups" class="screen"></div>
+</section>
+<section class="screen" aria-labelledby="models-title">
+  <h2 id="models-title">Models used: none</h2>
+  <p>Every change is made by ordinary code inside this page. No model, local or remote, reads or rewrites your text, and the page is not allowed to send it anywhere, not even to the small local server that opened this window.</p>
+  <details class="govuk-details"><summary class="govuk-details__summary"><span class="govuk-details__summary-text">What this does not do, and what is kept</span></summary><div class="govuk-details__text screen"><p>It does not fix grammar or spelling, reword, summarise or decide where paragraphs belong. Those are judgements about meaning, not exact changes. Comparing two lists never guesses that two different spellings are the same person or thing.</p><p>Your text and results stay in this window’s memory only. Nothing is stored; closing or reloading the window loses them. Line endings from Windows files become plain line breaks. Save or copy what you want to keep.</p></div></details>
+</section>
+    </main>
+    <footer class="app-footer">A local experiment · ordinary code, no model · nothing is stored</footer>
+  </body>
+</html>

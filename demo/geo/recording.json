@@ -1,0 +1,1481 @@
+{
+ "exchanges": {
+  "GET /api/map-tile?pack=:id&x=1020&y=679&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "84285eed0373064d.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1020&y=680&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "733989e87ea8aa1c.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1020&y=681&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "a51347c0292ee9d8.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1020&y=682&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "bf8ff36cc5452192.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1020&y=683&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "d25efb389bf9926b.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1021&y=679&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "35c6e92106b527d8.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1021&y=680&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "2b8810a2b17d6eb1.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1021&y=681&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "ed0b070c1081bbab.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1021&y=682&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "545b2172ef53317b.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1021&y=683&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "6f6fc2e95e00d44b.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1022&y=679&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "20ff72d98e8b733d.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1022&y=680&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "84f9c193655d9b8c.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1022&y=681&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "6a5e974ae78c9fad.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1022&y=682&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "6be51bd866d5d9b3.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1022&y=683&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "26e4966ccb1d37f2.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1023&y=679&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "69dd732d5891d256.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1023&y=680&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "dca4e8a18b73be4a.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1023&y=681&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "9798dccbef8933ee.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1023&y=682&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "109ed974e3f7e75e.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1023&y=683&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "57b31a11cfdd4642.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1024&y=679&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "3ceeeb40d3a76a84.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1024&y=680&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "5429af5d695752e3.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1024&y=681&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "54b74644c3adc196.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1024&y=682&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "2fe6ad87ba462a73.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1024&y=683&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "06e7f81891bc3638.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1025&y=679&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "0d0ff458efe73a18.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1025&y=680&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "a88d64578fc102c6.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1025&y=681&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "dcbd01e630ee521c.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1025&y=682&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "d477d64bb3de81c5.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=1025&y=683&z=11": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "7613bcc84e01749f.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2041&y=1358&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "7c2f2e04d56f46bc.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2041&y=1359&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "52808732570dd012.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2041&y=1360&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "cef1d7898e28cd50.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2041&y=1361&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "eccd81e00fe48e14.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2041&y=1362&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "b3f46a93d3fd00ae.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2041&y=1363&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "23c686f18981e4d5.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2041&y=1364&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "752f8e55aacb678c.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2041&y=1365&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "7e46b6a2398f4104.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2041&y=1366&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "cf684f92a22452a8.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2042&y=1358&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "583aaa4fa05e2f4d.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2042&y=1359&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "e470e590f83687e0.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2042&y=1360&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "8f62f093b148f7e6.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2042&y=1361&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "778acc331d17b86e.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2042&y=1362&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "b5976fa24b3d886c.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2042&y=1363&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "5bf2145b473177cf.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2042&y=1364&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "54627cb6906375e5.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2042&y=1365&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "736f8f7518008beb.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2042&y=1366&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "707be87b30b44ba4.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2043&y=1358&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "efe865f4558db76e.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2043&y=1359&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "d126b8b594c04ea4.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2043&y=1360&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "a43a25fddd996b1b.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2043&y=1361&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "9cd15f82c35bf931.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2043&y=1362&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "b3a2353f7cbe40b2.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2043&y=1363&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "e879b656d3994857.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2043&y=1364&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "9aa86f24023060f2.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2043&y=1365&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "a8d99d8f401e78d9.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2043&y=1366&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "6da37c8aa2b9091c.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2044&y=1358&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "3f5ee5ed62b3733a.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2044&y=1359&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "47f3c61d2e998bc1.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2044&y=1360&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "4fe834aec57b507b.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2044&y=1361&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "0f170ee5eafc16a9.png",
+    "ms": 20
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2044&y=1362&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "ba855d1269088c7a.png",
+    "ms": 18
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2044&y=1363&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "a1520c3427d5f869.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2044&y=1364&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "1b12d041bc8e1d1a.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2044&y=1365&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "89cf2b419a47a4e3.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2044&y=1366&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "c0046b3c1cd57d3d.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2045&y=1358&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "32038a0fa82c7036.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2045&y=1359&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "0b53ac8c8c6a51c4.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2045&y=1360&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "f0073ceb1ac5564c.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2045&y=1361&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "414d47296d52018b.png",
+    "ms": 12
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2045&y=1362&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "f782e4ffdb96e88e.png",
+    "ms": 11
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2045&y=1363&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "f344a9e6e0f666cd.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2045&y=1364&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "4df4339a97f0e398.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2045&y=1365&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "619f2f1f118bda48.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2045&y=1366&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "e49a5f70115adc1a.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2046&y=1358&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "f92462b530203bfc.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2046&y=1359&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "d2aa6a1424a8351a.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2046&y=1360&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "f245368ebb3cc14a.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2046&y=1361&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "45877b99eb72054e.png",
+    "ms": 8
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2046&y=1362&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "cb3f486bc3a5c0a2.png",
+    "ms": 16
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2046&y=1363&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "ec5cc2473a86f7f7.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2046&y=1364&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "af71676d45d6a6ed.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2046&y=1365&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "0ccb90bddbc079d8.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2046&y=1366&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "7f1c7a4f349438fe.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2047&y=1358&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "4307784129e4c351.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2047&y=1359&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "1dd9aa441c8944b4.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2047&y=1360&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "79ac421f853b5ae9.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2047&y=1361&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "e8b9a2035909a7e0.png",
+    "ms": 10
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2047&y=1362&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "51476be25ba2363e.png",
+    "ms": 9
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2047&y=1363&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "8a126db48440037f.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2047&y=1364&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "34ec7a916f22c7e9.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2047&y=1365&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "7152406747b08554.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2047&y=1366&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "26a1fc40d0d39130.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2048&y=1358&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "696ee473e542f0c5.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2048&y=1359&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "ba51233fd3d5b929.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2048&y=1360&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "146dd954c06dcc05.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2048&y=1361&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "a1b99702b07aae3d.png",
+    "ms": 17
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2048&y=1362&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "0f66dd46cc657fd1.png",
+    "ms": 12
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2048&y=1363&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "97901629193f48bd.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2048&y=1364&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "ed3842600d27bae2.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2048&y=1365&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "0b3905ea00d4add7.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2048&y=1366&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "59b189de9f9e309e.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2049&y=1358&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "ed5ee6cd4359e493.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2049&y=1359&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "be5d315e235f33d2.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2049&y=1360&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "1996a0d41172aec5.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2049&y=1361&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "b72fdf70629a29a4.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2049&y=1362&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "e5953088cda80edb.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2049&y=1363&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "505270060263665f.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2049&y=1364&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "2784e83f28114a38.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2049&y=1365&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "0a401ca1467af266.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2049&y=1366&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "99eaa7172dc866bb.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2050&y=1358&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "b761982e663e7961.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2050&y=1359&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "b26cad0a8041a9fc.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2050&y=1360&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "e9a85bc550eb251f.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2050&y=1361&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "9b1bc5726eac8ec3.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2050&y=1362&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "ef2a3036de47dd70.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2050&y=1363&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "26d1ec1336b5e33a.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2050&y=1364&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "10ed04b5e014cc04.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2050&y=1365&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "8c46d6375d74fb0b.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2050&y=1366&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "c549435a11c754a2.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2051&y=1358&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "aefa03942c400d56.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2051&y=1359&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "8277ac691a8c783b.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2051&y=1360&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "e647fd74a15a3b9f.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2051&y=1361&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "cc917f85a8325d78.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2051&y=1362&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "5d6b368e326cc67f.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2051&y=1363&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "c5ac6651fae92682.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2051&y=1364&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "7da4840404699491.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2051&y=1365&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "d05b7f10f9254f94.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=2051&y=1366&z=12": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "9966a3fba90300d5.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=510&y=339&z=10": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "6f94394deeda673f.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=510&y=340&z=10": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "6df53fe0cd775ed1.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=510&y=341&z=10": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "47f851f095894f8b.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=511&y=339&z=10": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "8a099198f8bd4542.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=511&y=340&z=10": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "dc19e862aa8e7f13.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=511&y=341&z=10": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "1d28a7f77668df4c.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=512&y=339&z=10": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "c8e2465a47a7f188.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=512&y=340&z=10": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "0e36a6cfad6e045d.png"
+   }
+  ],
+  "GET /api/map-tile?pack=:id&x=512&y=341&z=10": [
+   {
+    "status": 200,
+    "type": "image/png",
+    "file": "74ce2798761cda76.png"
+   }
+  ],
+  "GET /api/photo?file=battersea-power-station.jpg&folder=/private/tmp/kttl-demo/London photos": [
+   {
+    "status": 200,
+    "type": "image/jpeg",
+    "file": "62f954234efb6fce.jpg",
+    "ms": 6
+   }
+  ],
+  "GET /api/photo?file=big-ben.jpg&folder=/private/tmp/kttl-demo/London photos": [
+   {
+    "status": 200,
+    "type": "image/jpeg",
+    "file": "649a4defb84f34b8.jpg",
+    "ms": 7
+   }
+  ],
+  "GET /api/photo?file=british-museum.jpg&folder=/private/tmp/kttl-demo/London photos": [
+   {
+    "status": 200,
+    "type": "image/jpeg",
+    "file": "478f2f4bf44ff384.jpg",
+    "ms": 13
+   }
+  ],
+  "GET /api/photo?file=buckingham-palace.jpg&folder=/private/tmp/kttl-demo/London photos": [
+   {
+    "status": 200,
+    "type": "image/jpeg",
+    "file": "20249d26494c7b08.jpg",
+    "ms": 18
+   }
+  ],
+  "GET /api/photo?file=kew-palm-house.jpg&folder=/private/tmp/kttl-demo/London photos": [
+   {
+    "status": 200,
+    "type": "image/jpeg",
+    "file": "e3882bbec65f6973.jpg",
+    "ms": 16
+   }
+  ],
+  "GET /api/photo?file=royal-albert-hall.jpg&folder=/private/tmp/kttl-demo/London photos": [
+   {
+    "status": 200,
+    "type": "image/jpeg",
+    "file": "da3b76928d24b950.jpg",
+    "ms": 16
+   }
+  ],
+  "GET /api/photo?file=royal-observatory.jpg&folder=/private/tmp/kttl-demo/London photos": [
+   {
+    "status": 200,
+    "type": "image/jpeg",
+    "file": "e97032722e32ed9c.jpg",
+    "ms": 11
+   }
+  ],
+  "GET /api/photo?file=st-pauls.jpg&folder=/private/tmp/kttl-demo/London photos": [
+   {
+    "status": 200,
+    "type": "image/jpeg",
+    "file": "2ca9e873432b5abb.jpg",
+    "ms": 16
+   }
+  ],
+  "GET /api/photo?file=tower-bridge.jpg&folder=/private/tmp/kttl-demo/London photos": [
+   {
+    "status": 200,
+    "type": "image/jpeg",
+    "file": "395ccf4bc9115d80.jpg",
+    "ms": 17
+   }
+  ],
+  "GET /api/state": [
+   {
+    "status": 200,
+    "type": "application/json; charset=utf-8",
+    "json": {
+     "folder": {
+      "path": "/private/tmp/kttl-demo/London photos",
+      "indexed": true,
+      "status": {
+       "contract_version": 1,
+       "schema_version": 1,
+       "coverage": {
+        "indexed": 9,
+        "located": 9,
+        "unlocated": 0,
+        "failed": 0,
+        "states": {
+         "located": 9,
+         "no_gps": 0,
+         "invalid_gps": 0,
+         "error": 0
+        }
+       },
+       "last_scan": {
+        "completed_at": "2026-10-12T08:49:21.135492+00:00",
+        "extracted": 9,
+        "updated": 9,
+        "unchanged": 0,
+        "removed": 0,
+        "skipped": {
+         "unsupported": 0,
+         "symlinks": 0,
+         "non_regular": 0
+        },
+        "force": false,
+        "diagnostics": [
+         "9 image files read"
+        ]
+       },
+       "extensions": [
+        ".arw",
+        ".cr2",
+        ".cr3",
+        ".dng",
+        ".heic",
+        ".heif",
+        ".jpeg",
+        ".jpg",
+        ".nef",
+        ".orf",
+        ".pef",
+        ".png",
+        ".raf",
+        ".rw2",
+        ".tif",
+        ".tiff",
+        ".webp"
+       ],
+       "metadata_policy": "exif-xmp-v1",
+       "exiftool_version": "13.55",
+       "models_used": [],
+       "snapshot_only": true,
+       "issues": [],
+       "total_issues": 0,
+       "issues_limit": 100,
+       "issues_truncated": false
+      }
+     },
+     "job": null,
+     "working": false,
+     "map_pack": {
+      "id": "1cb9aad6cc6043a7ac5dcac007f93fec",
+      "path": "/private/tmp/kttl-demo/London map.mbtiles",
+      "name": "London — OS VectorMap District backdrop (2026)",
+      "bounds": [
+       -0.53,
+       51.28,
+       0.34,
+       51.7
+      ],
+      "minzoom": 10,
+      "maxzoom": 12,
+      "format": "png",
+      "size_bytes": 1982464,
+      "attribution": "Contains Ordnance Survey data © Crown copyright and database right 2026. <a href=\"https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/\" target=\"_blank\" rel=\"noopener noreferrer\">Open Government Licence</a>"
+     }
+    },
+    "ms": 11
+   }
+  ],
+  "POST /api/folder {\"path\":\"/private/tmp/kttl-demo/London photos\"}": [
+   {
+    "status": 200,
+    "type": "application/json; charset=utf-8",
+    "json": {
+     "path": "/private/tmp/kttl-demo/London photos",
+     "indexed": true,
+     "status": {
+      "contract_version": 1,
+      "schema_version": 1,
+      "coverage": {
+       "indexed": 9,
+       "located": 9,
+       "unlocated": 0,
+       "failed": 0,
+       "states": {
+        "located": 9,
+        "no_gps": 0,
+        "invalid_gps": 0,
+        "error": 0
+       }
+      },
+      "last_scan": {
+       "completed_at": "2026-10-12T08:49:21.135492+00:00",
+       "extracted": 9,
+       "updated": 9,
+       "unchanged": 0,
+       "removed": 0,
+       "skipped": {
+        "unsupported": 0,
+        "symlinks": 0,
+        "non_regular": 0
+       },
+       "force": false,
+       "diagnostics": [
+        "9 image files read"
+       ]
+      },
+      "extensions": [
+       ".arw",
+       ".cr2",
+       ".cr3",
+       ".dng",
+       ".heic",
+       ".heif",
+       ".jpeg",
+       ".jpg",
+       ".nef",
+       ".orf",
+       ".pef",
+       ".png",
+       ".raf",
+       ".rw2",
+       ".tif",
+       ".tiff",
+       ".webp"
+      ],
+      "metadata_policy": "exif-xmp-v1",
+      "exiftool_version": "13.55",
+      "models_used": [],
+      "snapshot_only": true,
+      "issues": [],
+      "total_issues": 0,
+      "issues_limit": 100,
+      "issues_truncated": false
+     }
+    },
+    "ms": 4
+   }
+  ],
+  "POST /api/search {\"filters\":{\"bbox\":\"\",\"from\":\"\",\"lat\":\"\",\"limit\":\"50\",\"lon\":\"\",\"mode\":\"all\",\"radius\":\"500\",\"to\":\"\"},\"folder\":\"/private/tmp/kttl-demo/London photos\"}": [
+   {
+    "status": 200,
+    "type": "application/json; charset=utf-8",
+    "json": {
+     "contract_version": 1,
+     "hits": [
+      {
+       "path": "battersea-power-station.jpg",
+       "latitude": 51.4817,
+       "longitude": -0.1446,
+       "capture_time_raw": "2025:05:22 19:31:20",
+       "capture_time_sortable": "2025-05-22T19:31:20",
+       "capture_local_date": "2025-05-22",
+       "capture_time_source": "ExifIFD:DateTimeOriginal",
+       "capture_offset_raw": null,
+       "gps_source": "EXIF GPS",
+       "warning_message": null,
+       "distance_m": null
+      },
+      {
+       "path": "big-ben.jpg",
+       "latitude": 51.5008,
+       "longitude": -0.122,
+       "capture_time_raw": "2023:08:28 13:03:20",
+       "capture_time_sortable": "2023-08-28T13:03:20",
+       "capture_local_date": "2023-08-28",
+       "capture_time_source": "ExifIFD:DateTimeOriginal",
+       "capture_offset_raw": null,
+       "gps_source": "EXIF GPS",
+       "warning_message": null,
+       "distance_m": null
+      },
+      {
+       "path": "british-museum.jpg",
+       "latitude": 51.5194,
+       "longitude": -0.127,
+       "capture_time_raw": "2011:06:15 12:50:40",
+       "capture_time_sortable": "2011-06-15T12:50:40",
+       "capture_local_date": "2011-06-15",
+       "capture_time_source": "ExifIFD:DateTimeOriginal",
+       "capture_offset_raw": null,
+       "gps_source": "EXIF GPS",
+       "warning_message": null,
+       "distance_m": null
+      },
+      {
+       "path": "buckingham-palace.jpg",
+       "latitude": 51.5014,
+       "longitude": -0.1419,
+       "capture_time_raw": "2008:06:15 12:00:00",
+       "capture_time_sortable": "2008-06-15T12:00:00",
+       "capture_local_date": "2008-06-15",
+       "capture_time_source": "ExifIFD:DateTimeOriginal",
+       "capture_offset_raw": null,
+       "gps_source": "EXIF GPS",
+       "warning_message": null,
+       "distance_m": null
+      },
+      {
+       "path": "kew-palm-house.jpg",
+       "latitude": 51.479119,
+       "longitude": -0.292128,
+       "capture_time_raw": "2025:05:14 15:08:02",
+       "capture_time_sortable": "2025-05-14T15:08:02",
+       "capture_local_date": "2025-05-14",
+       "capture_time_source": "ExifIFD:DateTimeOriginal",
+       "capture_offset_raw": null,
+       "gps_source": "EXIF GPS",
+       "warning_message": null,
+       "distance_m": null
+      },
+      {
+       "path": "royal-albert-hall.jpg",
+       "latitude": 51.501111,
+       "longitude": -0.1775,
+       "capture_time_raw": "2011:07:09 14:52:10",
+       "capture_time_sortable": "2011-07-09T14:52:10",
+       "capture_local_date": "2011-07-09",
+       "capture_time_source": "ExifIFD:DateTimeOriginal",
+       "capture_offset_raw": null,
+       "gps_source": "EXIF GPS",
+       "warning_message": null,
+       "distance_m": null
+      },
+      {
+       "path": "royal-observatory.jpg",
+       "latitude": 51.4769,
+       "longitude": -0.0005,
+       "capture_time_raw": "2020:02:11 11:07:16",
+       "capture_time_sortable": "2020-02-11T11:07:16",
+       "capture_local_date": "2020-02-11",
+       "capture_time_source": "ExifIFD:DateTimeOriginal",
+       "capture_offset_raw": null,
+       "gps_source": "EXIF GPS",
+       "warning_message": null,
+       "distance_m": null
+      },
+      {
+       "path": "st-pauls.jpg",
+       "latitude": 51.513594,
+       "longitude": -0.09975,
+       "capture_time_raw": "2011:07:10 13:54:15",
+       "capture_time_sortable": "2011-07-10T13:54:15",
+       "capture_local_date": "2011-07-10",
+       "capture_time_source": "ExifIFD:DateTimeOriginal",
+       "capture_offset_raw": null,
+       "gps_source": "EXIF GPS",
+       "warning_message": null,
+       "distance_m": null
+      },
+      {
+       "path": "tower-bridge.jpg",
+       "latitude": 51.504544,
+       "longitude": -0.0777329999222222,
+       "capture_time_raw": "2025:03:15 14:26:30",
+       "capture_time_sortable": "2025-03-15T14:26:30",
+       "capture_local_date": "2025-03-15",
+       "capture_time_source": "ExifIFD:DateTimeOriginal",
+       "capture_offset_raw": null,
+       "gps_source": "EXIF GPS",
+       "warning_message": null,
+       "distance_m": null
+      }
+     ],
+     "total_matches": 9,
+     "limit": 50,
+     "truncated": false,
+     "coverage": {
+      "indexed": 9,
+      "located": 9,
+      "unlocated": 0,
+      "failed": 0,
+      "states": {
+       "located": 9,
+       "no_gps": 0,
+       "invalid_gps": 0,
+       "error": 0
+      }
+     },
+     "snapshot_only": true
+    },
+    "ms": 3
+   }
+  ],
+  "POST /api/search {\"filters\":{\"bbox\":\"\",\"from\":\"\",\"lat\":\"51.5007\",\"limit\":\"50\",\"lon\":\"-0.1246\",\"mode\":\"radius\",\"radius\":\"1500\",\"to\":\"\"},\"folder\":\"/private/tmp/kttl-demo/London photos\"}": [
+   {
+    "status": 200,
+    "type": "application/json; charset=utf-8",
+    "json": {
+     "contract_version": 1,
+     "hits": [
+      {
+       "path": "big-ben.jpg",
+       "latitude": 51.5008,
+       "longitude": -0.122,
+       "capture_time_raw": "2023:08:28 13:03:20",
+       "capture_time_sortable": "2023-08-28T13:03:20",
+       "capture_local_date": "2023-08-28",
+       "capture_time_source": "ExifIFD:DateTimeOriginal",
+       "capture_offset_raw": null,
+       "gps_source": "EXIF GPS",
+       "warning_message": null,
+       "distance_m": 180.31369031479622
+      },
+      {
+       "path": "buckingham-palace.jpg",
+       "latitude": 51.5014,
+       "longitude": -0.1419,
+       "capture_time_raw": "2008:06:15 12:00:00",
+       "capture_time_sortable": "2008-06-15T12:00:00",
+       "capture_local_date": "2008-06-15",
+       "capture_time_source": "ExifIFD:DateTimeOriginal",
+       "capture_offset_raw": null,
+       "gps_source": "EXIF GPS",
+       "warning_message": null,
+       "distance_m": 1200.0151975100987
+      }
+     ],
+     "total_matches": 2,
+     "limit": 50,
+     "truncated": false,
+     "coverage": {
+      "indexed": 9,
+      "located": 9,
+      "unlocated": 0,
+      "failed": 0,
+      "states": {
+       "located": 9,
+       "no_gps": 0,
+       "invalid_gps": 0,
+       "error": 0
+      }
+     },
+     "snapshot_only": true
+    },
+    "ms": 2
+   }
+  ],
+  "POST /api/search {\"filters\":{\"bbox\":\"\",\"from\":\"2025-01-01\",\"lat\":\"\",\"limit\":\"50\",\"lon\":\"\",\"mode\":\"all\",\"radius\":\"500\",\"to\":\"2025-12-31\"},\"folder\":\"/private/tmp/kttl-demo/London photos\"}": [
+   {
+    "status": 200,
+    "type": "application/json; charset=utf-8",
+    "json": {
+     "contract_version": 1,
+     "hits": [
+      {
+       "path": "battersea-power-station.jpg",
+       "latitude": 51.4817,
+       "longitude": -0.1446,
+       "capture_time_raw": "2025:05:22 19:31:20",
+       "capture_time_sortable": "2025-05-22T19:31:20",
+       "capture_local_date": "2025-05-22",
+       "capture_time_source": "ExifIFD:DateTimeOriginal",
+       "capture_offset_raw": null,
+       "gps_source": "EXIF GPS",
+       "warning_message": null,
+       "distance_m": null
+      },
+      {
+       "path": "kew-palm-house.jpg",
+       "latitude": 51.479119,
+       "longitude": -0.292128,
+       "capture_time_raw": "2025:05:14 15:08:02",
+       "capture_time_sortable": "2025-05-14T15:08:02",
+       "capture_local_date": "2025-05-14",
+       "capture_time_source": "ExifIFD:DateTimeOriginal",
+       "capture_offset_raw": null,
+       "gps_source": "EXIF GPS",
+       "warning_message": null,
+       "distance_m": null
+      },
+      {
+       "path": "tower-bridge.jpg",
+       "latitude": 51.504544,
+       "longitude": -0.0777329999222222,
+       "capture_time_raw": "2025:03:15 14:26:30",
+       "capture_time_sortable": "2025-03-15T14:26:30",
+       "capture_local_date": "2025-03-15",
+       "capture_time_source": "ExifIFD:DateTimeOriginal",
+       "capture_offset_raw": null,
+       "gps_source": "EXIF GPS",
+       "warning_message": null,
+       "distance_m": null
+      }
+     ],
+     "total_matches": 3,
+     "limit": 50,
+     "truncated": false,
+     "coverage": {
+      "indexed": 9,
+      "located": 9,
+      "unlocated": 0,
+      "failed": 0,
+      "states": {
+       "located": 9,
+       "no_gps": 0,
+       "invalid_gps": 0,
+       "error": 0
+      }
+     },
+     "snapshot_only": true
+    },
+    "ms": 3
+   }
+  ]
+ },
+ "aliases": {
+  "POST /api/choose": "POST /api/folder"
+ }
+}

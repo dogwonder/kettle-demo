@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Regulars · Kettle cups</title>
+    <link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="app-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle cups · regulars">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g class="cup-mark" transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+<path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+<path class="cup-steam cup-steam-later" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups · regulars</span>
+        </a>
+        <span class="privacy-fact">Nothing leaves this computer.</span>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+<nav><button id="return-kettle" class="govuk-link k-text-button" type="button" hidden>Back to Kettle</button></nav>
+<section class="screen">
+  <h1>Regulars</h1>
+  <p class="lede">What you pay for again and again, from a year of your bank statements, with a yearly total for each. Ordinary code on this computer groups the payments by rule. It gives no labels, no categories and no advice, and no model is used.</p>
+  <div id="picker" class="screen drop-zone">
+    <input id="file" type="file" accept=".csv,text/csv" multiple aria-label="Choose statement CSV files" hidden>
+    <button id="choose-file" type="button" class="file-picker" aria-describedby="file-hint">
+      <svg class="file-picker__icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.8 2 H19.2 V15.5 H12.8 Z"/><path fill="currentColor" d="M7 15.5 H25 L16 25.5 Z"/><path fill="#7385a0" d="M5 28 H27 V31 H5 Z"/></svg>
+      <span>Choose your statement files</span>
+      <span class="small muted">Or drop them here. Choose all twelve at once, or add more later.</span>
+    </button>
+    <p id="file-hint" class="small">Reviewed statement CSV files saved from Tables, up to 5 MB each. Your files are unchanged, and your statements are never stored: close or reload this window and they are gone.</p>
+  </div>
+</section>
+<p id="status" role="status" aria-live="polite"></p>
+<div id="notices" class="govuk-error-summary" role="alert" tabindex="-1" hidden>
+  <div class="govuk-error-summary__body">
+    <h2 class="govuk-error-summary__title">Some files were not added</h2>
+    <ul id="notice-list" class="govuk-list govuk-error-summary__list"></ul>
+  </div>
+</div>
+<section id="files-section" class="screen" aria-labelledby="files-title" hidden>
+  <h2 id="files-title">Your files</h2>
+  <ul id="file-list" class="file-list"></ul>
+  <div id="problems" class="govuk-error-summary" role="alert" tabindex="-1" hidden>
+    <div class="govuk-error-summary__body">
+      <h3 id="problems-title" class="govuk-error-summary__title"></h3>
+      <ul id="problem-list" class="govuk-list govuk-error-summary__list"></ul>
+      <p class="small">Nothing here is corrected for you. Fix a row in Tables, save the file again, and add it here: a file with the same name replaces the earlier one.</p>
+    </div>
+  </div>
+  <p id="overlap" class="govuk-inset-text" hidden></p>
+</section>
+<section id="result" class="screen" aria-labelledby="result-title" hidden>
+  <h2 id="result-title" tabindex="-1">Your regulars</h2>
+  <p id="period"></p>
+  <p id="summary" class="small"></p>
+  <p id="new-link" class="small" hidden><a class="govuk-link" href="#new-title"></a></p>
+  <div class="button-row">
+    <button id="download" type="button" class="govuk-button">Download the list as CSV</button>
+    <button id="download-payments" type="button" class="govuk-button govuk-button--secondary">Download every payment as CSV</button>
+    <button id="undo" type="button" class="govuk-button govuk-button--secondary" hidden>Undo all renames and merges</button>
+  </div>
+  <div class="govuk-form-group threshold">
+    <label class="govuk-label" for="min-year">Put lines under this many pounds a year in one collapsed section</label>
+    <div class="govuk-input__wrapper"><div class="govuk-input__prefix" aria-hidden="true">£</div><input id="min-year" class="govuk-input govuk-input--width-5" type="number" min="0" step="10" inputmode="numeric"></div>
+  </div>
+  <p id="none" class="govuk-inset-text" hidden>No line has 3 or more payments in 3 or more calendar months yet. Add more statements.</p>
+  <ol id="list" class="lines"></ol>
+  <details id="tail" class="tail" hidden>
+    <summary id="tail-summary"></summary>
+    <ol id="tail-list" class="lines"></ol>
+  </details>
+</section>
+<section id="new" class="screen" aria-labelledby="new-title" hidden>
+  <h2 id="new-title" tabindex="-1">New in the latest statement</h2>
+  <p id="new-none" class="govuk-inset-text" hidden>Add an earlier statement to compare against. With only one statement, every name would be new.</p>
+  <div id="new-found" class="screen">
+    <div id="since-group" class="govuk-form-group since">
+      <label class="govuk-label" for="since">Count as new from</label>
+      <select id="since" class="govuk-select"></select>
+    </div>
+    <p id="new-summary"></p>
+    <ol id="first-list" class="lines"></ol>
+    <div class="button-row">
+      <button id="download-new" type="button" class="govuk-button govuk-button--secondary">Download what is new as CSV</button>
+    </div>
+  </div>
+</section>
+<section class="screen" aria-labelledby="models-title">
+  <h2 id="models-title">Models used: none</h2>
+  <p>Every step is made by ordinary code inside this page: reading the files, grouping by rule, and working out rhythm, price changes and totals. No model, local or remote, reads your statements, and the page is not allowed to send anything anywhere, not even to the small local server that opened this window.</p>
+  <details class="govuk-details"><summary class="govuk-details__summary"><span class="govuk-details__summary-text">How the list is worked out, and what is kept</span></summary><div class="govuk-details__text screen">
+    <p>Only money paid out is listed. A line is a bank name with 3 or more payments in 3 or more calendar months. The bank’s description is cut at the first “ | ” (card rows are merchant, then location), words with digits are dropped unless nothing else is left, web endings, dots and a trailing UK, LTD or PLC are dropped, single letters are joined, and after a “*” the name is kept when the part before it is a short processor name. No list of shops is used, so payment platforms that pay many sellers stay as one line.</p>
+    <p>A year is the total for the period you added, scaled to 365 days. A price change is shown when runs of the same amount, at least two payments long, cover 80% or more of a line’s payments, with at most three changes. Last paid is shown up front when the time since the last payment is more than twice the usual gap, and at least 45 days.</p>
+    <p>New in the latest statement lists every name with no payment before the first payment in your latest statement, largest first. “First time” only means not in the earlier statements you added. Every one is listed, however small. It is a list of what is new, with no view on whether a payment should be there.</p>
+    <p>The running balance is checked in each file. A break is shown, never fixed. Money coming in is not listed.</p>
+    <p>Nothing is stored. Your statements, renames, merges and the £ limit are held in this window’s memory only, and are gone when you close or reload it. Save the list as CSV to keep it. The bank’s own names always stay visible.</p>
+  </div></details>
+</section>
+    </main>
+    <footer class="app-footer">A local experiment · ordinary code, no model · your statements are never stored</footer>
+  </body>
+</html>

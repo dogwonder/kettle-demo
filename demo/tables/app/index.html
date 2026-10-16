@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Tables · Kettle cups</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="app-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle cups · tables">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g class="cup-mark" transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+<path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+<path class="cup-steam cup-steam-later" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups · tables</span>
+        </a>
+        <span class="privacy-fact">Nothing leaves this computer.</span>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+<nav><button id="return-kettle" class="govuk-link k-text-button" type="button" hidden>Back to Kettle</button></nav>
+      <section id="add" class="screen" aria-labelledby="add-title">
+        <div class="intro">
+          <h1 id="add-title" tabindex="-1">A table you can work with.</h1>
+          <p class="lede">Choose an image of one printed table, or a bank statement saved as a PDF. Check and edit the cells, then save them as CSV.</p>
+        </div>
+        <div id="read-error" class="govuk-error-summary" role="alert" tabindex="-1" aria-labelledby="read-error-title" hidden>
+          <h2 id="read-error-title" class="govuk-error-summary__title">The table could not be read</h2>
+          <div class="govuk-error-summary__body"><p id="read-error-message"></p><ul class="govuk-list govuk-error-summary__list"><li><a href="#change-image">Choose a different file</a></li></ul></div>
+        </div>
+        <form id="form" class="screen drop-zone">
+          <div id="file-field" class="govuk-form-group file-field">
+            <p id="file-error" class="govuk-error-message" data-field-error role="alert" hidden><span class="govuk-visually-hidden">Error: </span><span data-error-message></span></p>
+            <input id="image" type="file" accept="image/jpeg,image/png,image/webp,application/pdf" hidden data-file-control>
+            <div id="empty-image">
+              <button type="button" id="choose" class="file-picker" aria-describedby="file-hint" data-file-control>
+                <svg class="file-picker__icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.8 2 H19.2 V15.5 H12.8 Z"/><path fill="currentColor" d="M7 15.5 H25 L16 25.5 Z"/><path fill="#7385a0" d="M5 28 H27 V31 H5 Z"/></svg>
+                <span>Choose a table image or a PDF statement</span>
+                <span class="small muted">Or drop it here.</span>
+              </button>
+            </div>
+            <p id="file-hint" class="small muted">An image: JPEG, PNG or WebP, up to 15 MB and 25 million pixels. After choosing it, use Rotate or crop the image to select just the table. Or a statement downloaded from your bank as a text PDF: up to 15 MB, 30 pages and 500 rows. One file at a time.</p>
+            <div id="image-selection" class="card image-selection" hidden>
+              <figure id="preview-wrap"><img id="preview" alt="Your selected photograph, shown for checking"><canvas id="crop-preview" role="img" aria-label="Rotated and cropped table image that will be read" hidden></canvas><figcaption id="filename"></figcaption></figure>
+              <p id="pdf-note" class="small" hidden>A PDF statement. Tables reads its text and positions with ordinary code. Models used: none.</p>
+              <div class="button-row">
+                <button id="change-image" type="button" class="govuk-link k-text-button" data-file-control>Change file</button>
+                <button id="remove-image" type="button" class="govuk-link k-text-button">Remove</button>
+              </div>
+              <details id="prepare-image" class="govuk-details">
+                <summary class="govuk-details__summary"><span class="govuk-details__summary-text">Rotate or crop the image</span></summary>
+                <div class="govuk-details__text screen">
+                  <p>Make the text upright, then draw a box around the table. Include its column headings and all its rows. Leave out surrounding page text and background.</p>
+                  <div class="button-row"><button id="rotate-image" type="button" class="govuk-link k-text-button">Rotate left 90°</button><button id="reset-crop" type="button" class="govuk-link k-text-button">Reset image</button></div>
+                  <p id="crop-draw-hint" class="small muted">Drag across the image to draw a box, then drag its corners to adjust it. With a keyboard, focus a corner and use the arrow keys. Only the selected area will be read. Rotating resets the crop.</p>
+                  <div id="crop-editor" role="group" aria-label="Select the table area" aria-describedby="crop-draw-hint">
+                    <canvas id="crop-source" role="img" aria-label="Whole image with the selected table area"></canvas>
+                    <div id="crop-box">
+                      <button type="button" class="crop-corner" data-corner="tl" aria-label="Top left crop corner" aria-describedby="crop-draw-hint"></button>
+                      <button type="button" class="crop-corner" data-corner="tr" aria-label="Top right crop corner" aria-describedby="crop-draw-hint"></button>
+                      <button type="button" class="crop-corner" data-corner="bl" aria-label="Bottom left crop corner" aria-describedby="crop-draw-hint"></button>
+                      <button type="button" class="crop-corner" data-corner="br" aria-label="Bottom right crop corner" aria-describedby="crop-draw-hint"></button>
+                    </div>
+                  </div>
+                  <p id="crop-hint" class="small muted">Or enter the percentage to trim from each edge (0 to 99.9, in steps of 0.1).</p>
+                  <div class="crop-controls">
+                    <div><label class="govuk-label" for="crop-top">Top (%)</label><input id="crop-top" class="govuk-input govuk-input--width-3" type="number" min="0" max="99.9" step="0.1" value="0" aria-describedby="crop-hint crop-status"></div>
+                    <div><label class="govuk-label" for="crop-right">Right (%)</label><input id="crop-right" class="govuk-input govuk-input--width-3" type="number" min="0" max="99.9" step="0.1" value="0" aria-describedby="crop-hint crop-status"></div>
+                    <div><label class="govuk-label" for="crop-bottom">Bottom (%)</label><input id="crop-bottom" class="govuk-input govuk-input--width-3" type="number" min="0" max="99.9" step="0.1" value="0" aria-describedby="crop-hint crop-status"></div>
+                    <div><label class="govuk-label" for="crop-left">Left (%)</label><input id="crop-left" class="govuk-input govuk-input--width-3" type="number" min="0" max="99.9" step="0.1" value="0" aria-describedby="crop-hint crop-status"></div>
+                  </div>
+                  <p id="crop-status" class="small" role="status" aria-atomic="true"></p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div id="read-actions" hidden>
+            <button id="describe" class="govuk-button full-width" disabled>Read this table</button>
+          </div>
+        </form>
+      </section>
+      <section id="wait" class="screen waiting" aria-labelledby="wait-title" hidden>
+        <svg id="waiting-icon" class="waiting-icon cup-mark" viewBox="0 -6 36 42" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+<path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+<path class="cup-steam cup-steam-later" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+        </svg>
+        <h1 id="wait-title" tabindex="-1">Reading your table.</h1>
+        <p class="lede">The reader is finding the cells and their text on this device. Go put the kettle on.</p>
+        <p id="elapsed" class="elapsed">00:00 elapsed</p>
+        <div><button id="stop" type="button" class="govuk-button govuk-button--secondary"><svg class="action-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M5 5 H27 V27 H5 Z"/><path fill="#7385a0" d="M11 11 H21 V21 H11 Z"/></svg> <span>Stop — nothing’s saved yet</span></button></div>
+      </section>
+      <p id="status" class="small muted" role="status" aria-live="polite" aria-atomic="true">Checking the local reader…</p>
+      <section id="result" class="screen report" hidden aria-labelledby="result-title">
+        <div class="intro">
+          <p class="eyebrow">A draft for you to check</p>
+          <h2 id="result-title" tabindex="-1">Check the table, cell by cell.</h2>
+          <p class="lede" id="draft-hint">Check the headings, numbers and empty cells against the image. Edit any mistakes before saving.</p>
+          <p id="alignment-hint" class="small" hidden>Some text was aligned using its position across neighbouring columns. Check the marked cells carefully against the image.</p>
+          <p id="pdf-draft-note" class="small" hidden>Models used: none. These rows were read from the PDF’s text and positions with ordinary code.</p>
+          <p id="balance-hint" class="small" hidden></p>
+        </div>
+        <fieldset id="review-layout" class="govuk-fieldset review-layout">
+          <legend class="govuk-fieldset__legend">Review layout</legend>
+          <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+            <div class="govuk-radios__item"><input class="govuk-radios__input" id="layout-side" name="review-layout" type="radio" value="side-by-side" checked><label class="govuk-label govuk-radios__label" for="layout-side">Side by side</label></div>
+            <div class="govuk-radios__item"><input class="govuk-radios__input" id="layout-above" name="review-layout" type="radio" value="image-above"><label class="govuk-label govuk-radios__label" for="layout-above">Image above</label></div>
+          </div>
+        </fieldset>
+        <div class="table-review">
+          <figure class="table-original"><img id="table-preview" alt="The table image used by the reader, shown for checking"><figcaption id="original-caption"><a id="open-original" class="govuk-link" target="_blank" rel="noopener">Open original image at full size (opens in a new tab)</a></figcaption>
+            <div id="pdf-pages" class="pdf-pages" role="region" aria-label="Statement pages" tabindex="0" hidden></div></figure>
+          <div class="screen table-editor">
+            <p class="small muted" id="grid-hint">Each cell can be edited. Row 1 includes any headings in the image. Scroll across to see more columns.</p>
+            <div id="grid-scroll" class="grid-scroll" role="region" aria-label="Editable draft table" aria-describedby="grid-hint" tabindex="0">
+              <table id="grid" class="govuk-table"><caption class="govuk-table__caption">Draft table</caption></table>
+            </div>
+          </div>
+        </div>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary"><span class="govuk-details__summary-text">Add or remove rows and columns</span></summary>
+          <div class="govuk-details__text screen">
+            <div class="structure-control"><label class="govuk-label" for="row-number">Row number</label><input id="row-number" class="govuk-input govuk-input--width-3" type="number" min="1" value="1"><div class="button-row"><button id="add-row" type="button" class="govuk-link k-text-button">Add row after</button><button id="remove-row" type="button" class="govuk-link k-text-button">Remove row</button></div></div>
+            <div class="structure-control"><label class="govuk-label" for="column-number">Column number</label><input id="column-number" class="govuk-input govuk-input--width-3" type="number" min="1" value="1"><div class="button-row"><button id="add-column" type="button" class="govuk-link k-text-button">Add column after</button><button id="remove-column" type="button" class="govuk-link k-text-button">Remove column</button></div></div>
+            <p id="structure-status" class="small" role="status" aria-atomic="true"></p>
+          </div>
+        </details>
+        <div class="card">
+          <div class="govuk-checkboxes"><div class="govuk-checkboxes__item"><input class="govuk-checkboxes__input" type="checkbox" id="reviewed"><label class="govuk-label govuk-checkboxes__label" for="reviewed">I’ve checked every cell against the <span id="review-source">image</span>.</label></div></div>
+          <p id="review-confirmed" class="small" hidden><svg class="action-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M3.5 16.5 L10.5 23.5 L28.5 5.5 L24.5 1.5 L10.5 15.5 L7.5 12.5 Z"/></svg> Table reviewed.</p>
+          <p class="small muted">The CSV is named after your file and keeps the cell text, without colours or merged cells. Text that could act as a spreadsheet formula is saved with a leading apostrophe.</p>
+          <div class="button-row"><button id="save" type="button" class="govuk-button" disabled>Save as CSV</button></div>
+        </div>
+        <button id="clear" type="button" class="govuk-link k-text-button">Clear and choose another table</button>
+      </section>
+      <div class="photo-details">
+        <details class="govuk-details">
+          <summary class="govuk-details__summary"><span class="govuk-details__summary-text">About this small experiment</span></summary>
+          <div class="govuk-details__text screen">
+            <p>For images, this cup uses PaddleOCR’s PP-OCRv6 text recogniser and SLANet-plus table model, packaged by RapidAI. They run on your computer. Your file is not sent to a cloud service.</p>
+            <p>Start with a clear, tightly cropped image of one printed table in English, with no merged cells. Use the rotation and crop controls to make the text upright and remove surrounding page text. Handwriting, tilted photographs and complex layouts may not work well. It can miss spaces, misread numbers or add empty rows.</p>
+            <p>For a PDF statement, no model is used. Tables reads the words and their positions from the PDF with pdfplumber, finds the columns of amounts, copies a blank date from the row above, and uses the printed running balance to tell money in from money out. Rows where the balance does not add up are marked. Scanned PDFs are not read.</p>
+            <p>There is no result history. You choose what to save.</p>
+          </div>
+        </details>
+      </div>
+      <noscript>This local application needs JavaScript enabled to choose and read a table image or PDF statement.</noscript>
+    </main>
+    <footer class="app-footer">A proof of concept · one table at a time · stays on this device</footer>
+  </body>
+</html>

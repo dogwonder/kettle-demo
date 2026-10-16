@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Sort">
+  <title>Sort</title>
+  <path fill="#7385a0" d="M2 3 H13 V11 H2 Z"></path>
+  <path fill="#54677f" d="M5 7 H16 V15 H5 Z"></path>
+  <path fill="#16335b" d="M4 19 H10 V16 L15 21.5 L10 27 V24 H4 Z"></path>
+  <path fill="#16335b" d="M17 14 H22 V17 H30 V30 H17 Z"></path>
+</svg>

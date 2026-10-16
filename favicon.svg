@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Adapted from the cup in site/src/_includes/base.njk, with simplified steam and handle for small sizes. -->
+  <rect width="32" height="32" rx="6" fill="#16335b"/>
+  <path fill="#fff" fill-rule="evenodd" d="M6 16H22V28H6ZM22 18H28V26H22ZM22 20V24H26V20Z"/>
+  <path fill="#fff" d="M12 6H16V10H20V13H12Z"/>
+</svg>

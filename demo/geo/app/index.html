@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Geo · Kettle cups</title>
+    <link rel="stylesheet" href="/leaflet/leaflet.css"><link rel="stylesheet" href="/style.css"><script defer src="/leaflet/leaflet.js"></script><script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="app-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle cups · geo">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g class="cup-mark" transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+<path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+<path class="cup-steam cup-steam-later" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups · geo</span>
+        </a>
+        <span class="privacy-fact">Your photographs stay on this computer.</span>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+<nav><button id="return-kettle" class="govuk-link k-text-button" type="button" hidden>Back to Kettle</button></nav>
+<section class="screen">
+  <div class="intro">
+    <h1>Geo</h1>
+    <p class="lede">Find photographs by their recorded GPS. Choose a folder, make or update its local index, then search by coordinates, area or capture date.</p>
+  </div>
+  <div id="picker" class="screen drop-zone">
+    <button id="choose-folder" class="file-picker" type="button" aria-describedby="folder-hint">
+      <svg class="file-picker__icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.8 2 H19.2 V15.5 H12.8 Z"/><path fill="currentColor" d="M7 15.5 H25 L16 25.5 Z"/><path fill="#7385a0" d="M5 28 H27 V31 H5 Z"/></svg>
+      <span>Choose a photo folder</span>
+      <span class="small muted">Or drop a folder you have already opened here.</span>
+    </button>
+    <p id="folder-hint" class="small">JPEG, PNG, HEIC, TIFF, WebP and common camera RAW files. Choosing a folder does not start a scan or change your photographs.</p>
+  </div>
+  <details class="govuk-details"><summary class="govuk-details__summary"><span class="govuk-details__summary-text">Or type the folder’s full path</span></summary><div class="govuk-details__text">
+    <form id="folder-form" class="screen">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="folder">Photo folder</label>
+        <input id="folder" class="govuk-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" required aria-describedby="path-hint">
+        <p id="path-hint" class="govuk-hint">Choose the folder that contains your photos, not the geo.sqlite file.</p>
+      </div>
+      <div class="button-row"><button id="use-folder" class="govuk-button govuk-button--secondary" type="submit">Use this folder</button></div>
+    </form>
+  </div></details>
+</section>
+<p id="status" role="status" aria-live="polite"></p>
+<div id="problem" class="govuk-error-summary" role="alert" tabindex="-1" hidden>
+  <h2 class="govuk-error-summary__title">Geo could not do that</h2>
+  <p id="problem-text"></p>
+</div>
+<section id="index-section" class="screen" aria-labelledby="index-title" hidden>
+  <h2 id="index-title">Your folder</h2>
+  <p id="index-path" class="source-location"></p>
+  <p id="index-facts"></p>
+  <dl id="coverage" class="coverage" hidden>
+    <div><dt>Indexed files</dt><dd id="count-indexed"></dd></div>
+    <div><dt>Recorded GPS</dt><dd id="count-located"></dd></div>
+    <div><dt>No GPS</dt><dd id="count-unlocated"></dd></div>
+    <div><dt>Failed</dt><dd id="count-failed"></dd></div>
+  </dl>
+  <p id="scan-note" class="small muted"></p>
+  <div class="button-row">
+    <button id="index" class="govuk-button" type="button">Make the index</button>
+    <button id="reindex" class="govuk-button govuk-button--secondary" type="button" hidden>Re-index all files</button>
+  </div>
+  <p class="small muted">Update reads new or changed files and removes missing ones after a complete scan. Re-index reads every file again, including previous failures. Your originals stay unchanged.</p>
+  <details id="issues" class="govuk-details" hidden><summary class="govuk-details__summary"><span id="issues-title" class="govuk-details__summary-text">Files that need attention</span></summary><div class="govuk-details__text screen"><ul id="issue-list" class="govuk-list"></ul><p id="issues-note" class="small muted"></p></div></details>
+</section>
+<section id="search-section" class="screen" aria-labelledby="search-title" hidden>
+  <h2 id="search-title">Find photographs</h2>
+  <form id="search-form" class="screen">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="mode">Search area</label>
+      <select id="mode" class="govuk-select"><option value="all">All recorded locations</option><option value="radius">Within a radius</option><option value="bbox">Inside a bounding box</option></select>
+    </div>
+    <fieldset id="radius-fields" class="govuk-fieldset field-grid" hidden>
+      <legend class="govuk-fieldset__legend">Centre point and radius</legend>
+      <div class="location-control screen">
+        <div class="button-row"><button id="locate" class="govuk-button govuk-button--secondary" type="button" aria-describedby="location-hint">Use my current location</button></div>
+        <p id="location-hint" class="small muted">Requests one location reading with your permission. Your browser may contact its location provider. Geo uses it as the search centre and does not save it.</p>
+        <p id="location-status" class="small" role="status" aria-live="polite"></p>
+      </div>
+      <div class="govuk-form-group"><label class="govuk-label" for="lat">Latitude</label><input id="lat" class="govuk-input" type="number" step="any" min="-90" max="90" placeholder="51.5"></div>
+      <div class="govuk-form-group"><label class="govuk-label" for="lon">Longitude</label><input id="lon" class="govuk-input" type="number" step="any" min="-180" max="180" placeholder="-0.1"></div>
+      <div class="govuk-form-group"><label class="govuk-label" for="radius">Radius in metres</label><input id="radius" class="govuk-input" type="number" step="any" min="0" value="500"></div>
+    </fieldset>
+    <div id="bbox-fields" class="govuk-form-group" hidden>
+      <label class="govuk-label" for="bbox">Bounding box</label>
+      <p id="bbox-hint" class="govuk-hint">West, south, east, north. For example −0.20,51.45,−0.05,51.60. Boxes cannot cross the antimeridian.</p>
+      <input id="bbox" class="govuk-input" type="text" placeholder="-0.20,51.45,-0.05,51.60" aria-describedby="bbox-hint">
+    </div>
+    <div class="field-grid">
+      <div class="govuk-form-group"><label class="govuk-label" for="from">From date (optional)</label><input id="from" class="govuk-input" type="date" aria-describedby="date-hint"></div>
+      <div class="govuk-form-group"><label class="govuk-label" for="to">To date (optional)</label><input id="to" class="govuk-input" type="date" aria-describedby="date-hint"></div>
+      <div class="govuk-form-group"><label class="govuk-label" for="limit">Show up to</label><input id="limit" class="govuk-input" type="number" value="50" min="1" max="10000" step="1" required></div>
+    </div>
+    <p id="date-hint" class="small muted">Dates use the recorded local calendar day, inclusively. Photos without a usable capture date are left out when you filter by date.</p>
+    <div class="button-row"><button id="search" class="govuk-button" type="submit">Find photographs</button></div>
+  </form>
+</section>
+<section id="results" class="screen" aria-labelledby="results-title" hidden>
+  <h2 id="results-title" tabindex="-1">Photographs found</h2>
+  <p id="result-count"></p>
+  <p id="result-query" class="small muted"></p>
+  <div class="button-row">
+    <button id="show-map" class="govuk-button govuk-button--secondary" type="button" aria-expanded="false" aria-controls="map-section">Show results on map</button>
+    <button id="download" class="govuk-button govuk-button--secondary" type="button">Download these results as GeoJSON</button>
+  </div>
+  <p class="small muted">The download includes the displayed results, up to your chosen limit. Recorded GPS is metadata, not a verified capture location.</p>
+  <section id="map-section" class="screen" aria-labelledby="map-title" hidden>
+    <h3 id="map-title">Results on a local map</h3>
+    <p id="map-caption" class="small"></p>
+    <div class="button-row"><button id="fit-map" class="govuk-button govuk-button--secondary" type="button">Fit displayed results</button></div>
+    <div id="map" aria-label="Photo locations map" aria-describedby="map-caption map-note"></div>
+    <p id="map-note" class="small" role="status" aria-live="polite"></p>
+    <p class="small muted">Use + and − to zoom and arrow keys to pan when the map is focused. Markers open a photo preview; the full results list remains below.</p>
+    <details class="govuk-details"><summary class="govuk-details__summary"><span class="govuk-details__summary-text">Offline map pack</span></summary><div class="govuk-details__text screen">
+      <p id="map-pack-info" class="small source-location"></p>
+      <p class="small muted">Choose a downloaded raster MBTiles file. Geo reads it in place and makes no external map requests. Getting map data is a separate setup step; this page never downloads it.</p>
+      <div class="button-row">
+        <button id="choose-map" class="govuk-button govuk-button--secondary" type="button">Choose an offline map pack</button>
+        <button id="clear-map" class="govuk-button govuk-button--secondary" type="button" hidden>Remove map pack</button>
+      </div>
+      <form id="map-pack-form" class="screen">
+        <div class="govuk-form-group"><label class="govuk-label" for="map-pack-path">Or enter the map pack’s full path</label><input id="map-pack-path" class="govuk-input" type="text" spellcheck="false" autocomplete="off" required></div>
+        <div class="button-row"><button id="use-map" class="govuk-button govuk-button--secondary" type="submit">Use this map pack</button></div>
+      </form>
+    </div></details>
+  </section>
+  <ol id="result-list" class="photos"></ol>
+</section>
+<section class="screen">
+  <p><strong>Models used: none.</strong> Geo reads embedded GPS and capture-time tags with ExifTool. It does not infer positions, geocode places or upload files.</p>
+  <details class="govuk-details"><summary class="govuk-details__summary"><span class="govuk-details__summary-text">What stays on this computer</span></summary><div class="govuk-details__text screen">
+    <p>The index is <code>.kttl/geo.sqlite</code> inside your selected folder. Choosing a folder only reads its existing index; making, updating or re-indexing starts only when you press its button. Folder choices and results live in this session and are not logged.</p>
+    <p>Use my current location makes one browser geolocation request when you choose it. The browser or operating system may use a network location provider. Geo does not track your movement or store the reading: it fills the search centre, which goes only to this local server when you choose Find photographs.</p>
+    <p>JPEG, PNG and WebP previews are read directly from indexed originals, up to 40 MiB each; Geo makes no thumbnails. Other formats can be opened in your file browser. Show in file browser is limited to files held by the selected folder’s index.</p>
+    <p>Maps use a bundled local copy of Leaflet and an optional raster MBTiles file you choose. Tile images, markers and previews come only from this server. Packs are opened read-only, never downloaded or changed; their selection lasts for this server session. Outside a pack’s coverage, the map keeps the photo markers and explains the missing background.</p>
+    <p>The folder picker uses your computer’s native window. A browser cannot give Geo the full path of a dropped folder, so dropping works only for a uniquely named folder already opened during this server session. Type its full path if necessary.</p>
+    <p>Search uses the last completed index. Use Update after editing or moving files. A failed scan keeps the previous index; unsupported, missing-GPS and failed files remain visible in coverage.</p>
+  </div></details>
+</section>
+    </main>
+    <footer class="app-footer">Recorded GPS, searched locally · your original files are never changed · Models used: none</footer>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>A year of statements · Kettle Cups</title>
+    <meta name="description" content="From a year of bank statement PDFs to one list of what I pay for again and again, through Tables and then Regulars, passing saved files by hand.">
+    <meta property="og:title" content="A year of statements · Kettle Cups">
+    <meta property="og:description" content="From a year of bank statement PDFs to one list of what I pay for again and again, through Tables and then Regulars, passing saved files by hand.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle Cups home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+              <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+              <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/" aria-current="true">Tools</a>
+          <a href="/demo/">Demos</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="page-title">
+<p class="eyebrow">Playbooks · A year of statements</p>
+<h1 id="page-title">From a year of statements to what I pay for again and again.</h1>
+<p class="lede">Two tools, one after the other. <a href="/tables/">Tables</a> turns each month’s statement into a CSV I have checked, and <a href="/regulars/">Regulars</a> reads the year of CSVs and lists every payee I pay repeatedly. Nothing passes between them on its own: I <a href="/playbooks/#pouring">pour</a> by hand, saving each file and opening it in the next tool.</p>
+</section>
+<section aria-labelledby="what-i-start-with-and-end-with-title">
+<h2 id="what-i-start-with-and-end-with-title">What I start with and end with</h2>
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Start with</dt>
+<dd class="govuk-summary-list__value">Twelve monthly statements downloaded from my bank as PDFs. Text PDFs, not scans.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">End with</dt>
+<dd class="govuk-summary-list__value">One list of every payee I pay 3 or more times in 3 or more months, sorted by what they cost in a year, saved as a CSV. And the names I paid for the first time in the latest statement.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Models used</dt>
+<dd class="govuk-summary-list__value">None. Both tools use ordinary code for this, so the same statements always give the same list.</dd>
+</div>
+</dl>
+</section>
+<section aria-labelledby="the-route-title">
+<h2 id="the-route-title">The route</h2>
+<ol class="govuk-list govuk-list--number">
+<li><strong>Tables: each statement to a checked CSV.</strong> Choose one statement PDF. The rows appear beside images of the pages, and a row whose printed balance does not add up is marked. Check every cell, correct what is wrong, tick and save the CSV. Do this for each month, and keep the twelve CSVs in one folder.</li>
+<li><strong>Regulars: the year in one list.</strong> Choose all twelve CSVs together. If a balance does not add up somewhere, or two files cover the same dates, Regulars says so: go back to Tables for that month, fix it, save it again and choose the files again. Rename or merge lines the bank names differently.</li>
+<li><strong>Save the list.</strong> Regulars keeps nothing when it closes, so save the list as a CSV, and the payments behind it if you want them.</li>
+</ol>
+</section>
+<section aria-labelledby="next-month-title">
+<h2 id="next-month-title">Next month</h2>
+<p>Take the new statement through Tables and save its CSV into the same folder. Choose the whole folder in Regulars again. “New in the latest statement” shows every name paid for the first time, largest first. Renames and merges are not kept, so make them again.</p>
+</section>
+<section aria-labelledby="what-to-check-and-where-title">
+<h2 id="what-to-check-and-where-title">What to check, and where</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li>In Tables, every cell. When every balance adds up, the amounts are right, but not necessarily the dates or descriptions.</li>
+<li>In Regulars, nothing new. It is only as right as the CSVs checked in Tables.</li>
+</ul>
+</section>
+<section aria-labelledby="how-it-went-for-me-title">
+<h2 id="how-it-went-for-me-title">How it went for me</h2>
+<p>I took twelve of my own statements, from one bank, along this route. Every running balance added up and the list needed no manual merges. One statement took about 20 seconds from download to saved CSV, and a couple of its cells needed correcting. That is one person’s year from one bank, and Regulars knows only that bank’s column layout so far.</p>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle Cups · small local tools for repeatable tasks</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from 91bb342 on 2026-10-16. This site loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

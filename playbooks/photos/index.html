@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>A pile of photos · Kettle Cups</title>
+    <meta name="description" content="From a folder of unsorted photos to photos filed in the folders I already have, through Local, then Sort, then Local and Geo again, with every move made by a script I read and run.">
+    <meta property="og:title" content="A pile of photos · Kettle Cups">
+    <meta property="og:description" content="From a folder of unsorted photos to photos filed in the folders I already have, through Local, then Sort, then Local and Geo again, with every move made by a script I read and run.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle Cups home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+            <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+            <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+            <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+            <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+            <g transform="translate(448.72 40.94) scale(6.831)">
+              <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+              <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+              <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+            </g>
+          </svg>
+          <span class="brand-label">cups</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/" aria-current="true">Tools</a>
+          <a href="/demo/">Demos</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="page-title">
+<p class="eyebrow">Playbooks · A pile of photos</p>
+<h1 id="page-title">From a pile of unsorted photos to the folders I already have.</h1>
+<p class="lede">Three tools, around one move. <a href="/local/">Local</a> indexes my folders by what their pictures show. <a href="/sort/">Sort</a> suggests where each unsorted photo belongs and writes a script that moves them. <a href="/geo/">Geo</a> and Local then catch up with what moved. Nothing passes between them on its own, and this route is not a <a href="/playbooks/#pouring">pour</a> of saved files: Sort reads the index Local keeps inside my folders, and Local and Geo see the moved photos only when I update their indexes.</p>
+</section>
+<section aria-labelledby="what-i-start-with-and-end-with-title">
+<h2 id="what-i-start-with-and-end-with-title">What I start with and end with</h2>
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Start with</dt>
+<dd class="govuk-summary-list__value">A folder of photos I already keep in folders, such as Events by month and Things by what they show. Beside it, a folder of photos I never filed, such as Misc.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">End with</dt>
+<dd class="govuk-summary-list__value">The photos I accepted moved into those folders, or into new ones, and an undo script for the move. Every photo I left is still where it was.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Models used</dt>
+<dd class="govuk-summary-list__value">Sort uses Apple’s Vision, part of macOS, to compare how photos look, score them and name new folders. Local uses EmbeddingGemma, a model that runs on my computer, to index pictures by what they show. Sort reads those vectors and runs no model of its own for them. Geo uses none.</dd>
+</div>
+</dl>
+</section>
+<section aria-labelledby="the-route-title">
+<h2 id="the-route-title">The route</h2>
+<ol class="govuk-list govuk-list--number">
+<li><strong>Local: index the folders sorted by what they show.</strong> Make an index in each top folder that is sorted by what photos show, such as Things and Home. Do the same for the unsorted folder. This step is optional: without it, Sort compares by Apple’s model alone. On my check, Apple’s model put 73% of photos in the right folder first, and EmbeddingGemma 84%. It is slow: about two seconds a picture.</li>
+<li><strong>Sort: suggest, then choose.</strong> Choose the folder that holds my photo folders, then the unsorted one. Untick folders sorted by who is in them, such as People, because Apple’s models do not tell people apart. Sort suggests a folder for each photo by date where it can, and by look otherwise. If Local’s indexes do not cover every folder sorted by what it shows, Sort says which to index, and uses Apple’s model for all of them. Every suggestion starts on Move: leave the ones that are wrong.</li>
+<li><strong>Save the move script, read it, run it.</strong> Sort moves nothing. It saves a script that moves each photo I accepted, with its raw file and sidecars. The script never overwrites a file, and as it runs it writes an undo script beside itself.</li>
+<li><strong>Local and Geo: update their indexes.</strong> Both folders have changed, so Local’s indexes of the unsorted folder and of the folders photos went into are out of date, and so is Geo’s index if it covers them. Update each one in Local, and Update in Geo.</li>
+</ol>
+</section>
+<section aria-labelledby="what-to-check-and-where-title">
+<h2 id="what-to-check-and-where-title">What to check, and where</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li>In Sort, every suggestion “by look”. It is the weakest route. “By date, sure” was right every time on my check.</li>
+<li>In the move script, the list of photos left where they were, with the reason for each.</li>
+<li>Afterwards, the folders themselves. The undo script puts everything back, and removes the new folders if they are empty.</li>
+</ul>
+</section>
+<section aria-labelledby="how-it-went-for-me-title">
+<h2 id="how-it-went-for-me-title">How it went for me</h2>
+<p>I ran Sort on my own photos, about 12,000 in folders, to sort a Misc folder of about 160. Only Misc had a Local index, so Sort compared by look with Apple’s model alone. Before building Sort, I checked it by hiding 10% of the photos I had already filed: by date it put 92% of 845 event photos in the right folder first, and all 541 it was sure about; by look, 73% of 44 photos, or 84% with EmbeddingGemma, and 95% within its first three. That look sample is small.</p>
+<p>I have not yet taken the whole route: indexing Things and Home in Local first, and updating Local and Geo after a move.</p>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle Cups · small local tools for repeatable tasks</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from 91bb342 on 2026-10-16. This site loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

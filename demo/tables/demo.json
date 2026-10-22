@@ -1,0 +1,94 @@
+{
+ "cup": "tables",
+ "title": "Tables",
+ "note": "The samples are made up. Tables read them on a Mac and its answers are replayed here, so it reads only these samples, and a cropped or rotated one has no answer.",
+ "ready": "#choose",
+ "presets": [
+  {
+   "label": "Read a printed table",
+   "steps": [
+    {
+     "sample": "printed"
+    },
+    {
+     "wait": "#describe:not([disabled])"
+    },
+    {
+     "click": "#describe"
+    }
+   ],
+   "until": "#grid"
+  },
+  {
+   "label": "Read a photograph of a table",
+   "steps": [
+    {
+     "sample": "photo"
+    },
+    {
+     "wait": "#describe:not([disabled])"
+    },
+    {
+     "click": "#describe"
+    }
+   ],
+   "until": "#grid"
+  },
+  {
+   "label": "Read a bank statement PDF",
+   "steps": [
+    {
+     "sample": "statement"
+    },
+    {
+     "wait": "#describe:not([disabled])"
+    },
+    {
+     "click": "#describe"
+    }
+   ],
+   "until": "#grid"
+  }
+ ],
+ "samples": [
+  {
+   "name": "printed",
+   "label": "a printed table",
+   "files": [
+    {
+     "name": "ruled.png",
+     "type": "image/png"
+    }
+   ]
+  },
+  {
+   "name": "photo",
+   "label": "a photograph of a printed table",
+   "files": [
+    {
+     "name": "photo-ruled.png",
+     "type": "image/png"
+    }
+   ]
+  },
+  {
+   "name": "statement",
+   "label": "a bank statement as a PDF",
+   "files": [
+    {
+     "name": "statement.pdf",
+     "type": "application/pdf"
+    }
+   ]
+  }
+ ],
+ "credits": [],
+ "leftOut": [],
+ "replayed": 4,
+ "captured": {
+  "on": "2026-10-12",
+  "commit": "9eeced7",
+  "cupChanged": false,
+  "slowestMs": 1788
+ }
+}

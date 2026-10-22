@@ -1,0 +1,135 @@
+{
+ "cup": "geo",
+ "title": "Geo",
+ "note": "The photographs are public-domain samples. Geo’s answers were recorded on a Mac and are replayed here, so only the examples can be searched. “Show in file browser” is left out, because a web page cannot open a folder on your computer.",
+ "ready": "#search",
+ "presets": [
+  {
+   "label": "All nine photographs, on the map",
+   "steps": [
+    {
+     "select": "#mode",
+     "value": "all"
+    },
+    {
+     "click": "#search"
+    },
+    {
+     "wait": "#result-list .photo"
+    },
+    {
+     "click": "#show-map"
+    }
+   ],
+   "until": "#map"
+  },
+  {
+   "label": "Within 1.5 km of Big Ben",
+   "steps": [
+    {
+     "select": "#mode",
+     "value": "radius"
+    },
+    {
+     "fill": "#lat",
+     "value": "51.5007"
+    },
+    {
+     "fill": "#lon",
+     "value": "-0.1246"
+    },
+    {
+     "fill": "#radius",
+     "value": "1500"
+    },
+    {
+     "click": "#search"
+    },
+    {
+     "wait": "#result-list .photo"
+    },
+    {
+     "click": "#show-map"
+    }
+   ],
+   "until": "#map"
+  },
+  {
+   "label": "Taken in 2025",
+   "steps": [
+    {
+     "select": "#mode",
+     "value": "all"
+    },
+    {
+     "fill": "#from",
+     "value": "2025-01-01"
+    },
+    {
+     "fill": "#to",
+     "value": "2025-12-31"
+    },
+    {
+     "click": "#search"
+    },
+    {
+     "wait": "#result-list .photo"
+    }
+   ],
+   "until": "#result-list .photo"
+  }
+ ],
+ "samples": [],
+ "credits": [
+  {
+   "text": "Tower Bridge: photograph by Andy Li, CC0 1.0",
+   "href": "https://commons.wikimedia.org/wiki/File:Tower_Bridge_2025-03-15.jpg"
+  },
+  {
+   "text": "Big Ben and the Palace of Westminster: photograph by Ryan Schwark, CC0 1.0",
+   "href": "https://commons.wikimedia.org/wiki/File:Big_Ben_from_the_Westminster_Bridge.jpg"
+  },
+  {
+   "text": "Buckingham Palace: photograph by Ibagli, Public domain (released by the photographer)",
+   "href": "https://commons.wikimedia.org/wiki/File:Buckingham_Palace_June_2008.JPG"
+  },
+  {
+   "text": "The Great Court, British Museum: photograph by Andreas Praefcke, Public domain (released by the photographer)",
+   "href": "https://commons.wikimedia.org/wiki/File:Great_Court_British_Museum_2011.jpg"
+  },
+  {
+   "text": "The Palm House, Kew Gardens: photograph by Andy Li, CC0 1.0",
+   "href": "https://commons.wikimedia.org/wiki/File:Kew_Gardens_Palm_House_2025-05-14.jpg"
+  },
+  {
+   "text": "Royal Observatory, Greenwich: photograph by Robert von Oliva (naruciakk), CC0 1.0",
+   "href": "https://commons.wikimedia.org/wiki/File:Royal_Observatory_in_Greenwich,_Astronomy_Centre.jpg"
+  },
+  {
+   "text": "St Paul's Cathedral: photograph by Perituss, CC0 1.0",
+   "href": "https://commons.wikimedia.org/wiki/File:Saint_Paul_London_2011_3.jpg"
+  },
+  {
+   "text": "Royal Albert Hall: photograph by Perituss, CC0 1.0",
+   "href": "https://commons.wikimedia.org/wiki/File:Albert_Hall_2011_3.jpg"
+  },
+  {
+   "text": "Battersea Power Station: photograph by Danmacleod114, CC0 1.0",
+   "href": "https://commons.wikimedia.org/wiki/File:Battersea_Power_Station_2025-05-22.jpg"
+  },
+  {
+   "text": "Map: contains Ordnance Survey data © Crown copyright and database right 2026, under the Open Government Licence",
+   "href": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+  }
+ ],
+ "leftOut": [
+  ".reveal"
+ ],
+ "replayed": 152,
+ "captured": {
+  "on": "2026-10-12",
+  "commit": "9eeced7",
+  "cupChanged": false,
+  "slowestMs": 20
+ }
+}

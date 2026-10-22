@@ -1,0 +1,113 @@
+{
+ "cup": "text",
+ "title": "Text",
+ "note": "It is ordinary code, so it runs for real in this page, on made-up samples or on text you type.",
+ "ready": "#apply",
+ "presets": [
+  {
+   "label": "Sort a list of names",
+   "steps": [
+    {
+     "sample": "names"
+    },
+    {
+     "check": "#op-sort"
+    },
+    {
+     "click": "#apply"
+    }
+   ],
+   "until": "#result-title"
+  },
+  {
+   "label": "Remove bullets and numbering",
+   "steps": [
+    {
+     "sample": "agenda"
+    },
+    {
+     "check": "#op-markers"
+    },
+    {
+     "click": "#apply"
+    }
+   ],
+   "until": "#result-title"
+  },
+  {
+   "label": "Capitals to sentence case",
+   "steps": [
+    {
+     "sample": "notice"
+    },
+    {
+     "check": "#op-case"
+    },
+    {
+     "click": "#apply"
+    }
+   ],
+   "until": "#result-title"
+  },
+  {
+   "label": "Compare two lists of names",
+   "steps": [
+    {
+     "sample": "names"
+    },
+    {
+     "check": "#op-compare"
+    },
+    {
+     "fill": "#second",
+     "value": "Zoë Marsh\nPriya Raman\nBen Whitlow\nTomás Reid"
+    },
+    {
+     "click": "#apply"
+    }
+   ],
+   "until": "#comparison-title"
+  }
+ ],
+ "samples": [
+  {
+   "name": "names",
+   "label": "a list of names",
+   "files": [
+    {
+     "name": "names.txt",
+     "type": "text/plain"
+    }
+   ]
+  },
+  {
+   "name": "agenda",
+   "label": "an agenda with bullets and numbering",
+   "files": [
+    {
+     "name": "agenda.txt",
+     "type": "text/plain"
+    }
+   ]
+  },
+  {
+   "name": "notice",
+   "label": "a notice typed in capitals",
+   "files": [
+    {
+     "name": "notice-capitals.txt",
+     "type": "text/plain"
+    }
+   ]
+  }
+ ],
+ "credits": [],
+ "leftOut": [],
+ "replayed": 0,
+ "captured": {
+  "on": "2026-10-12",
+  "commit": "2ee0bc5",
+  "cupChanged": false,
+  "slowestMs": 0
+ }
+}

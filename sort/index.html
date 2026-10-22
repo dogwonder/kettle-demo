@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Sort · Kettle Cups</title>
+    <meta name="description" content="Suggest where a folder of unsorted photos belongs in the folders you already have, by date and by look, using Apple’s models built into macOS. It moves nothing until you run the script it writes.">
+    <meta property="og:title" content="Sort · Kettle Cups">
+    <meta property="og:description" content="Suggest where a folder of unsorted photos belongs in the folders you already have, by date and by look, using Apple’s models built into macOS. It moves nothing until you run the script it writes.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle Cups home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+  <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+  <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+  <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+  <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+  <g class="cup-mark" transform="translate(448.72 40.94) scale(6.831)">
+    <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+            <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+            <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+  </g>
+</svg>
+          <span class="brand-label">cups</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/" aria-current="true">Tools</a>
+          <a href="/demo/">Demos</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="page-title">
+<p class="eyebrow">Tools · Sort</p>
+<h1 id="page-title">File a pile of photos into the folders you already have.</h1>
+<p class="lede">Choose the folder that holds your photo folders, then a folder of photos you never filed. Sort suggests where each one belongs: by the date it was taken where it can, and by how it looks otherwise. It also suggests new folders for groups that have none, and marks the best of each set of near-duplicates. It moves nothing itself. You accept or leave each suggestion, then save a script that you read and run.</p>
+</section>
+<section aria-labelledby="why-this-exists-title">
+<h2 id="why-this-exists-title">Why this exists</h2>
+<p>I keep my photos in folders: occasions by month, and things by what they show. Over the years a Misc folder filled up with photos I never filed. Photo apps sort into their own albums, often after the photos have been uploaded. Sort works with the folders I already have, on my own computer.</p>
+</section>
+<section aria-labelledby="what-goes-in-and-what-comes-out-title">
+<h2 id="what-goes-in-and-what-comes-out-title">What goes in and what comes out</h2>
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Goes in</dt>
+<dd class="govuk-summary-list__value">The folder that holds your photo folders, such as Photos with Events, Things and Home inside it, and a folder of unsorted photos at its top level, up to 2,000: JPEG, HEIC, PNG or TIFF. A raw file or sidecar with the same name goes with its photo.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">It reads</dt>
+<dd class="govuk-summary-list__value">The date in every photo in your folders, and how each photo looks in the folders sorted by what they show. A folder counts as sorted by date when 80% of its photos were taken within 60 days of each other, or when it sits among folders mostly named by month, such as <code>Events/08.09 Lincoln</code>.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Comes out</dt>
+<dd class="govuk-summary-list__value">A suggestion for each photo, in four groups. <strong>By date, sure</strong>: only one folder has photos taken within two days of it, and the folder’s month agrees. <strong>By date, more than one folder</strong>: the folder whose photos look most alike comes first. <strong>By look</strong>: no date places it, so it is compared with the folders sorted by what they show. <strong>Not placed</strong>, with the reason. Also new folders it would make, named from what Apple’s model sees in the photos, and sets of near-duplicates with the best outlined.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">You choose</dt>
+<dd class="govuk-summary-list__value">Every suggestion starts on Move, with Leave beside it and, where Sort found more than one folder, the others in a list. You can rename a new folder, or untick photos in it.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">You can save</dt>
+<dd class="govuk-summary-list__value">A folders script, which only makes the new folders and lists every move for you to make by hand. Or a move script, which moves each photo you accepted with its raw file and sidecars. It never overwrites a file, and as it runs it writes an undo script beside itself.</dd>
+</div>
+</dl>
+<p>Nothing is kept except small pictures of the photos, made so the page can show them, and deleted when Sort closes. Your folders, choices and results are not saved or logged.</p>
+<p>Sort reads the pictures in <a href="/local/">Local’s</a> index where Local has indexed your folders, and compares them more closely. After the move, Local’s and <a href="/geo/">Geo’s</a> indexes of those folders are out of date until you update them. The whole route is the playbook <a href="/playbooks/photos/">A pile of photos</a>.</p>
+</section>
+<section id="models" aria-labelledby="models-title">
+<h2 id="models-title">Models used</h2>
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key"><a href="https://developer.apple.com/documentation/vision">Apple’s Vision</a>, part of macOS</dt>
+<dd class="govuk-summary-list__value">By Apple, built into macOS 26 and later, so nothing is downloaded. It does three jobs. A <a href="https://developer.apple.com/documentation/vision/generateimagefeatureprintrequest">feature print</a> of each photo, to compare how photos look and find near-duplicates. An <a href="https://developer.apple.com/documentation/vision/calculateimageaestheticsscoresrequest">aesthetics score</a>, to put the best of near-duplicates first. And <a href="https://developer.apple.com/documentation/vision/classifyimagerequest">labels</a> for what a photo shows, to name new folders. Its version comes with macOS, so an update to macOS can change Sort’s suggestions. Checked on macOS 27.0.1.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key"><a href="https://huggingface.co/google/embeddinggemma-2/tree/914f7f89142e33e77833254d9c9b90c3cef7303b">EmbeddingGemma 2</a>, only through Local</dt>
+<dd class="govuk-summary-list__value">Where Local has already indexed your folders, Sort reads the numbers Local’s EmbeddingGemma made for each picture, and compares by those instead. Sort does not run EmbeddingGemma and does not include it. It uses them only when every folder sorted by what it shows is indexed, so no folder loses out for not being indexed. See <a href="/local/#models">Local’s models</a>.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">No model</dt>
+<dd class="govuk-summary-list__value">Reading dates, the rules for sorting by date, and writing the scripts are ordinary code.</dd>
+</div>
+</dl>
+<p>The part that reads photos runs with networking turned off. Normal use downloads nothing and sends nothing.</p>
+</section>
+<section aria-labelledby="what-has-been-checked-title">
+<h2 id="what-has-been-checked-title">What has been checked</h2>
+<p>Before building Sort I checked it on my own photos, about 12,000 in folders, by hiding a tenth of the ones already filed and asking where they belonged. By date, it put 92% of 845 event photos in the right folder first, and all 541 it was sure about. By look, Apple’s model put 73% of 44 photos in the right folder first, and EmbeddingGemma 84%. Both had the right folder in their first three for about 95%. That look sample is small.</p>
+<p>I then ran Sort on my own Misc folder of about 160 photos. Only Misc had a Local index, so it compared by look with Apple’s model alone. In an earlier run on the same folder, most of what it placed by look went to one folder, Home.</p>
+<p>Automated tests run on made-up folders of drawn photos, including a real run of the move script and its undo.</p>
+<p>These are counts from one person’s photos on one computer, not a measure of how often Sort is right.</p>
+</section>
+<section aria-labelledby="known-limits-title">
+<h2 id="known-limits-title">Known limits</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li>By look is the weakest route. Read every one of those suggestions before you save a script.</li>
+<li>It does not tell people apart. Untick folders sorted by who is in them, such as People.</li>
+<li>A photo with no date, which nothing looks like, is left where it is.</li>
+<li>Folder names suggested from Apple’s labels are often odd. Expect to rename them.</li>
+<li>It reads the first two levels of your folders, such as Events/08.09 Lincoln, and the top level of the unsorted folder.</li>
+<li>It needs a Mac with macOS 26 or later.</li>
+</ul>
+</section>
+<section aria-labelledby="availability-title">
+<h2 id="availability-title">Availability</h2>
+<div class="govuk-inset-text">
+<p><strong>Not available to download yet.</strong> Sort runs in the development Kettle app on my Mac, and as its own page. There is no public installer or source download at present.</p>
+</div>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle Cups · small local tools for repeatable tasks</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from 3effa30 on 2026-10-22. This site loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Text demo · Kettle Cups</title>
+    <meta name="description" content="Text, as it is in the app, on prepared samples. It is ordinary code, so it runs for real in this page, on made-up samples or on text you type.">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/demo/outer.js"></script>
+  </head>
+  <body class="demo">
+    <header class="demo-strip">
+      <p class="demo-strip__what">
+        <strong class="govuk-tag">Demo</strong>
+        <span><a class="govuk-link" href="/text/">Text</a>, as it is in the app. It is ordinary code, so it runs for real in this page, on made-up samples or on text you type.</span>
+      </p>
+      <p class="demo-strip__try" id="demo-try" hidden>
+        <span>Examples:</span>
+        <button type="button" class="govuk-button govuk-button--secondary" data-preset="0">Sort a list of names</button>
+        <button type="button" class="govuk-button govuk-button--secondary" data-preset="1">Remove bullets and numbering</button>
+        <button type="button" class="govuk-button govuk-button--secondary" data-preset="2">Capitals to sentence case</button>
+        <button type="button" class="govuk-button govuk-button--secondary" data-preset="3">Compare two lists of names</button>
+      </p>
+      <p class="demo-strip__said" id="demo-said" role="status" aria-live="polite"></p>
+    </header>
+    <noscript><p class="demo-unavailable">This demo needs JavaScript. <a class="govuk-link" href="/text/">The Text page</a> describes the tool without it.</p></noscript>
+    <p class="demo-unavailable" id="demo-unavailable" hidden>This demo cannot run in this browser window, because the browser has turned off the feature that replays the tool’s answers. <a class="govuk-link" href="/text/">The Text page</a> describes the tool.</p>
+    <iframe class="demo-frame" id="demo-frame" title="Text: the page from the app"></iframe>
+    <script type="application/json" id="demo-data">{"cup":"text","title":"Text","note":"It is ordinary code, so it runs for real in this page, on made-up samples or on text you type.","ready":"#apply","presets":[{"label":"Sort a list of names","steps":[{"sample":"names"},{"check":"#op-sort"},{"click":"#apply"}],"until":"#result-title"},{"label":"Remove bullets and numbering","steps":[{"sample":"agenda"},{"check":"#op-markers"},{"click":"#apply"}],"until":"#result-title"},{"label":"Capitals to sentence case","steps":[{"sample":"notice"},{"check":"#op-case"},{"click":"#apply"}],"until":"#result-title"},{"label":"Compare two lists of names","steps":[{"sample":"names"},{"check":"#op-compare"},{"fill":"#second","value":"Zoë Marsh\nPriya Raman\nBen Whitlow\nTomás Reid"},{"click":"#apply"}],"until":"#comparison-title"}],"samples":[{"name":"names","label":"a list of names","files":[{"name":"names.txt","type":"text/plain"}]},{"name":"agenda","label":"an agenda with bullets and numbering","files":[{"name":"agenda.txt","type":"text/plain"}]},{"name":"notice","label":"a notice typed in capitals","files":[{"name":"notice-capitals.txt","type":"text/plain"}]}],"credits":[],"leftOut":[],"replayed":0,"captured":{"on":"2026-10-12","commit":"2ee0bc5","cupChanged":false,"slowestMs":0}}</script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>About · Kettle</title>
+    <meta name="description" content="Why Kettle exists, the starting question behind its tools, what it doesn&#39;t claim and who builds it.">
+    <meta property="og:title" content="About · Kettle">
+    <meta property="og:description" content="Why Kettle exists, the starting question behind its tools, what it doesn&#39;t claim and who builds it.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+  <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+  <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+  <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+  <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+  <g class="cup-mark" transform="translate(448.72 40.94) scale(6.831)">
+    <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+            <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+            <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+  </g>
+</svg>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/">Tools</a>
+          <a href="/demo/">Demos</a>
+          <a href="/how-it-works/">How it works</a>
+          <a href="/research/">Research</a>
+          <a href="/about/" aria-current="page">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="page-title">
+<p class="eyebrow">About</p>
+<h1 id="page-title">Why Kettle exists</h1>
+<p class="lede">Kettle builds small tools for repeatable jobs, each published with what was tested and where it broke. Inside the codebase each tool is called a Cup.</p>
+</section>
+<section aria-labelledby="the-question-kettle-starts-with-title">
+<h2 id="the-question-kettle-starts-with-title">The question Kettle starts with</h2>
+<p>For any repeatable job, Kettle asks what's the smallest thing that does it well enough: plain code, a small specialist model, a local language model, or a remote model. All four are fair answers. &quot;Use what your computer already has&quot; and &quot;just use a remote model&quot; are results worth publishing too.</p>
+<p>Running locally doesn't make a tool good by itself. Operating systems already ship their own models for everyday writing, so a local tool still has to earn its keep on real files. When the source is already public — like funders' websites in the <a href="/funding-watch/">funding watch</a> — running in the cloud makes more sense.</p>
+</section>
+<section aria-labelledby="why-local-title">
+<h2 id="why-local-title">Why local</h2>
+<p>I put Qwen 2.5 on a Raspberry Pi as a proof of concept. It worked, slowly, and gave a decent answer about fixing a tap. That got me thinking: local models have a place doing everyday jobs that don't need frontier AI. I care about privacy, energy, water and the communities living next to data centres, and the scale of spending going into AI makes me wonder whether a smaller approach could cost less. Those are the reasons I started building Kettle.</p>
+<p>You don't need all of those reasons to want a local tool; one is enough. <a href="/how-it-works/">How it works</a> covers how the tools are built and how privacy is checked, and the <a href="/research/">research pages</a> record what has actually been tested.</p>
+</section>
+<section aria-labelledby="no-chatbots-inside-title">
+<h2 id="no-chatbots-inside-title">No chatbots inside</h2>
+<p>None of these tools are chatbots. You don't chat with them, they don't write answers in their own words, and they don't send, book, file or call anything for you. Every tool stops at a draft for you to check, because the main risk with models that generate text is a smooth, confident mistake — like an invented date or amount in your own paperwork — that's easy to miss. Most of the <a href="/tools/">tools</a> need neither generative AI nor any model at all.</p>
+</section>
+<section aria-labelledby="what-kettle-doesn-t-claim-title">
+<h2 id="what-kettle-doesn-t-claim-title">What Kettle doesn't claim</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li>Energy or carbon reductions. Energy hasn't been measured, and tokens count model demand, not electricity.</li>
+<li>Better models. Operating systems and large labs will always lead on model quality.</li>
+<li>Accuracy percentages or reliability figures. A handful of development examples can't give you those.</li>
+<li>A replacement for a frontier model beyond the specific jobs tested.</li>
+</ul>
+<p>The <a href="/research/">research pages</a> cover what's been tried so far, including the <a href="/research/agent-guide-study/">study where an agent guide made a frontier model do more work, not less</a>.</p>
+</section>
+<section aria-labelledby="who-builds-it-title">
+<h2 id="who-builds-it-title">Who builds it</h2>
+<p>Kettle started as an experiment in reading paperwork with local models, beginning with Tables.</p>
+<p>I'm Rich Holman, and I build Kettle at DGW.ltd (Dogwonder Ltd). I'm also a trustee of the small charity I built the funding watch for. It uses Kettle free, and always will. Email <a href="mailto:dogwonder@gmail.com">dogwonder@gmail.com</a>.</p>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle · small tools with results you can check</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from a12d3c4 on 2026-11-24. Loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

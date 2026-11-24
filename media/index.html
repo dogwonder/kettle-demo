@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Media · Kettle</title>
+    <meta name="description" content="Resize a video or picture, crop an image, convert to black and white, or trim a recording on your Mac with plain code and a written plan to check first.">
+    <meta property="og:title" content="Media · Kettle">
+    <meta property="og:description" content="Resize a video or picture, crop an image, convert to black and white, or trim a recording on your Mac with plain code and a written plan to check first.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+  <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+  <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+  <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+  <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+  <g class="cup-mark" transform="translate(448.72 40.94) scale(6.831)">
+    <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+            <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+            <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+  </g>
+</svg>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/" aria-current="true">Tools</a>
+          <a href="/demo/">Demos</a>
+          <a href="/how-it-works/">How it works</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="page-title">
+<p class="eyebrow">Tools · Media</p>
+<h1 id="page-title">Resize, crop or trim a file without uploading it</h1>
+<p class="lede">Pick a video, picture or recording, choose what you want on a short form, check the written plan and confirm. Media writes a new copy and never touches your original. No model runs anywhere in it.</p>
+</section>
+<section aria-labelledby="why-this-exists-title">
+<h2 id="why-this-exists-title">Why this exists</h2>
+<p>Shrinking a video, resizing a batch of pictures or lopping the dead air off a recording are tiny jobs that people routinely upload to random websites or chatbots. Tools like FFmpeg and Pillow have done this locally for years — Media just puts a straight-ahead form in front of them on your Mac.</p>
+<p>For a few days it also ran a local language model so you could type requests in plain English instead of clicking controls. Kettle took it out. A form offering a handful of sensible sizes for the file you picked does the same job in one click. <a href="#model-title">The story of why it went</a> is below.</p>
+</section>
+<section aria-labelledby="what-goes-in-and-what-comes-out-title">
+<h2 id="what-goes-in-and-what-comes-out-title">What goes in and what comes out</h2>
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Goes in</dt>
+<dd class="govuk-summary-list__value">One video or audio file at a time, or up to 100 images: a short landscape MP4, JPEG or PNG pictures, or a WAV or MP3 recording.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Video</dt>
+<dd class="govuk-summary-list__value">A smaller copy at 1080p, 720p, 480p or 360p, keeping the whole frame, full length and sound. It won't let you upscale past the clip's original size.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Picture</dt>
+<dd class="govuk-summary-list__value">Scale to a longest side you type in, fit inside a width/height box without cropping, or centre-crop to exact dimensions with the cut edges shaded in preview first. Any of those can also go black and white. Quick-pick buttons suggest sizes that fit the image (like &quot;Longest side 1200&quot;) and fill the boxes for you to tweak.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Recording</dt>
+<dd class="govuk-summary-list__value">Keep the slice between a start and end time — type them in or grab them straight from the audio player. Leave either end blank to run to the start or finish, or use quick buttons for the first or last chunk. You can play your selection before exporting, and Media copies the audio stream without re-encoding so you lose no quality.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">The plan</dt>
+<dd class="govuk-summary-list__value">Spells out exactly what Media is about to make — pixel dimensions or trim timestamps — updating live as you change settings. Nothing runs until you click Create copy.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Comes out</dt>
+<dd class="govuk-summary-list__value">A separate file. Media checks the file's dimensions or duration against the plan before handing it over, though those are automated checks, so still look at or listen to the result.</dd>
+</div>
+</dl>
+</section>
+<section id="models" aria-labelledby="models-title">
+<h2 id="models-title">Models used</h2>
+<p><strong>None.</strong> FFmpeg 8.1.1 handles video and MP3, Pillow 12.3.0 handles images, and plain Python handles WAV. Checking the plan and output is plain code too. Nothing downloads or leaves your Mac.</p>
+</section>
+<section id="model" aria-labelledby="model-title">
+<h2 id="model-title">The model Kettle took out</h2>
+<p>For a few days in October 2026, Media had a text box for typed requests like &quot;fit inside 800 x 600 and make it black and white&quot;. A few plain rules caught simple phrasing, and Qwen3 4B (a 2.5 GB local model) read the rest and filled in the form. It never saw the file and couldn't invent numbers.</p>
+<p>It worked well enough: across 102 AI-written requests for things Media can do, it filled in the right settings 82 times. It also picked a wrong setting 6 times across 144 requests without flagging it — once putting the height into the width box.</p>
+<p>Then I added example prompts under the text box so I'd remember wording it understood. Typing an example is slower than clicking it, which meant the examples were doing the model's job. Putting those preset sizes straight onto the form takes one click, can't quietly swap width and height, and drops a 2.5 GB download.</p>
+<p>Before pulling the plug, I tested nine smaller models (0.25 GB to 1.3 GB) on the same requests. The best managed 57 of 102 right and 7 wrong; the cautious ones barely beat the plain rules, and one failed every single request. So the choice came down to a 2.5 GB model or nothing, and I chose nothing.</p>
+<p class="small muted">Caveats: AI models wrote all the test requests, each model got one pass, and I built the form while testing against the 2.5 GB model. The request box is still sitting in the codebase behind an opt-in flag, though the app ships without it. <a href="/research/request-reading-study/">The second study</a> covers the earlier rules-vs-models test.</p>
+</section>
+<section aria-labelledby="what-s-been-tested-title">
+<h2 id="what-s-been-tested-title">What's been tested</h2>
+<p>Automated tests run on invented images, audio clips and one video clip, covering the form presets, single-sided limits, blank start/end times, player timestamps, live plan updates and crop shading in one browser.</p>
+<p>By eye and ear, I've checked one 720p video copy, six resized test images and six trimmed test recordings, and passed all of them. The other video sizes, cropping and black-and-white output have only had automated dimension/format checks so far.</p>
+</section>
+<section aria-labelledby="known-limits-title">
+<h2 id="known-limits-title">Known limits</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li>The form only does what's on screen — no free-text requests. Read the plan before confirming.</li>
+<li>Video support is narrow: landscape H.264 MP4, up to 60 seconds, ~64 MB and 30 fps. Anything else gets refused with a reason, and it doesn't trim video.</li>
+<li>Images are JPEG or PNG only, and crops always take the centre.</li>
+<li>Audio is WAV or MP3 only, one slice at a time, no fades. Trimmed MP3s start quiet or silent for a fraction of a second and cut points can drift up to ~0.013 seconds; the plan shows both numbers for your file.</li>
+<li>Tested on Apple silicon macOS only.</li>
+<li>Working copies vanish when you pick another file or quit, so save anything you want to keep.</li>
+</ul>
+</section>
+<section aria-labelledby="status-and-what-s-next-title">
+<h2 id="status-and-what-s-next-title">Status and what's next</h2>
+<div class="govuk-inset-text">
+<p><strong>Not available to download yet.</strong> Media runs in the development Kettle app on macOS and as a standalone local page.</p>
+</div>
+<p>Next up is inspecting crops, black-and-white copies and the remaining video sizes by eye, and stripping the unused request-box model code out of the repo.</p>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle · small tools with results you can check</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from a12d3c4 on 2026-11-24. Loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Study: a legal model for complaint letters · Kettle</title>
+    <meta name="description" content="I tested a small local legal model against a general one on four complaint letters. It stuck to the facts in my notes, though I decided not to build a tool from it.">
+    <meta property="og:title" content="Study: a legal model for complaint letters · Kettle">
+    <meta property="og:description" content="I tested a small local legal model against a general one on four complaint letters. It stuck to the facts in my notes, though I decided not to build a tool from it.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+  <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+  <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+  <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+  <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+  <g class="cup-mark" transform="translate(448.72 40.94) scale(6.831)">
+    <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+            <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+            <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+  </g>
+</svg>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/">Tools</a>
+          <a href="/demo/">Demos</a>
+          <a href="/how-it-works/">How it works</a>
+          <a href="/research/" aria-current="true">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="page-title">
+<p class="eyebrow">Research · third study</p>
+<h1 id="page-title">Testing a small legal model on complaint letters</h1>
+<p class="lede">I've written a fair few complaint letters to a housing association, some for neighbours. They're private and follow roughly the same shape, so I wanted to see whether a small local model trained on legal text would draft them better than a general model of similar size. It stuck to my facts better, though I decided not to build a tool from it.</p>
+<p class="small muted">Run on 12 October 2026.</p>
+</section>
+<div class="govuk-inset-text">
+<p><strong>No tool came out of this.</strong> There's nothing to download. This was four letters to one housing association, drafted from rough notes an AI assistant extracted from the finished letters. I picked which draft I preferred, never whether either was ready to send.</p>
+</div>
+<section aria-labelledby="what-i-tried-title">
+<h2 id="what-i-tried-title">What I tried</h2>
+<p>Two small local models that generate text, both running on my Mac:</p>
+<ol class="govuk-list govuk-list--number">
+<li><strong>Saul 7B</strong> (4.4 GB), trained on legal text and published in March 2024.</li>
+<li><strong>Qwen3 4B</strong> (2.5 GB), the general model <a class="govuk-link" href="/media/">Media</a> briefly used.</li>
+</ol>
+<p>Both got the same rough notes for the same four letters and the same rules: stick strictly to the facts in the notes, and invent no date, name, reference number or law. A short script with no model then flagged anything in a draft that didn't appear in my notes. I read both drafts for each letter blind.</p>
+</section>
+<section id="result" aria-labelledby="result-title">
+<h2 id="result-title">What happened</h2>
+<p>Saul invented nothing. Qwen3 slipped three inventions into one letter — two dates and a department name that weren't in my notes. I preferred Saul's draft on three of the four letters.</p>
+<p>I liked Saul's drafts because they read like actual letters: plain paragraphs followed by a list of what I wanted. So I ran a second pass asking both models for that exact layout. Saul again added nothing. Qwen3 invented two claims that weren't in my notes, including that a complaint had been stuck for over a month — which wasn't true.</p>
+</section>
+<section id="wrong" aria-labelledby="wrong-title">
+<h2 id="wrong-title">What both models got wrong</h2>
+<p>Qwen3 followed the formatting instructions both times, but it made things up — inventing a date whenever my notes had a reference number without one.</p>
+<p>Saul stuck to my facts, but ignored formatting. Asked for a bulleted list, it used zero bullets across four drafts and returned eighteen numbered points on one letter. It also left out important details, including what the complaint was actually about in one letter.</p>
+<p>Neither model handled basic letter structure reliably. On the second pass, Qwen3 dropped the greeting and sign-off from all four letters.</p>
+<p>Both quietly bent small details. A 30-minute phone call became 30 minutes <em>on hold</em>. Something raised at a meeting became something that <em>happened</em> at the meeting. My script couldn't catch those because every word came from my notes — I only spotted them by reading carefully.</p>
+<p>Saul's legal knowledge is two years old. I told both models not to cite law and neither did, so legal training didn't help on law. I looked for a newer small legal model and didn't find one: its makers only released much bigger models afterwards, and the other small ones I found are single-country legal chatbots. Anything Saul cited would be at least two years stale and need checking anyway.</p>
+</section>
+<section id="decision" aria-labelledby="decision-title">
+<h2 id="decision-title">Why I'm not building it</h2>
+<p>I ran the comparison before asking whether anyone would actually use a local tool for this.</p>
+<p>Turning rough notes into a letter is already what people use a frontier chatbot for. I expect a chatbot writes a noticeably better letter than either of these, though I didn't run one to check. Nobody — me included — is going to put up with a clunky, two-year-old local model just to run it locally.</p>
+<p>It's easy to fall into treating local as the automatic answer. Here the privacy case is weak anyway: you're about to send the letter to the housing association, and the only part worth keeping out of a cloud chat is personal details, which <a class="govuk-link" href="/share-copy/">Share Copy</a> already strips before you paste.</p>
+<p>I closed the plan the same day I opened it and deleted Saul.</p>
+</section>
+<section id="checking" aria-labelledby="checking-title">
+<h2 id="checking-title">What I kept</h2>
+<p>The part worth keeping was the fact-check script. A few lines of plain code caught the invented dates in seconds, and reading the draft beside my notes caught the subtle distortions.</p>
+<p>Whatever writes a draft — a local model or a frontier chatbot — can invent a date, twist a detail or bury the point while reading smoothly. So now I check every date, amount, reference number and name against my notes, and verify any law it cites against the current statute.</p>
+<p>I haven't run that check on a chatbot's draft of a real complaint yet — that's what I'll try next.</p>
+</section>
+<section id="limits" aria-labelledby="limits-title">
+<h2 id="limits-title">What this doesn't tell you</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li>Whether either model produced a letter good enough to send.</li>
+<li>How a frontier chatbot performs on the same notes — I didn't run one.</li>
+<li>How either model handles messy notes typed by a person. An AI assistant generated these notes from finished letters, which is the easy direction.</li>
+<li>Whether legal training is why Saul stayed faithful — I didn't run a general model of the same size and age.</li>
+<li>Anything about energy. I didn't measure it.</li>
+</ul>
+</section>
+<section aria-labelledby="the-detail-title">
+<h2 id="the-detail-title">The detail</h2>
+<p>Everything behind the write-up above, if you want to inspect the counts.</p>
+<details class="govuk-details">
+  <summary class="govuk-details__summary"><span class="govuk-details__summary-text">The numbers</span></summary>
+  <div class="govuk-details__text">
+    <div class="table-scroll">
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">First run: asked for a dated timeline and numbered lists</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">What was counted</th>
+            <th scope="col" class="govuk-table__header">Saul 7B, the legal model</th><th scope="col" class="govuk-table__header">Qwen3 4B, the general model</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Facts added that were not in my notes, letter by letter</th>
+            <td class="govuk-table__cell">0, 0, 0, 0</td><td class="govuk-table__cell">3, 0, 0, 0</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Laws named that were not in my notes</th>
+            <td class="govuk-table__cell">0</td><td class="govuk-table__cell">0</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Drafts with a blank left to fill in, of 4</th>
+            <td class="govuk-table__cell">1</td><td class="govuk-table__cell">3</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">The draft I preferred, of 4</th>
+            <td class="govuk-table__cell">3</td><td class="govuk-table__cell">1</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Seconds for one letter</th>
+            <td class="govuk-table__cell">19 to 35</td><td class="govuk-table__cell">16 to 26</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <div class="table-scroll">
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Second run: asked for plain paragraphs, then a bulleted list of outcomes</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">What was counted</th>
+            <th scope="col" class="govuk-table__header">Saul 7B, the legal model</th><th scope="col" class="govuk-table__header">Qwen3 4B, the general model</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Plain paragraphs followed by a bulleted list, of 4</th>
+            <td class="govuk-table__cell">0</td><td class="govuk-table__cell">4</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Any list of outcomes at the end, of 4</th>
+            <td class="govuk-table__cell">2</td><td class="govuk-table__cell">4</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">A greeting and a sign-off, of 4</th>
+            <td class="govuk-table__cell">4</td><td class="govuk-table__cell">0</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Claims that were not in my notes</th>
+            <td class="govuk-table__cell">0</td><td class="govuk-table__cell">2</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Drafts with a blank left to fill in, of 4</th>
+            <td class="govuk-table__cell">2</td><td class="govuk-table__cell">0</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <p>A blank is a placeholder the model left for me to fill in, like "[Your Name]". On the second run my script flagged nothing in either model's drafts — the two invented claims only showed up on reading.</p>
+  </div>
+</details>
+<details class="govuk-details">
+  <summary class="govuk-details__summary"><span class="govuk-details__summary-text">How the test was set up</span></summary>
+  <div class="govuk-details__text">
+    <ul class="govuk-list govuk-list--bullet">
+      <li>The task: turn rough notes about one complaint into a letter, using only the facts in the notes.</li><li>Four letters that had already been sent to one housing association. Two I wrote and two were written by neighbours.</li><li>An AI assistant, Claude, wrote the rough notes from the finished letters: what happened, with dates and reference numbers, and what the writer wanted. I did not write the notes.</li><li>The legal model: Saul 7B Instruct, version 1, published by Equall in March 2024, in a 4.4 GB file made by someone else from the original.</li><li>The general model: Qwen3 4B Instruct 2507, in a 2.5 GB file, the model Media used for a few days.</li><li>Both ran on an Apple M1 Pro with 32 GB of memory. Each model had one go at each letter in each pass, with the same wording.</li><li>First pass: I asked for a dated timeline, the issues as a numbered list and the requests as a numbered list. Second pass: I asked for plain paragraphs followed by a bulleted list of outcomes.</li><li>Both times the models were told to add no date, amount, reference number, name, address, law or policy that was not in the notes.</li><li>A short script with no model in it listed every date, number, reference and name in a draft that was not in the notes, and anything that looked like a law. Claude read each list and counted what had really been added.</li><li>For the first pass I read the two drafts of each letter without knowing which model wrote which, and said which I preferred. I have not read the second-pass drafts that way.</li>
+    </ul>
+  </div>
+</details>
+<details class="govuk-details">
+  <summary class="govuk-details__summary"><span class="govuk-details__summary-text">Everything this doesn't show</span></summary>
+  <div class="govuk-details__text">
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Whether any draft was good enough to send. I said which of two I preferred and never marked one as usable.</li><li>How either model does from notes typed by a person. The notes were written by an AI assistant from finished letters, so every fact was already there and in order.</li><li>How a chatbot does on the same notes. None was run.</li><li>Whether training on legal text is why Saul kept to the notes. A general model of the same size and age was not run.</li><li>Anything about other kinds of complaint. All four letters went to one housing association.</li><li>How often either model adds something. These are counts from one go at four letters, twice.</li><li>Whether the script finds everything. In the second pass it found nothing and reading found two claims.</li><li>Whether either model gets the law right. Both were told to add none, and neither did.</li><li>Energy was not measured.</li>
+    </ul>
+  </div>
+</details>
+<details class="govuk-details">
+  <summary class="govuk-details__summary"><span class="govuk-details__summary-text">Record source and dates</span></summary>
+  <div class="govuk-details__text">
+    <p>Copied on 2026-10-12 from the two result comments of 12 October 2026 on issue 76 in dogwonder/kettle-cups. This page is a reviewed copy of those counts. Building the site runs no model.</p>
+    <p>The letters, notes and drafts stay on my Mac — only the counts above are published, and no letter is quoted. Models: <a class="govuk-link" href="https://huggingface.co/Equall/Saul-7B-Instruct-v1">Equall/Saul-7B-Instruct-v1</a>, run from <code>Saul-Instruct-v1.Q4_K_M.gguf</code> in <a class="govuk-link" href="https://huggingface.co/MaziyarPanahi/Saul-Instruct-v1-GGUF">MaziyarPanahi/Saul-Instruct-v1-GGUF</a>, and Qwen3-4B-Instruct-2507 as already set up for Media.</p>
+  </div>
+</details>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle · small tools with results you can check</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from a12d3c4 on 2026-11-24. Loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

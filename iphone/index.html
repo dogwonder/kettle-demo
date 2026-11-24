@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>iPhone · Kettle</title>
+    <meta name="description" content="Small tools for iPhone and iPad that read what&#39;s in front of you — a food label, a letter or a screenshot — and check it on the device. Nothing leaves the phone.">
+    <meta property="og:title" content="iPhone · Kettle">
+    <meta property="og:description" content="Small tools for iPhone and iPad that read what&#39;s in front of you — a food label, a letter or a screenshot — and check it on the device. Nothing leaves the phone.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+  <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+  <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+  <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+  <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+  <g class="cup-mark" transform="translate(448.72 40.94) scale(6.831)">
+    <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+            <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+            <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+  </g>
+</svg>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/" aria-current="true">Tools</a>
+          <a href="/demo/">Demos</a>
+          <a href="/how-it-works/">How it works</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="page-title">
+<p class="eyebrow">Tools · iPhone</p>
+<h1 id="page-title">Read what's in front of you, on your phone</h1>
+<p class="lede">One app for iPhone and iPad holding three small tools. Each reads something you photograph, record or share, checks the result on the phone, and lets you copy, save or hear it read aloud. Nothing leaves the phone, and your originals stay untouched.</p>
+<div class="govuk-inset-text">
+<p><strong>In development.</strong> Not out for download yet — I run it on my own iPhone and iPad.</p>
+</div>
+</section>
+<section aria-labelledby="the-tools-title">
+<h2 id="the-tools-title">The tools</h2>
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Label</dt>
+<dd class="govuk-summary-list__value">Photograph a UK or EU food label. Allergens appear first, followed by additives, whether it's vegan based on ingredients and additives, and nutrition — with the arithmetic checked and scaled to a portion or part of the pack. Written to sound right when read aloud.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Text</dt>
+<dd class="govuk-summary-list__value">Pick a photo or screenshot and copy its words out as paragraphs, a list or a table. I've used it on my own phone since 19 October 2026.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Scan</dt>
+<dd class="govuk-summary-list__value">Photograph a letter or form page by page into one PDF, each page cropped to the paper. Built, not properly tested yet.</dd>
+</div>
+</dl>
+</section>
+<section aria-labelledby="how-it-s-built-title">
+<h2 id="how-it-s-built-title">How it's built</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li><strong>No Apple Intelligence required.</strong> Most iPhones out there can't run Apple's on-device language models, including an iPhone 14. Everything here works without them.</li>
+<li><strong>No networking code in the app.</strong> Photos only come through the camera or photo picker. Copied text stays on your phone unless you've enabled Universal Clipboard (&quot;Copy to my other devices&quot;).</li>
+<li><strong>Refusals instead of guesses.</strong> If a photo is too blurry or cropped to read reliably, the tool says &quot;Unproven&quot; and tells you what to retake.</li>
+<li><strong>Code does the maths; models only classify.</strong> Each tool's logic lives in a Swift package with its own unit tests — 252 in total — running on a Mac without needing a phone.</li>
+<li><strong>Cited nutrition tables.</strong> Label checks against the Food Standards Agency's additive register (331 additives) and Regulation (EU) 1169/2011 for reference intakes.</li>
+</ul>
+</section>
+<section id="models" aria-labelledby="models-title">
+<h2 id="models-title">Models used</h2>
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Reading text in a photo</dt>
+<dd class="govuk-summary-list__value">Apple's built-in Vision framework, part of iOS. Nothing to download.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Language models</dt>
+<dd class="govuk-summary-list__value">None. If Kettle adds Apple's on-device language model later as an optional extra on phones that support it, it will be listed here first.</dd>
+</div>
+</dl>
+</section>
+<section aria-labelledby="what-s-next-title">
+<h2 id="what-s-next-title">What's next</h2>
+<p>Scan is built and still needs a real test on messy letters and multi-page forms before it counts as done.</p>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle · small tools with results you can check</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from a12d3c4 on 2026-11-24. Loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+{
+ "cup": "regulars",
+ "title": "Regulars",
+ "note": "It is ordinary code, so it runs for real in this page, on a made-up year of bank statements.",
+ "ready": "#choose-file",
+ "presets": [
+  {
+   "label": "A year of statements",
+   "steps": [
+    {
+     "sample": "year"
+    },
+    {
+     "wait": "#list .line"
+    }
+   ],
+   "until": "#result-title"
+  },
+  {
+   "label": "A price that went up",
+   "steps": [
+    {
+     "sample": "year"
+    },
+    {
+     "wait": "#list .line"
+    },
+    {
+     "click": "details.line[data-key=\"LUMEN STREAMING\"] > summary"
+    }
+   ],
+   "until": "details.line[data-key=\"LUMEN STREAMING\"] table"
+  },
+  {
+   "label": "A row the balance check caught",
+   "steps": [
+    {
+     "sample": "year"
+    },
+    {
+     "wait": "#list .line"
+    }
+   ],
+   "until": "#problems"
+  },
+  {
+   "label": "What was new in October",
+   "steps": [
+    {
+     "sample": "year"
+    },
+    {
+     "wait": "#list .line"
+    },
+    {
+     "select": "#since",
+     "value": "2025-10-01"
+    },
+    {
+     "click": "details.first-time > summary"
+    }
+   ],
+   "until": "details.first-time table"
+  }
+ ],
+ "samples": [
+  {
+   "name": "year",
+   "label": "a made-up year of statements, twelve files",
+   "files": [
+    {
+     "name": "statement-2025-01.csv",
+     "type": "text/csv"
+    },
+    {
+     "name": "statement-2025-02.csv",
+     "type": "text/csv"
+    },
+    {
+     "name": "statement-2025-03.csv",
+     "type": "text/csv"
+    },
+    {
+     "name": "statement-2025-04.csv",
+     "type": "text/csv"
+    },
+    {
+     "name": "statement-2025-05.csv",
+     "type": "text/csv"
+    },
+    {
+     "name": "statement-2025-06.csv",
+     "type": "text/csv"
+    },
+    {
+     "name": "statement-2025-07.csv",
+     "type": "text/csv"
+    },
+    {
+     "name": "statement-2025-08.csv",
+     "type": "text/csv"
+    },
+    {
+     "name": "statement-2025-09.csv",
+     "type": "text/csv"
+    },
+    {
+     "name": "statement-2025-10.csv",
+     "type": "text/csv"
+    },
+    {
+     "name": "statement-2025-11.csv",
+     "type": "text/csv"
+    },
+    {
+     "name": "statement-2025-12.csv",
+     "type": "text/csv"
+    }
+   ]
+  }
+ ],
+ "credits": [],
+ "leftOut": [],
+ "replayed": 0,
+ "captured": {
+  "on": "2026-10-12",
+  "commit": "f1a4391",
+  "cupChanged": false,
+  "slowestMs": 0
+ }
+}

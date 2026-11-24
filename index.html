@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Kettle</title>
+    <meta name="description" content="Small tools for the everyday jobs people often hand to AI chatbots, each giving a result you can check. On a Mac, on an iPhone and, for public pages only, in the cloud.">
+    <meta property="og:title" content="Kettle">
+    <meta property="og:description" content="Small tools for the everyday jobs people often hand to AI chatbots, each giving a result you can check. On a Mac, on an iPhone and, for public pages only, in the cloud.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+  <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+  <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+  <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+  <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+  <g class="cup-mark" transform="translate(448.72 40.94) scale(6.831)">
+    <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+            <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+            <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+  </g>
+</svg>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/">Tools</a>
+          <a href="/demo/">Demos</a>
+          <a href="/how-it-works/">How it works</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="page-title">
+<p class="eyebrow">Kettle</p>
+<h1 id="page-title">Small tools with results you can check</h1>
+<p class="lede">Kettle builds small tools for the everyday jobs people often hand to AI chatbots. Each one does a single job and puts its draft beside the original so you can check and fix it before you keep it. Where a tool uses a model, Kettle pins the exact file and tests it against real examples before building the app around it.</p>
+<div class="actions">
+  <a href="/tools/" role="button" draggable="false" class="govuk-button" data-module="govuk-button">See the tools</a>
+</div>
+</section>
+<div class="govuk-inset-text">
+<p><strong>Still in development.</strong> The Mac and iPhone apps aren't out for download yet. The funding watch is live for its first charity. Always check a tool's output before you rely on it.</p>
+</div>
+<section class="card" aria-labelledby="try-title">
+  <h2 id="try-title">Try one in your browser</h2>
+  <p><a href="/demo/regulars/">Regulars</a>, <a href="/demo/tables/">Tables</a> and <a href="/demo/text/">Text</a> each have a browser demo: the real page from the app, running on prepared samples. Nothing of yours gets uploaded. Demos need JavaScript.</p>
+  <div class="actions">
+    <a href="/demo/" role="button" draggable="false" class="govuk-button" data-module="govuk-button">See the demos</a>
+  </div>
+</section>
+<section id="who" aria-labelledby="who-title">
+<h2 id="who-title">Who it's for</h2>
+<p>Charities and small organisations that can't paste their paperwork into a chatbot. They need to trust the numbers and know where their files went.</p>
+</section>
+<section id="funding-watch" aria-labelledby="funding-watch-title">
+<h2 id="funding-watch-title">The funding watch</h2>
+<p>Small charities usually hear about funding by chance: a search, a newsletter, word of mouth. Every Monday morning, the funding watch checks a charity's chosen funders and emails what changed. Instead of asking a chat model to summarise pages, it pairs plain code with Cloudflare's Clairic and Clef models, which extract single facts and fixed labels rather than writing prose. Every date and amount has to appear on the funder's own page; if a page doesn't say, the email says &quot;Not stated on the page&quot;.</p>
+<p>It's been running since October 2026 for a small Hackney charity. <a href="/funding-watch/">See how the funding watch works</a>.</p>
+</section>
+<section id="rules" aria-labelledby="rules-title">
+<h2 id="rules-title">Four rules every Kettle tool follows</h2>
+<ol class="govuk-list govuk-list--number">
+<li><strong>One job, checked by a person.</strong> You see the source beside the result and fix mistakes before saving. No tool sends, books or decides anything for you.</li>
+<li><strong>Private files stay on your device.</strong> Kettle only uses the cloud for public pages, like funders' websites.</li>
+<li><strong>The smallest thing that works.</strong> Plain code first, then a small local model, and a large model only when nothing smaller can handle it. Every tool page names its models, or says it uses none.</li>
+<li><strong>Show the working.</strong> Kettle publishes what was tested, what it was checked against, and where it broke.</li>
+</ol>
+</section>
+<section id="where" aria-labelledby="where-title">
+<h2 id="where-title">Where the tools run</h2>
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">In the cloud</dt>
+<dd class="govuk-summary-list__value">Public pages, read once and shared with everyone who needs them. <a href="/funding-watch/">The funding watch</a> is live.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">On a Mac</dt>
+<dd class="govuk-summary-list__value">Your own files: bank statements, meeting recordings, folders of photos. <a href="/tools/">Six tools</a> in development, with three you can <a href="/demo/">try in your browser</a>. Once set up, none of them talk to the network.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">On an iPhone</dt>
+<dd class="govuk-summary-list__value">Whatever's in front of you: a food label, a letter, a screenshot. <a href="/iphone/">Three tools</a> in development. They work on older iPhones without Apple Intelligence, and the app has no networking code at all.</dd>
+</div>
+</dl>
+</section>
+<section id="how" aria-labelledby="how-title">
+<h2 id="how-title">How Kettle builds them</h2>
+<p>The tools share the same pattern underneath, which keeps them quick to build and possible to test. Where a tool uses a model, the model proposes an answer and code checks what comes back. Every model is pinned to its exact file, and every new tool starts with a test on real files; ideas that lose get dropped. <a href="/how-it-works/">Read how it works</a>.</p>
+</section>
+<section aria-labelledby="research-title">
+<h2 id="research-title">Research</h2>
+<p>Building Kettle means testing hunches and publishing the results whether they hold up or fall flat. In the first study, giving Claude Code a guide to Tables made it do more model work on seven small tables than reading the picture itself. In another, reading short requests about a picture, hand-written rules got 59 of 60 right against 47 or 48 for three small models.</p>
+<p>Read <a href="/research/agent-guide-study/">the first study</a>, <a href="/evidence/">what's been checked on Tables</a>, or <a href="/research/">all the research</a>.</p>
+</section>
+<section aria-labelledby="about-title">
+<h2 id="about-title">About</h2>
+<p>I'm Rich Holman, and I build Kettle at DGW.ltd. <a href="/about/">Read why Kettle exists and what it doesn't claim</a>.</p>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle · small tools with results you can check</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from a12d3c4 on 2026-11-24. Loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

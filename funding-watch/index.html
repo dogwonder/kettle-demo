@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Funding watch · Kettle</title>
+    <meta name="description" content="A weekly email for a small charity showing what changed on its funders&#39; public pages, with every date and amount pulled from the funder&#39;s own words.">
+    <meta property="og:title" content="Funding watch · Kettle">
+    <meta property="og:description" content="A weekly email for a small charity showing what changed on its funders&#39; public pages, with every date and amount pulled from the funder&#39;s own words.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+  <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+  <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+  <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+  <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+  <g class="cup-mark" transform="translate(448.72 40.94) scale(6.831)">
+    <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+            <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+            <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+  </g>
+</svg>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/" aria-current="true">Tools</a>
+          <a href="/demo/">Demos</a>
+          <a href="/how-it-works/">How it works</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="page-title">
+<p class="eyebrow">Tools · Funding watch</p>
+<h1 id="page-title">What changed on your funders' pages this week</h1>
+<p class="lede">Every Monday morning, the funding watch checks the public pages of a charity's chosen funders and emails what changed: a round that opened, an upcoming deadline, a new grant limit. Every date and amount has to appear in the funder's own page text.</p>
+<div class="govuk-inset-text">
+<p><strong>Live since October 2026</strong> for its first charity, a small Hackney food pantry where I'm a trustee. They use it free, and always will.</p>
+</div>
+</section>
+<section aria-labelledby="why-this-exists-title">
+<h2 id="why-this-exists-title">Why this exists</h2>
+<p>Small charities mostly find funding by luck: a search, a newsletter, word of mouth. Funders publish what they fund and when, on their own websites, in their own phrasing, and change them without warning. Nobody at a tiny charity has time to check 30 funders' websites every Monday. Watching pages and flagging what changed is a repeatable job, and that's what the watch does.</p>
+</section>
+<section aria-labelledby="what-the-email-shows-title">
+<h2 id="what-the-email-shows-title">What the email shows</h2>
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Opened</dt>
+<dd class="govuk-summary-list__value">A round that wasn't open last week and is now.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Closing</dt>
+<dd class="govuk-summary-list__value">A deadline coming up in the next four weeks.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Changed</dt>
+<dd class="govuk-summary-list__value">A date, amount or limit that shifted since last week.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Couldn't read</dt>
+<dd class="govuk-summary-list__value">Any page that failed to load or blocked the watch, with the reason in plain words — nothing gets quietly skipped.</dd>
+</div>
+</dl>
+<p>Each item shows the fact, the exact sentence it came from and a link back to the page. A quiet week still sends a one-line email, and if a run breaks, a short &quot;didn't run&quot; email says so.</p>
+<p><a href="/samples/funding-watch-email.html">See a sample email</a> — the real template, populated with invented funders and an invented charity.</p>
+</section>
+<section id="checks" aria-labelledby="checks-title">
+<h2 id="checks-title">How it checks what it shows</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li><strong>Every date, amount and area has to appear in the page text.</strong> A sentence is quoted only if it matches the page word for word; otherwise the email says &quot;Check the page&quot;.</li>
+<li><strong>Unknown stays unknown.</strong> If a page doesn't state a fact, the email says &quot;Not stated on the page&quot; instead of guessing.</li>
+<li><strong>No verdicts.</strong> It never tells a charity it qualifies or drafts an application. At most it flags a round worth checking alongside the funder's wording. People make the call.</li>
+<li><strong>Unchanged pages aren't re-read.</strong> That avoids paying for redundant model runs and stops a model paraphrasing the same page slightly differently from looking like a real change.</li>
+</ul>
+</section>
+<section id="evidence" aria-labelledby="evidence-title">
+<h2 id="evidence-title">What's been tested</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li><strong>Finding new funders:</strong> Before building the watch, pulling public data on past grants in Hackney turned up 26 funders. The charity marked 11 of them new.</li>
+<li><strong>Reading pages vs plain code:</strong> On real funder pages, the reading model extracted 45 of 55 stated facts; a plain parser found 28.</li>
+<li><strong>Running cost:</strong> A full first read across every page cost 2 to 3p. After that, it only reads pages that changed.</li>
+</ul>
+<p>Cloudflare swapped the hosted reading model on 18 November 2026. Re-scored on the earlier pages, the new version matched or beat the old one on dates and amounts, though it sometimes picks up a geographic area mentioned elsewhere on the page — so check the area.</p>
+</section>
+<section aria-labelledby="help-open-now-title">
+<h2 id="help-open-now-title">Help open now</h2>
+<p>A second weekly email for the same charity uses the same reader to track local support schemes with open windows (cost-of-living help, holiday places) and nearby food support. The charity marked 35 of 39 items new to them, and in a blind check its food listings came back 19 out of 19 right.</p>
+</section>
+<section id="models" aria-labelledby="models-title">
+<h2 id="models-title">Models used</h2>
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Reading facts in running text</dt>
+<dd class="govuk-summary-list__value">Cloudflare's hosted reading model, <code>@cf/cloudflare/clairic</code>, via Workers AI. It reads one fact at a time and returns the sentence it came from. Since 18 November 2026 that name points to the 27.8B version (<code>clairic-27b</code>), and every stored fact records which version read it. Open weights under Apache 2.0: <a href="https://huggingface.co/Cloudflare/clairic/tree/2c161be5cc71bacd6605b99a8c07547e58cfa434">Cloudflare/clairic at revision 2c161be</a>, published 18 November 2026.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Sorting into topics</dt>
+<dd class="govuk-summary-list__value">Keywords first. A second Cloudflare model, <code>@cf/cloudflare/clef</code>, checks only whether core costs are funded, where testing showed it caught wording keywords missed. Open weights under Apache 2.0: <a href="https://huggingface.co/Cloudflare/clef/tree/171287b2571042abec9e7b99752aee58216b0ed0">Cloudflare/clef at revision 171287b</a>, published 10 November 2026.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Clear, labelled details</dt>
+<dd class="govuk-summary-list__value">Plain code parsing dates, amounts and explicit labels like &quot;Deadline: 3 March&quot;. No model.</dd>
+</div>
+</dl>
+<p>Cloudflare can swap the model behind a hosted name without warning — as happened on 18 November 2026 — which is why the watch logs the reported version alongside every fact. The links above point to the published weights; the hosted service is Cloudflare's, so the watch records whatever version string it reports.</p>
+</section>
+<section id="privacy" aria-labelledby="privacy-title">
+<h2 id="privacy-title">What stays where</h2>
+<p>The watch only reads public web pages. Nothing from the charity goes to the cloud: no client records, no draft bids, no accounts. Anything touching a charity's own documents stays on a local computer.</p>
+</section>
+<section aria-labelledby="what-s-unresolved-title">
+<h2 id="what-s-unresolved-title">What's unresolved</h2>
+<p>Only one charity uses it so far, and no grant has come out of it yet. That's the real test still ahead.</p>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle · small tools with results you can check</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from a12d3c4 on 2026-11-24. Loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

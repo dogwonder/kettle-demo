@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Study: models against rules for reading a typed request · Kettle</title>
+    <meta name="description" content="I assumed a small local model would read typed picture requests better than hand-written rules. The rules got 59 of 60 right and the best model managed 48.">
+    <meta property="og:title" content="Study: models against rules for reading a typed request · Kettle">
+    <meta property="og:description" content="I assumed a small local model would read typed picture requests better than hand-written rules. The rules got 59 of 60 right and the best model managed 48.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+  <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+  <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+  <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+  <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+  <g class="cup-mark" transform="translate(448.72 40.94) scale(6.831)">
+    <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+            <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+            <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+  </g>
+</svg>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/">Tools</a>
+          <a href="/demo/">Demos</a>
+          <a href="/how-it-works/">How it works</a>
+          <a href="/research/" aria-current="true">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="page-title">
+<p class="eyebrow">Research · second study</p>
+<h1 id="page-title">Hand-written rules against small models for reading picture requests</h1>
+<p class="lede">Media originally had a box where I could type what I wanted done to a picture, like &quot;fit inside 800 x 600 and make it black and white&quot;. I assumed a small local AI model would read sentences like that better than a pile of hand-written patterns. Across 60 test requests, the patterns got 59 right and the best model got 48.</p>
+<p class="small muted">Run on 6 October 2026, with a follow-up on 7 October 2026.</p>
+</section>
+<div class="govuk-inset-text">
+<p><strong>Caveat first.</strong> AI models wrote every request in this test, not real people — which almost certainly flatters the rules. This also tested an unpublished prototype: <a class="govuk-link" href="/media/">Media</a> runs on my Mac and isn't out for download.</p>
+</div>
+<section aria-labelledby="what-i-tried-title">
+<h2 id="what-i-tried-title">What I tried</h2>
+<p>Something had to turn a typed sentence into form settings: a size, whether to crop, and whether to convert to black and white. I tested two routes:</p>
+<ol class="govuk-list govuk-list--number">
+<li><strong>Plain rules:</strong> hand-written patterns for the words people use, with no model.</li>
+<li><strong>Small embedding models:</strong> the kind usually used for search, with lightweight classifiers trained on top. I tried three, the largest roughly eight times the size of the smallest.</li>
+</ol>
+<p>Plain code pulled out the numbers either way, so a model never had to parse a width or height. All it had to return were three yes/no flags: resize, crop, black and white. I ran each route once on 60 unseen requests.</p>
+</section>
+<section id="result" aria-labelledby="result-title">
+<h2 id="result-title">What happened</h2>
+<p>The rules got 59 of 60 whole requests right. The three models managed 47 or 48, and kept turning on changes nobody asked for. Scaling up to the largest embedding model didn't help at all.</p>
+<p id="for-models">The one request the rules missed, all three models got right: "cut to 1080 x 1350 exactly and remove colour". Nobody had written a rule for "cut to". Models handle phrasing you didn't think of; hand-written patterns can't.</p>
+</section>
+<section id="why" aria-labelledby="why-title">
+<h2 id="why-title">Why I think the models lost</h2>
+<p>First, there wasn't much left for a model to do. Once code extracts the numbers, most requests come down to a handful of words: &quot;crop&quot;, &quot;black and white&quot;, &quot;wide&quot;.</p>
+<p>Second, small errors compound across three flags. Each model got an individual yes/no flag right roughly nine times out of ten, but a whole request needs all three right at once — which drops nine in ten down to 47 or 48 out of 60.</p>
+<p>Third, in hindsight an embedding model was a poor fit here and I should have spotted it before running the test. Embeddings measure how similar two chunks of text are, which works well for search but poorly when the answer turns on two exact words.</p>
+</section>
+<section id="next-day" aria-labelledby="next-day-title">
+<h2 id="next-day-title">The next day I tried a form-filling model</h2>
+<p>This time I ran a small chat-style model, Qwen3 4B (2.5 GB), locked down so it couldn't write free text. Code extracted every number and timestamp first, the model filled in a fixed form by picking among them, and code verified that every value got used.</p>
+<p>On the same 60 picture requests it scored 56 against 59 for the rules. On fresh test sets it scored 28 of 30 on recordings, 22 of 24 on video and 28 of 30 on pictures. That showed the first day's loss was mostly down to picking embedding models.</p>
+<p>Two things stayed true, though. For pictures, the hand-written rules still edged ahead (by one on the new set, three on the old) with zero download. And when a language model guesses wrong, it can invert what you asked: two smaller versions of Qwen3 read &quot;chop it to the last 90 secs&quot; as cutting the last 90 seconds <em>off</em>.</p>
+</section>
+<section id="decision" aria-labelledby="decision-title">
+<h2 id="decision-title">What I did afterwards</h2>
+<p>Even though the rules won, I stopped using them. They'd already bloated past twenty patterns for three toggles, and I didn't want to maintain a brittle rulebook for every file type.</p>
+<p>First I wired Media to catch dead-simple requests (&quot;720p&quot;, &quot;crop to 800 x 600&quot;) with a few patterns and pass everything else to Qwen3 4B, with a written plan to check before running.</p>
+<p>That lasted two days. On 9 October I pulled the model out of the app completely. Once I added example prompts under the text box, typing an example was slower than just clicking a preset button — so I moved those sizes directly onto the form. Nine smaller models I tried on the same requests didn't get near the 2.5 GB model, so the choice was 2.5 GB or none, and I picked none. <a class="govuk-link" href="/media/#model-title">Media's page</a> has the numbers.</p>
+</section>
+<section id="limits" aria-labelledby="limits-title">
+<h2 id="limits-title">What this doesn't tell you</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li>How rules or models hold up on requests typed by actual people — none were in these runs.</li>
+<li>General accuracy rates — these are single passes across 24 to 60 requests.</li>
+<li>Anything about open-ended tasks like searching documents by description. This was a small, closed form; models earn their keep elsewhere.</li>
+<li>Anything about energy. I didn't measure it.</li>
+</ul>
+</section>
+<section aria-labelledby="the-detail-title">
+<h2 id="the-detail-title">The detail</h2>
+<p>Everything behind the write-up above, if you want to check it.</p>
+<details class="govuk-details">
+  <summary class="govuk-details__summary"><span class="govuk-details__summary-text">The numbers</span></summary>
+  <div class="govuk-details__text">
+    <p>Media's older classifier scored 18 of 60 because it could only pick one operation per request and couldn't combine two changes.</p>
+    <div class="table-scroll">
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">One run on 60 unseen requests</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">What was counted</th>
+            <th scope="col" class="govuk-table__header">Media before</th><th scope="col" class="govuk-table__header">Rules, no model</th><th scope="col" class="govuk-table__header">BGE-small as already tuned for Media</th><th scope="col" class="govuk-table__header">BGE-small as published</th><th scope="col" class="govuk-table__header">EmbeddingGemma 2, text only</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Complete suggestions, of 60</th>
+            <td class="govuk-table__cell">18</td><td class="govuk-table__cell">59</td><td class="govuk-table__cell">48</td><td class="govuk-table__cell">47</td><td class="govuk-table__cell">48</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">One change, of 20</th>
+            <td class="govuk-table__cell">11</td><td class="govuk-table__cell">20</td><td class="govuk-table__cell">15</td><td class="govuk-table__cell">14</td><td class="govuk-table__cell">16</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Two changes together, of 20</th>
+            <td class="govuk-table__cell">0</td><td class="govuk-table__cell">19</td><td class="govuk-table__cell">16</td><td class="govuk-table__cell">17</td><td class="govuk-table__cell">17</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Awkward requests, of 20</th>
+            <td class="govuk-table__cell">7</td><td class="govuk-table__cell">20</td><td class="govuk-table__cell">17</td><td class="govuk-table__cell">16</td><td class="govuk-table__cell">15</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Requests given a change nobody asked for</th>
+            <td class="govuk-table__cell">3</td><td class="govuk-table__cell">1</td><td class="govuk-table__cell">6</td><td class="govuk-table__cell">9</td><td class="govuk-table__cell">6</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Requests missing a change that was asked for</th>
+            <td class="govuk-table__cell">40</td><td class="govuk-table__cell">1</td><td class="govuk-table__cell">7</td><td class="govuk-table__cell">6</td><td class="govuk-table__cell">7</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Answers matching, of 60: resize, crop, black and white</th>
+            <td class="govuk-table__cell">not applicable</td><td class="govuk-table__cell">59, 59, 60</td><td class="govuk-table__cell">53, 58, 52</td><td class="govuk-table__cell">54, 54, 53</td><td class="govuk-table__cell">54, 53, 55</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <p>Earlier that day I tried two untrained models on 18 requests. EmbeddingGemma 2 (matching against fixed example sentences) got 3 right; GLiNER2.5 Small got 6. Neither was usable out of the box.</p>
+    <div class="table-scroll">
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">What each route needed on my Mac</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">What was counted</th>
+            <th scope="col" class="govuk-table__header">Rules, no model</th><th scope="col" class="govuk-table__header">BGE-small as already tuned for Media</th><th scope="col" class="govuk-table__header">BGE-small as published</th><th scope="col" class="govuk-table__header">EmbeddingGemma 2, text only</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Size of the model</th>
+            <td class="govuk-table__cell">none</td><td class="govuk-table__cell">33 million parameters</td><td class="govuk-table__cell">33 million parameters</td><td class="govuk-table__cell">271 million parameters for the text part</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Download</th>
+            <td class="govuk-table__cell">none</td><td class="govuk-table__cell">none, already on my computer</td><td class="govuk-table__cell">133 MB</td><td class="govuk-table__cell">1.5 GB</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Peak memory while reading requests</th>
+            <td class="govuk-table__cell">not measured</td><td class="govuk-table__cell">about 0.6 GB</td><td class="govuk-table__cell">about 0.6 GB</td><td class="govuk-table__cell">about 2.4 GB</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Time to turn one request into numbers</th>
+            <td class="govuk-table__cell">under a thousandth of a second for the whole reading</td><td class="govuk-table__cell">about 2 thousandths of a second</td><td class="govuk-table__cell">about 2 thousandths of a second</td><td class="govuk-table__cell">about 10 thousandths of a second</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Its own software environment</th>
+            <td class="govuk-table__cell">no</td><td class="govuk-table__cell">no</td><td class="govuk-table__cell">no</td><td class="govuk-table__cell">yes, 0.9 GB</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <div class="table-scroll">
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Complete suggestions on new requests, 7 October 2026</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Kind of request</th>
+            <th scope="col" class="govuk-table__header">Requests</th><th scope="col" class="govuk-table__header">A few plain rules alone</th><th scope="col" class="govuk-table__header">The same rules, then the model</th><th scope="col" class="govuk-table__header">What Media used before</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Sound recordings</th>
+            <td class="govuk-table__cell">30</td><td class="govuk-table__cell">17</td><td class="govuk-table__cell">28</td><td class="govuk-table__cell">No suggestions</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Video</th>
+            <td class="govuk-table__cell">24</td><td class="govuk-table__cell">10</td><td class="govuk-table__cell">22</td><td class="govuk-table__cell">An older small model: 7</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Pictures</th>
+            <td class="govuk-table__cell">30</td><td class="govuk-table__cell">3</td><td class="govuk-table__cell">28</td><td class="govuk-table__cell">The rules from this study: 29</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</details>
+<details class="govuk-details">
+  <summary class="govuk-details__summary"><span class="govuk-details__summary-text">More on why the models lost</span></summary>
+  <div class="govuk-details__text">
+    <p>The rules got each individual yes/no answer right 59 or 60 times; each model got 52 to 58 out of 60.</p>
+    <p>The mistakes were scattered. At least one model missed 21 of the 60 requests, while all three missed only 4. The same model turned black-and-white on when nobody asked for it and missed it when somebody did, leaving no single hole to patch.</p>
+    <p>I checked one hypothesis afterwards: the training requests came from two sources with different styles, and only one included black-and-white examples, so maybe the models learned the style instead of the intent. Retraining on that single source gave 46, 47 and 49 on the same 60 requests — so mixed styles weren't to blame.</p>
+    <p>The largest model, EmbeddingGemma 2, cost a 1.5 GB download, roughly four times the RAM and its own Python environment, only to match the smallest model's score.</p>
+    <p>All three models missed the same four requests, each hinging on a couple of words. Two gave permission to crop ("exactly 1920 by 1080? Cutting some off the top and bottom is fine"), one asked for a crop that kept everything, and one gave a dimension that could apply to either side. My guess is that squashing a whole sentence into one vector barely shifts for caveats like those, whereas a pattern looks straight at the words. I didn't test that directly.</p>
+    <p>The next day's Qwen3 4B model got three of those four right. Size mattered for it: on recordings, the 0.6B and 1.7B versions scored 25 and 26 of 30 and each picked a wrong setting at least once, while 4B scored 28 with zero wrong settings. The light rules sitting in front of it caught very little alone (8 of 30 recordings, 3 of 24 videos, 2 of 30 pictures) and didn't change a single final score once the model ran behind them. Qwen3 4B took about a second per request on my Mac.</p>
+  </div>
+</details>
+<details class="govuk-details">
+  <summary class="govuk-details__summary"><span class="govuk-details__summary-text">How the test was set up</span></summary>
+  <div class="govuk-details__text">
+    <ul class="govuk-list govuk-list--bullet">
+      <li>The task: read one typed request about one picture and say which of three changes it asks for (make it smaller, crop it from the centre to a given size, make it black and white), with the numbers, and list anything it asks for that the tool does not do.</li><li>Every route used the same code to read the numbers and to list what was not done. A route only had to give three yes or no answers: resize, crop, black and white.</li><li>Rules: ordinary patterns for the words people use, including “don’t” and requests that pull two ways. No model.</li><li>Models: three embedding models, each left as downloaded, with three small classifiers trained on top, one for each answer. They were trained on 636 invented requests: 406 from earlier work on Media and 230 written for this study.</li><li>The test: 60 requests none of the routes had seen. 20 ask for one change, 20 for two together, and 20 are awkward on purpose: something said not to be done, a request that contradicts itself, or something the tool does not do.</li><li>All wording was written by AI models, not typed by me. Two separate AI writers produced the 60 test requests without seeing the rules. The rules and the training requests were written by a third.</li><li>The rules and the training recipe were fixed, and their files recorded, before the 60 requests were opened. Each route ran once and nothing was changed afterwards.</li><li>A suggestion counted as complete only if the size, the crop choice and black and white all matched the answer written beforehand, and everything not done was shown.</li><li>Run on an Apple M1 Pro with 32 GB of memory and macOS 27.0.1. The models ran on the processor with network access refused.</li>
+    </ul>
+  </div>
+</details>
+<details class="govuk-details">
+  <summary class="govuk-details__summary"><span class="govuk-details__summary-text">Everything I didn't measure</span></summary>
+  <div class="govuk-details__text">
+    <ul class="govuk-list govuk-list--bullet">
+      <li>The rules’ 59 is flattering. The cards, the rules and the training requests were written by one AI assistant, and the test requests by two others from the same family of models. Their wording is likely closer to what the rules expect than a person’s would be.</li><li>No request typed by a person has been through any route.</li><li>I did not check the 60 written answers myself. They were read against the rules before the run and none was changed. Four were judgement calls.</li><li>The models were not adjusted for this task beyond the small classifiers. Nobody retrained an embedding model. No chatbot-style model was tried in this run; one was tried the next day, and that is described above.</li><li>The classifiers were trained on 636 requests. More, or better, examples might have closed some of the gap. That was not tested.</li><li>One run. Variation between repeated runs was not measured.</li><li>English requests about still images only.</li><li>Energy was not measured.</li>
+    </ul>
+  </div>
+</details>
+<details class="govuk-details">
+  <summary class="govuk-details__summary"><span class="govuk-details__summary-text">Record source and dates</span></summary>
+  <div class="govuk-details__text">
+    <p>Copied on 2026-10-06 from docs/evidence-media-compound-suggestions-2026-10-06.md in dogwonder/kettle-cups at f91af3d4ea92b8f31b870edec71e2fdc331cee3f. This page is a reviewed copy of that evidence note. Building the site runs no model.</p>
+    <p>Models: <a class="govuk-link" href="https://huggingface.co/BAAI/bge-small-en-v1.5/tree/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a">BAAI/bge-small-en-v1.5 at revision 5c38ec7</a>, <a class="govuk-link" href="https://huggingface.co/google/embeddinggemma-2/tree/914f7f89142e33e77833254d9c9b90c3cef7303b">google/embeddinggemma-2 at revision 914f7f8</a> and <a class="govuk-link" href="https://huggingface.co/fastino/gliner2.5-small-v1/tree/7132dc4561c3f94563c6147e75ffa8ef34c4964a">fastino/gliner2.5-small-v1 at revision 7132dc4</a>. Requests, rules and scripts are in the repo; model weights and raw outputs stay on my Mac.</p>
+    <p>The 7 October runs come from docs/evidence-media-compound-suggestions-2026-10-06.md in dogwonder/kettle-cups at 15206c61eaaa7d7e27cd7a33b1e83049866fedbd. Model: <a class="govuk-link" href="https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF/tree/a06e946bb6b655725eafa393f4a9745d460374c9">Qwen3-4B-Instruct-2507, 4-bit, from unsloth/Qwen3-4B-Instruct-2507-GGUF at revision a06e946</a>, alongside the 0.6B and 1.7B files from the same family.</p>
+  </div>
+</details>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle · small tools with results you can check</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from a12d3c4 on 2026-11-24. Loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

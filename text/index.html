@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Text · Kettle</title>
+    <meta name="description" content="Five exact clean-up and sorting jobs for plain text on your Mac, with no model and a clear count of what changed.">
+    <meta property="og:title" content="Text · Kettle">
+    <meta property="og:description" content="Five exact clean-up and sorting jobs for plain text on your Mac, with no model and a clear count of what changed.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+  <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+  <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+  <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+  <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+  <g class="cup-mark" transform="translate(448.72 40.94) scale(6.831)">
+    <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+            <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+            <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+  </g>
+</svg>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/" aria-current="true">Tools</a>
+          <a href="/demo/">Demos</a>
+          <a href="/how-it-works/">How it works</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="page-title">
+<p class="eyebrow">Tools · Text</p>
+<h1 id="page-title">Tidy and sort text without asking a chatbot</h1>
+<p class="lede">Paste some text, pick one operation, see exactly what changed, then copy or save it. Plain code does the work — no model rewrites your words, and the same input always gives the same output.</p>
+<div class="demo-link">
+  <a href="/demo/text/" role="button" draggable="false" class="govuk-button" data-module="govuk-button">Try Text in your browser</a>
+  <p class="small muted">The real page from the app, on prepared samples. It's plain code, so it runs for real in your browser. It won't open your own files, and it needs JavaScript.</p>
+</div>
+</section>
+<section aria-labelledby="why-this-exists-title">
+<h2 id="why-this-exists-title">Why this exists</h2>
+<p>People routinely paste small text chores into a chatbot: sort a list, strip bullets, fix broken lines copied out of a PDF. Every one of those has an exact answer and doesn't need a language model. Text runs them locally, counts what it touched, and flags the edge cases it refuses to guess.</p>
+</section>
+<section aria-labelledby="the-five-changes-title">
+<h2 id="the-five-changes-title">The five changes</h2>
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Sort lines</dt>
+<dd class="govuk-summary-list__value">A to Z or Z to A in UK English dictionary order. Characters inside a line never change, and blank lines drop to the bottom.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Remove bullets and numbering</dt>
+<dd class="govuk-summary-list__value">Strips bullet symbols, dashes and prefixes like <code>1.</code>, <code>a)</code> or <code>(i)</code> from the start of a line, while leaving <code>-5</code>, <code>3.5 m</code> and <code>A. Smith</code> alone.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Change case</dt>
+<dd class="govuk-summary-list__value">lower, UPPER, Title or sentence case. Code can't tell that &quot;london&quot; is a proper noun, so sentence case lists every word it lowercased that isn't a common English word for you to review.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Tidy spacing and stray characters</dt>
+<dd class="govuk-summary-list__value">Collapses repeated spaces, trailing spaces and runs of blank lines. Strips invisible PDF/web junk like soft hyphens and zero-width spaces, and expands ligatures like &quot;ﬁ&quot;. Ordinary letters, digits and punctuation stay untouched.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Fix line breaks</dt>
+<dd class="govuk-summary-list__value">Rejoins lines broken by copying from a PDF, splits run-together list items onto their own lines, breaks jammed sentences where a space went missing, or puts one sentence per line. Words rejoined across a hyphen get listed separately, because &quot;well-being&quot; needs its hyphen back.</dd>
+</div>
+</dl>
+<p>Every operation tells you how many changes it made, and running it twice gives the same output as running it once. Your original stays put until you click replace, with one-step undo. Grammar, spelling, rewording and summaries aren't part of this tool.</p>
+</section>
+<section aria-labelledby="compare-two-lists-title">
+<h2 id="compare-two-lists-title">Compare two lists</h2>
+<p>Text also compares two line-by-line lists — who you invited against who replied, or what you ordered against what turned up. It splits items into both lists, first only, and second only, with counts for duplicates, without altering either list.</p>
+<p>Lines match only when every character is identical, unless you tell it to ignore case or outer spaces. If items nearly match, it flags how many and leaves the call to you rather than assuming two spellings are the same person.</p>
+</section>
+<section id="models" aria-labelledby="models-title">
+<h2 id="models-title">Models used</h2>
+<p><strong>None.</strong> Text is plain code. It downloads nothing and sends nothing anywhere.</p>
+</section>
+<section aria-labelledby="what-s-been-tested-title">
+<h2 id="what-s-been-tested-title">What's been tested</h2>
+<p>Each operation has automated tests on invented text verifying that it changes nothing outside its remit, is idempotent, and handles 50,000 words without stalling.</p>
+<p>I also tested my own premise for building it. I expected a chatbot to regenerate the whole text on every job, burning more model work as the text grew. Across ten texts, an AI coding agent wrote a tiny script instead in 19 of 20 tries and kept every word intact. So Text doesn't win on model work — it wins because your text stays on your Mac, the output is deterministic, and it tells you what it won't guess. In one of those runs, the agent quietly turned an ID from &quot;88a&quot; into &quot;88A&quot; during sentence-casing, whereas Text flags it for you to check.</p>
+<p>I've used Text in my own work since 21 September 2026.</p>
+</section>
+<section aria-labelledby="status-and-what-s-next-title">
+<h2 id="status-and-what-s-next-title">Status and what's next</h2>
+<div class="govuk-inset-text">
+<p><strong>Not available to download yet.</strong> Text runs in the development Kettle app on macOS.</p>
+</div>
+<p>List comparison landed on 12 October 2026 with automated tests on invented lists, and I still need to put it through real lists of my own.</p>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle · small tools with results you can check</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from a12d3c4 on 2026-11-24. Loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

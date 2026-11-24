@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>A year of statements · Kettle</title>
+    <meta name="description" content="Turning a year of bank statement PDFs into one list of repeat payees, through Tables and then Regulars by hand.">
+    <meta property="og:title" content="A year of statements · Kettle">
+    <meta property="og:description" content="Turning a year of bank statement PDFs into one list of repeat payees, through Tables and then Regulars by hand.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+  <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+  <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+  <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+  <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+  <g class="cup-mark" transform="translate(448.72 40.94) scale(6.831)">
+    <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+            <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+            <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+  </g>
+</svg>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/" aria-current="true">Tools</a>
+          <a href="/demo/">Demos</a>
+          <a href="/how-it-works/">How it works</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="page-title">
+<p class="eyebrow">Playbooks · A year of statements</p>
+<h1 id="page-title">A year of statements into one list of repeat payees</h1>
+<p class="lede">Two tools in a row. <a href="/tables/">Tables</a> turns each monthly statement into a checked CSV, and <a href="/regulars/">Regulars</a> reads all twelve CSVs to list every payee you pay repeatedly. Nothing passes between them automatically — you <a href="/playbooks/#pouring">pour</a> by hand, saving each file and opening it in the next tool.</p>
+</section>
+<section aria-labelledby="what-goes-in-and-comes-out-title">
+<h2 id="what-goes-in-and-comes-out-title">What goes in and comes out</h2>
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Start with</dt>
+<dd class="govuk-summary-list__value">Twelve monthly bank statements downloaded as text PDFs (not scans).</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">End with</dt>
+<dd class="govuk-summary-list__value">One CSV listing every payee you paid 3 or more times across 3 or more months, ranked by yearly total, plus every new payee from the latest statement.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Models used</dt>
+<dd class="govuk-summary-list__value">None. Both tools run plain code for this, so the same statements always produce the same list.</dd>
+</div>
+</dl>
+</section>
+<section aria-labelledby="the-route-title">
+<h2 id="the-route-title">The route</h2>
+<ol class="govuk-list govuk-list--number">
+<li><strong>Tables: each PDF into a checked CSV.</strong> Open one statement PDF. Rows sit beside images of the pages, with any broken running balance flagged. Check every cell, fix anything off, tick the box and save the CSV. Repeat for all twelve months and keep them in one folder.</li>
+<li><strong>Regulars: all twelve months in one list.</strong> Open the whole folder of CSVs together. If a balance doesn't add up or two files overlap in dates, Regulars flags it — jump back to Tables for that month, fix it, save over the CSV and reload. Rename or merge payees the bank formatted in two different ways.</li>
+<li><strong>Save the list.</strong> Regulars keeps nothing once you close the window, so export the summary CSV (and the underlying payments if you want them).</li>
+</ol>
+</section>
+<section aria-labelledby="next-month-title">
+<h2 id="next-month-title">Next month</h2>
+<p>Run the new statement through Tables and drop its CSV into the same folder, then open the whole folder in Regulars again. &quot;New in the latest statement&quot; lists every payee you hadn't paid before, largest first. Regulars doesn't persist renames or merges, so you'll redo those if you need them.</p>
+</section>
+<section aria-labelledby="what-to-check-title">
+<h2 id="what-to-check-title">What to check</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li>In Tables, check every cell. Matching running balances confirm the amounts, not the dates or descriptions.</li>
+<li>In Regulars, nothing new — the summary is only as clean as the CSVs you saved from Tables.</li>
+</ul>
+</section>
+<section aria-labelledby="how-it-went-for-me-title">
+<h2 id="how-it-went-for-me-title">How it went for me</h2>
+<p>I ran twelve of my own statements from one bank through this route. Every running balance added up and the list needed zero manual merges. One statement took about 20 seconds from download to saved CSV, with a couple of cells to tweak. Regulars still only knows that one bank's column layout; adding a second bank is next once I test against real files from another account.</p>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle · small tools with results you can check</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from a12d3c4 on 2026-11-24. Loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

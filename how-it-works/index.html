@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>How it works · Kettle</title>
+    <meta name="description" content="How Kettle builds its tools: code checks what a model returns, model files are pinned, each tool is tested on real files before building, and network use can be checked.">
+    <meta property="og:title" content="How it works · Kettle">
+    <meta property="og:description" content="How Kettle builds its tools: code checks what a model returns, model files are pinned, each tool is tested on real files before building, and network use can be checked.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+  <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+  <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+  <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+  <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+  <g class="cup-mark" transform="translate(448.72 40.94) scale(6.831)">
+    <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+            <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+            <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+  </g>
+</svg>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/">Tools</a>
+          <a href="/demo/">Demos</a>
+          <a href="/how-it-works/" aria-current="page">How it works</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="page-title">
+<p class="eyebrow">How it works</p>
+<h1 id="page-title">How the tools are built</h1>
+<p class="lede">The tools are small on purpose. Underneath, they follow a few plain rules so each one is quick to build and straightforward to test.</p>
+</section>
+<section id="checking" aria-labelledby="checking-title">
+<h2 id="checking-title">Code checks what a model returns</h2>
+<p>Where a tool uses a model, it is limited to picking from options code supplies or reading one fact at a time. Code then checks what comes back before showing it to you.</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>In the <a href="/funding-watch/#checks">funding watch</a>, Cloudflare's Clairic and Clef models extract single facts and fixed options rather than prose. Code then checks that every date, amount and area appears in the funder's page text, and only quotes a sentence if it matches word for word.</li>
+<li>In the iPhone <a href="/iphone/">Label</a> tool, the nutrition figures have to add up.</li>
+<li>Every tool is allowed to answer &quot;I can't tell&quot;. Refusals are counted separately from errors, and gaps aren't filled in with a guess.</li>
+</ul>
+</section>
+<section id="models" aria-labelledby="models-title">
+<h2 id="models-title">Every model is named and pinned</h2>
+<p>For local tools, Kettle records every model file by its revision, byte size and SHA-256 hash alongside the job it does. Setup checks every download against those hashes, so a pinned tool behaves the same way next year and costs nothing per run. Where a cloud tool uses a hosted model, it logs the reported version alongside every fact. Every tool page lists its models, or says it uses none.</p>
+</section>
+<section id="checks" aria-labelledby="checks-title">
+<h2 id="checks-title">Testing on real files first</h2>
+<p>Every new tool starts with a written test on real files before any interface is built.</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>The bar to beat is set up front, never weaker than the obvious alternative.</li>
+<li>Expected answers are marked blind and scored once, on files the method wasn't tuned against.</li>
+<li>Ideas that don't beat the bar get dropped: Kettle binned a committee watch, a funding calendar and the language model in Media, and <a href="/research/">publishes the results</a> either way.</li>
+</ul>
+</section>
+<section id="where" aria-labelledby="where-title">
+<h2 id="where-title">Mac, iPhone and the cloud</h2>
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">On a Mac</dt>
+<dd class="govuk-summary-list__value">One desktop app holds the tools. Each tool keeps its own code, models and tests, and runs on its own. A template spins up a new tool, and a linter checks every one.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">On an iPhone</dt>
+<dd class="govuk-summary-list__value">Shared packages handle the camera, reading aloud and the clipboard, so a new tool is mostly what it captures and what it checks. That took the app from scratch to three tools and 252 tests in five weeks.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">In the cloud</dt>
+<dd class="govuk-summary-list__value">Both cloud tools share one reader for public pages. Each tool is about 260 lines with no extra dependencies, running on a schedule as a Cloudflare Worker.</dd>
+</div>
+</dl>
+<p>Shared code is only pulled out once a second tool actually needs it, not ahead of time.</p>
+</section>
+<section id="privacy" aria-labelledby="privacy-title">
+<h2 id="privacy-title">Checking where data goes</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li>On a Mac, setup is the only time a tool uses the network. Tables was tested with macOS blocking all outside connections.</li>
+<li>The Mac tools listen only on localhost, check where every request comes from, and run under a strict content security policy.</li>
+<li>The iPhone app has no networking code at all.</li>
+<li>The cloud tools only read public pages. Nothing private ever goes to them.</li>
+</ul>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle · small tools with results you can check</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from a12d3c4 on 2026-11-24. Loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>

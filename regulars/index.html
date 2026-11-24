@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Regulars · Kettle</title>
+    <meta name="description" content="Turn a year of checked bank statements into one list of repeat payees sorted by yearly total, using plain code on your Mac.">
+    <meta property="og:title" content="Regulars · Kettle">
+    <meta property="og:description" content="Turn a year of checked bank statements into one list of repeat payees sorted by yearly total, using plain code on your Mac.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <a class="govuk-skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-bar">
+        <a href="/" class="wordmark" aria-label="Kettle home">
+          <svg class="brand-mark" viewBox="52 0 581.14 246" aria-hidden="true" focusable="false">
+  <path fill="#7385a0" d="M394.8 245.92V0H451.58V10H482.88L451.58 51.99V245.92Z"/>
+  <path fill="#9daaba" d="M296.54 245.92V45H353.32V93.45H401.56V139.84H353.32V245.92Z"/>
+  <path fill="#c9d3e0" d="M198.28 245.92V139.84H150.04V93.45H198.28V45H255.06V93.45H303.3V139.84H255.06V245.92Z"/>
+  <path fill="#ffffff" d="M52 0 L52 245.92 L108.78 245.92 L108.78 205.06 L149.64 245.92 L229.76 245.92 L146.72 162.88 L216.14 93.45 L144.52 93.45 L108.78 129.19 L108.78 0 Z"/>
+  <g class="cup-mark" transform="translate(448.72 40.94) scale(6.831)">
+    <path fill="currentColor" d="M6 30 V16 H22 V30 Z M22 19 H27 V26 H22 V23 H24 V22 H22 Z"/>
+            <path class="cup-steam" d="M11.5 12.5 V8 H14.4 V10.3 H20 V12.5 Z"/>
+            <path class="cup-steam" d="M14 6 V2 H16.6 V4 H21 V6 Z"/>
+  </g>
+</svg>
+        </a>
+        <nav class="site-nav" aria-label="Primary"><a href="/tools/" aria-current="true">Tools</a>
+          <a href="/demo/">Demos</a>
+          <a href="/how-it-works/">How it works</a>
+          <a href="/research/">Research</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro" aria-labelledby="page-title">
+<p class="eyebrow">Tools · Regulars</p>
+<h1 id="page-title">See what you pay for again and again</h1>
+<p class="lede">Feed in a year of bank statements you've checked in <a href="/tables/">Tables</a>, and Regulars pulls out every payee you pay repeatedly, sorted by what they cost you over the year. Plain code does the maths, so the same statements always produce the same list. The full workflow is written up in <a href="/playbooks/statements/">A year of statements</a>.</p>
+<div class="demo-link">
+  <a href="/demo/regulars/" role="button" draggable="false" class="govuk-button" data-module="govuk-button">Try Regulars in your browser</a>
+  <p class="small muted">The real page from the app, on prepared samples. It's plain code, so it runs for real in your browser. It won't open your own files, and it needs JavaScript.</p>
+</div>
+</section>
+<section aria-labelledby="why-this-exists-title">
+<h2 id="why-this-exists-title">Why this exists</h2>
+<p>Some banking apps group spending by merchant; plenty of high-street banks only show vague categories. When I ran an early script over a year of my own statements, the yearly totals were the piece my bank hid from me: direct debits, subscriptions and small habits like coffee, all ranked in one list.</p>
+</section>
+<section aria-labelledby="what-goes-in-and-what-comes-out-title">
+<h2 id="what-goes-in-and-what-comes-out-title">What goes in and what comes out</h2>
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Goes in</dt>
+<dd class="govuk-summary-list__value">Checked statement CSVs saved from Tables — roughly twelve files for a year. Load them together or add more as you go.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">A line</dt>
+<dd class="govuk-summary-list__value">Any payee you paid 3 or more times across 3 or more calendar months. Outgoing payments only.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Each line shows</dt>
+<dd class="govuk-summary-list__value">Rhythm (such as &quot;monthly&quot; or &quot;about 3 times a week&quot;), typical payment, yearly total, any price changes with dates, and when you last paid if it's been a while.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">You can</dt>
+<dd class="govuk-summary-list__value">Expand a line to inspect every payment behind it, rename it, merge two names the bank formatted differently, or split them back apart. The bank's original strings stay visible.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">New in the latest statement</dt>
+<dd class="govuk-summary-list__value">Every payee appearing for the first time in your newest statement, largest first. &quot;First time&quot; just means absent from the earlier files you loaded — it flags what's new without lecturing you about it.</dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">Comes out</dt>
+<dd class="govuk-summary-list__value">The summary list as CSV, plus the underlying payments and new-payee list if you want them.</dd>
+</div>
+</dl>
+<p>Grouping runs on general cleanup rules, like stripping reference numbers and the town name tacked onto card payments. There's no merchant database, no categories, no &quot;waste&quot; badges and no budgeting advice. It shows you what you paid; what you do about it is your business.</p>
+<p>Regulars also re-checks each statement's running balance and highlights any row that doesn't add up so you can fix it back in Tables, and warns if two files overlap in dates so payments aren't double-counted.</p>
+</section>
+<section id="models" aria-labelledby="models-title">
+<h2 id="models-title">Models used</h2>
+<p><strong>None.</strong> Every name, date and amount comes straight from your statements, and every total is plain arithmetic. Nothing downloads and nothing leaves your Mac.</p>
+</section>
+<section aria-labelledby="what-s-been-tested-title">
+<h2 id="what-s-been-tested-title">What's been tested</h2>
+<p>Automated tests run on a year of invented statements, including with the network off.</p>
+<p>On twelve of my own statements from one bank, every running balance added up and the list needed zero manual merges. Each of the last three statements turned up 22 to 25 first-time payees, most under £20.</p>
+</section>
+<section aria-labelledby="known-limits-title">
+<h2 id="known-limits-title">Known limits</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li>It only understands one bank's column layout so far; adding another bank takes a small parser update.</li>
+<li>It's only as clean as the CSVs you checked in Tables.</li>
+<li>Nothing is saved between sessions — closing the window clears your statements, renames and merges, so export the CSV if you want to keep it.</li>
+<li>You can't merge a payee with fewer than 3 payments in 3 months into a regular line unless it's new in the latest statement.</li>
+</ul>
+</section>
+<section aria-labelledby="status-and-what-s-next-title">
+<h2 id="status-and-what-s-next-title">Status and what's next</h2>
+<div class="govuk-inset-text">
+<p><strong>Not available to download yet.</strong> Regulars runs alongside Tables in the development Kettle app on macOS.</p>
+</div>
+<p>I still need to verify every reported price change and &quot;last paid&quot; date against my own records, and add a second bank's statement layout once I have real files to test against.</p>
+</section>
+
+    </main>
+    <footer class="site-footer">
+      <p>Kettle · small tools with results you can check</p>
+      <p><a href="/style-guide/">App style guide</a></p>
+      <p>Built from a12d3c4 on 2026-11-24. Loads no fonts, scripts or images from other hosts.</p>
+    </footer>
+  </body>
+</html>
